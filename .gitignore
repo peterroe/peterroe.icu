@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+dist
+*.local
+.presite
+dist-ssr
+.vite-ssg-temp
+components.d.ts
+auto-imports.d.ts
