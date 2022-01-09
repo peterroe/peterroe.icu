@@ -1,7 +1,10 @@
-**[antfu.me](https://antfu.me)**
+<!--
+ * @Descripttion: 
+ * @Author: peterroe
+ * @Date: 2022-01-08 21:21:46
+ * @LastEditors: peterroe
+ * @LastEditTime: 2022-01-09 16:50:42
+-->
+**[me.loxt.top](https://me.loxg.top)**
 
 my personal website powered by [Vite](https://vitejs.dev/)
-
-<br>
-
-<samp>code is licensed under <a href='./LICENSE'>MIT</a>,<br> words and images are licensed under <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/'>CC BY-NC-SA 4.0</a></samp>.
