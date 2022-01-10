@@ -1,10 +1,3 @@
-<!--
- * @Descripttion: 
- * @Author: peterroe
- * @Date: 2022-01-10 13:22:13
- * @LastEditors: peterroe
- * @LastEditTime: 2022-01-10 18:19:55
--->
 ---
 title: Peter Roe
 ---

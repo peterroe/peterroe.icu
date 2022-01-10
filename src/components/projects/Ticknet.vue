@@ -12,7 +12,7 @@
       class=" h-145 w-full bg-white
        m-auto
       "
-      src="http://www.ticknet.hnust.cn/#/layer/home"
+      src="https://home.ticknet.hnust.cn"
       frameborder="0"></iframe>
       <div class="w-full flex justify-around pt-20px text-white">
         <div i-carbon-list></div>
