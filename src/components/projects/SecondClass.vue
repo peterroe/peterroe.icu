@@ -2,9 +2,9 @@
 import { ref } from 'vue'
 
 const imgs = ref([
-  'https://img-blog.csdnimg.cn/822e5932db944ae2b4159783d5d1fb9c.png',
-  'https://img-blog.csdnimg.cn/317732a51200454093d429ef058c64de.png',
-  'https://img-blog.csdnimg.cn/d54fd5a161bc42da81e4850c352b77dd.png'
+  'https://hnust-ticknet-swzl.oss-cn-hangzhou.aliyuncs.com/secondClass/2022/01/10/64f82506-a3d8-456d-99ff-945b7f6b5c59.png',
+  'https://hnust-ticknet-swzl.oss-cn-hangzhou.aliyuncs.com/secondClass/2022/01/10/ad52c886-3930-4cc0-8d51-c9645a145233.png',
+  'https://hnust-ticknet-swzl.oss-cn-hangzhou.aliyuncs.com/secondClass/2022/01/10/e00658c6-e1a9-4c0f-85d4-3343a7ada6d3.png'
 ])
 </script>
 <template>
