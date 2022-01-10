@@ -25,590 +25,590 @@
   "src/App.vue": [],
   "src/main.ts": [],
   "index.html": [],
-  "assets/app.c8fe7c31.js-unocss-hash.css": [],
+  "assets/app.f6eb8d2d.js-unocss-hash.css": [],
   "\u0000commonjsHelpers.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "\u0000D:/VscodeItems/antfu.me/node_modules/.pnpm/nprogress@0.2.0/node_modules/nprogress/nprogress.js?commonjs-module": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/nprogress@0.2.0/node_modules/nprogress/nprogress.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+shared@3.2.26/node_modules/@vue/shared/dist/shared.esm-bundler.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+reactivity@3.2.26/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+runtime-core@3.2.26/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+runtime-dom@3.2.26/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/vue@3.2.26/node_modules/vue/dist/vue.runtime.esm-bundler.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/vite-ssg@0.17.2_6acdbf34162ba7e10d9a1c150af90728/node_modules/vite-ssg/dist/chunk-NOBEKB76.mjs": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/vite-ssg@0.17.2_6acdbf34162ba7e10d9a1c150af90728/node_modules/vite-ssg/dist/chunk-SOEV5HRE.mjs": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/env.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/const.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/proxy.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/api/api.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/api/app.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/api/component.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/api/context.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/api/hooks.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/api/util.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/api/index.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/plugin.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vue+devtools-api@6.0.0-beta.19/node_modules/@vue/devtools-api/lib/esm/index.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/vue-router@4.0.12_vue@3.2.26/node_modules/vue-router/dist/vue-router.esm-bundler.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vueuse+head@0.7.0_vue@3.2.26/node_modules/@vueuse/head/dist/index.mjs": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/vite-ssg@0.17.2_6acdbf34162ba7e10d9a1c150af90728/node_modules/vite-ssg/dist/index.mjs": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "\u0000D:/VscodeItems/antfu.me/node_modules/.pnpm/dayjs@1.10.7/node_modules/dayjs/dayjs.min.js?commonjs-module": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/dayjs@1.10.7/node_modules/dayjs/dayjs.min.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "\u0000D:/VscodeItems/antfu.me/node_modules/.pnpm/dayjs@1.10.7/node_modules/dayjs/plugin/localizedFormat.js?commonjs-module": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/dayjs@1.10.7/node_modules/dayjs/plugin/localizedFormat.js": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/vue-demi@0.11.3_vue@3.2.26/node_modules/vue-demi/lib/index.mjs": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vueuse+shared@6.9.2_vue@3.2.26/node_modules/@vueuse/shared/index.mjs": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "node_modules/.pnpm/@vueuse+core@6.9.2_vue@3.2.26/node_modules/@vueuse/core/index.mjs": [
-    "/peterroe.icu/assets/vendor.2adeb70a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vendor.2adeb70a.js"
   ],
   "pages/talks.md": [
-    "/peterroe.icu/assets/talks.d4d7f398.js",
-    "/peterroe.icu/assets/index.7e8a2e0c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/talks.a5064a08.js",
+    "https://peterroe.github.io/peterroe.icu/assets/talks.d43464c7.css"
   ],
-  "assets/talks.d4d7f398.js-unocss-hash.css": [
-    "/peterroe.icu/assets/talks.d4d7f398.js",
-    "/peterroe.icu/assets/index.7e8a2e0c.css"
+  "assets/talks.a5064a08.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/talks.a5064a08.js",
+    "https://peterroe.github.io/peterroe.icu/assets/talks.d43464c7.css"
   ],
   "src/components/Post.vue": [
-    "/peterroe.icu/assets/Post.915cc3e2.js",
-    "/peterroe.icu/assets/Post.844d8ce7.css"
+    "https://peterroe.github.io/peterroe.icu/assets/Post.638ab4fd.js",
+    "https://peterroe.github.io/peterroe.icu/assets/Post.844d8ce7.css"
   ],
-  "assets/Post.915cc3e2.js-unocss-hash.css": [
-    "/peterroe.icu/assets/Post.915cc3e2.js",
-    "/peterroe.icu/assets/Post.844d8ce7.css"
+  "assets/Post.638ab4fd.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/Post.638ab4fd.js",
+    "https://peterroe.github.io/peterroe.icu/assets/Post.844d8ce7.css"
   ],
   "src/components/ListPosts.vue": [
-    "/peterroe.icu/assets/ListPosts.0b5fbfe5.js",
-    "/peterroe.icu/assets/ListPosts.b7c321cb.css"
+    "https://peterroe.github.io/peterroe.icu/assets/ListPosts.e238083d.js",
+    "https://peterroe.github.io/peterroe.icu/assets/ListPosts.b7c321cb.css"
   ],
-  "assets/ListPosts.0b5fbfe5.js-unocss-hash.css": [
-    "/peterroe.icu/assets/ListPosts.0b5fbfe5.js",
-    "/peterroe.icu/assets/ListPosts.b7c321cb.css"
+  "assets/ListPosts.e238083d.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/ListPosts.e238083d.js",
+    "https://peterroe.github.io/peterroe.icu/assets/ListPosts.b7c321cb.css"
   ],
   "src/components/Plum.vue": [
-    "/peterroe.icu/assets/Plum.fdfcc140.js",
-    "/peterroe.icu/assets/Plum.eacda17b.css"
+    "https://peterroe.github.io/peterroe.icu/assets/Plum.fdfcc140.js",
+    "https://peterroe.github.io/peterroe.icu/assets/Plum.eacda17b.css"
   ],
   "assets/Plum.fdfcc140.js-unocss-hash.css": [
-    "/peterroe.icu/assets/Plum.fdfcc140.js",
-    "/peterroe.icu/assets/Plum.eacda17b.css"
+    "https://peterroe.github.io/peterroe.icu/assets/Plum.fdfcc140.js",
+    "https://peterroe.github.io/peterroe.icu/assets/Plum.eacda17b.css"
   ],
   "src/logics/getStarsRanking.ts": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/StarsRanking.vue": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/icons/Vitest.vue": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/icons/Unocss.vue": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/icons/VueDemi.vue": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/icons/VueReactivity.vue": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/icons/VueUse.vue": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/ListProjects.vue?vue&type=style&index=0&scoped=true&lang.css": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/ListProjects.vue": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "pages/projects.md": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
-  "assets/projects.bc5c6100.js-unocss-hash.css": [
-    "/peterroe.icu/assets/projects.bc5c6100.js",
-    "/peterroe.icu/assets/projects.5a1a248f.css"
+  "assets/projects.1de788ed.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/projects.1de788ed.js",
+    "https://peterroe.github.io/peterroe.icu/assets/projects.5a1a248f.css"
   ],
   "src/components/icons/Slidev.vue": [
-    "/peterroe.icu/assets/Slidev.b9d10e7a.js",
-    "/peterroe.icu/assets/Slidev.8ccf5182.css"
+    "https://peterroe.github.io/peterroe.icu/assets/Slidev.3d4bd439.js",
+    "https://peterroe.github.io/peterroe.icu/assets/Slidev.8ccf5182.css"
   ],
-  "assets/Slidev.b9d10e7a.js-unocss-hash.css": [
-    "/peterroe.icu/assets/Slidev.b9d10e7a.js",
-    "/peterroe.icu/assets/Slidev.8ccf5182.css"
+  "assets/Slidev.3d4bd439.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/Slidev.3d4bd439.js",
+    "https://peterroe.github.io/peterroe.icu/assets/Slidev.8ccf5182.css"
   ],
   "src/components/projects/SecondClass.vue": [
-    "/peterroe.icu/assets/project.a61363e1.js",
-    "/peterroe.icu/assets/project.ea0ed5b9.css"
+    "https://peterroe.github.io/peterroe.icu/assets/project.f8081c26.js",
+    "https://peterroe.github.io/peterroe.icu/assets/project.ea0ed5b9.css"
   ],
   "src/components/projects/Unge.vue": [
-    "/peterroe.icu/assets/project.a61363e1.js",
-    "/peterroe.icu/assets/project.ea0ed5b9.css"
+    "https://peterroe.github.io/peterroe.icu/assets/project.f8081c26.js",
+    "https://peterroe.github.io/peterroe.icu/assets/project.ea0ed5b9.css"
   ],
   "pages/project.md": [
-    "/peterroe.icu/assets/project.a61363e1.js",
-    "/peterroe.icu/assets/project.ea0ed5b9.css"
+    "https://peterroe.github.io/peterroe.icu/assets/project.f8081c26.js",
+    "https://peterroe.github.io/peterroe.icu/assets/project.ea0ed5b9.css"
   ],
-  "assets/project.a61363e1.js-unocss-hash.css": [
-    "/peterroe.icu/assets/project.a61363e1.js",
-    "/peterroe.icu/assets/project.ea0ed5b9.css"
+  "assets/project.f8081c26.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/project.f8081c26.js",
+    "https://peterroe.github.io/peterroe.icu/assets/project.ea0ed5b9.css"
   ],
   "src/components/GitHubLink.vue": [
-    "/peterroe.icu/assets/GitHubLink.e6a4fb87.js",
-    "/peterroe.icu/assets/GitHubLink.81ab58dd.css"
+    "https://peterroe.github.io/peterroe.icu/assets/GitHubLink.e6a4fb87.js",
+    "https://peterroe.github.io/peterroe.icu/assets/GitHubLink.81ab58dd.css"
   ],
   "assets/GitHubLink.e6a4fb87.js-unocss-hash.css": [
-    "/peterroe.icu/assets/GitHubLink.e6a4fb87.js",
-    "/peterroe.icu/assets/GitHubLink.81ab58dd.css"
+    "https://peterroe.github.io/peterroe.icu/assets/GitHubLink.e6a4fb87.js",
+    "https://peterroe.github.io/peterroe.icu/assets/GitHubLink.81ab58dd.css"
   ],
   "~icons/carbon/logo-github": [
-    "/peterroe.icu/assets/logo-github.bd98de11.js"
+    "https://peterroe.github.io/peterroe.icu/assets/logo-github.bd98de11.js"
   ],
   "src/components/Tweet.vue": [
-    "/peterroe.icu/assets/windicss-and-tailwind-jit.f55aefa5.js",
-    "/peterroe.icu/assets/windicss-and-tailwind-jit.da7a8c91.css"
+    "https://peterroe.github.io/peterroe.icu/assets/windicss-and-tailwind-jit.fdabf6b1.js",
+    "https://peterroe.github.io/peterroe.icu/assets/windicss-and-tailwind-jit.da7a8c91.css"
   ],
   "pages/posts/windicss-and-tailwind-jit.md": [
-    "/peterroe.icu/assets/windicss-and-tailwind-jit.f55aefa5.js",
-    "/peterroe.icu/assets/windicss-and-tailwind-jit.da7a8c91.css"
+    "https://peterroe.github.io/peterroe.icu/assets/windicss-and-tailwind-jit.fdabf6b1.js",
+    "https://peterroe.github.io/peterroe.icu/assets/windicss-and-tailwind-jit.da7a8c91.css"
   ],
-  "assets/windicss-and-tailwind-jit.f55aefa5.js-unocss-hash.css": [
-    "/peterroe.icu/assets/windicss-and-tailwind-jit.f55aefa5.js",
-    "/peterroe.icu/assets/windicss-and-tailwind-jit.da7a8c91.css"
+  "assets/windicss-and-tailwind-jit.fdabf6b1.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/windicss-and-tailwind-jit.fdabf6b1.js",
+    "https://peterroe.github.io/peterroe.icu/assets/windicss-and-tailwind-jit.da7a8c91.css"
   ],
   "pages/posts/watch-with-reactivity.md": [
-    "/peterroe.icu/assets/watch-with-reactivity.79dec378.js",
-    "/peterroe.icu/assets/watch-with-reactivity.e3de2f37.css"
+    "https://peterroe.github.io/peterroe.icu/assets/watch-with-reactivity.62753865.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-house.538f33b8.css"
   ],
-  "assets/watch-with-reactivity.79dec378.js-unocss-hash.css": [
-    "/peterroe.icu/assets/watch-with-reactivity.79dec378.js",
-    "/peterroe.icu/assets/watch-with-reactivity.e3de2f37.css"
+  "assets/watch-with-reactivity.62753865.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/watch-with-reactivity.62753865.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-house.538f33b8.css"
   ],
   "pages/posts/vue-beijing-2021.md": [
-    "/peterroe.icu/assets/vue-beijing-2021.d8049fc4.js",
-    "/peterroe.icu/assets/vue-beijing-2021.07f6ef4c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/vue-beijing-2021.7c44e43a.js",
+    "https://peterroe.github.io/peterroe.icu/assets/vue-beijing-2021.07f6ef4c.css"
   ],
-  "assets/vue-beijing-2021.d8049fc4.js-unocss-hash.css": [
-    "/peterroe.icu/assets/vue-beijing-2021.d8049fc4.js",
-    "/peterroe.icu/assets/vue-beijing-2021.07f6ef4c.css"
+  "assets/vue-beijing-2021.7c44e43a.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/vue-beijing-2021.7c44e43a.js",
+    "https://peterroe.github.io/peterroe.icu/assets/vue-beijing-2021.07f6ef4c.css"
   ],
   "pages/posts/vue-3-notes.md": [
-    "/peterroe.icu/assets/vue-3-notes.0979cf38.js"
+    "https://peterroe.github.io/peterroe.icu/assets/vue-3-notes.962856e4.js"
   ],
   "pages/posts/type-inferencing-in-vue.md": [
-    "/peterroe.icu/assets/type-inferencing-in-vue.4edf305f.js",
-    "/peterroe.icu/assets/about-yak-shaving.c0bfc364.css"
+    "https://peterroe.github.io/peterroe.icu/assets/type-inferencing-in-vue.874a7066.js",
+    "https://peterroe.github.io/peterroe.icu/assets/notes.852978b4.css"
   ],
-  "assets/type-inferencing-in-vue.4edf305f.js-unocss-hash.css": [
-    "/peterroe.icu/assets/type-inferencing-in-vue.4edf305f.js",
-    "/peterroe.icu/assets/about-yak-shaving.c0bfc364.css"
+  "assets/type-inferencing-in-vue.874a7066.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/type-inferencing-in-vue.874a7066.js",
+    "https://peterroe.github.io/peterroe.icu/assets/notes.852978b4.css"
   ],
   "pages/posts/rewrite-in-vite.md": [
-    "/peterroe.icu/assets/rewrite-in-vite.16cf4dcd.js",
-    "/peterroe.icu/assets/rewrite-in-vite.0678660f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/rewrite-in-vite.c8fbf247.js",
+    "https://peterroe.github.io/peterroe.icu/assets/rewrite-in-vite.0678660f.css"
   ],
-  "assets/rewrite-in-vite.16cf4dcd.js-unocss-hash.css": [
-    "/peterroe.icu/assets/rewrite-in-vite.16cf4dcd.js",
-    "/peterroe.icu/assets/rewrite-in-vite.0678660f.css"
+  "assets/rewrite-in-vite.c8fbf247.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/rewrite-in-vite.c8fbf247.js",
+    "https://peterroe.github.io/peterroe.icu/assets/rewrite-in-vite.0678660f.css"
   ],
   "../../images/discover-windicss-zh.png": [
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.befe4ffd.js",
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.d347d585.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
   ],
   "../../images/unocss-traditional-way-zh.png": [
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.befe4ffd.js",
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.d347d585.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
   ],
   "../../images/unocss-on-demand-way-zh.png": [
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.befe4ffd.js",
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.d347d585.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
   ],
   "pages/posts/reimagine-atomic-css-zh.md": [
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.befe4ffd.js",
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.d347d585.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
   ],
-  "assets/reimagine-atomic-css-zh.befe4ffd.js-unocss-hash.css": [
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.befe4ffd.js",
-    "/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
+  "assets/reimagine-atomic-css-zh.d347d585.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.d347d585.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css-zh.8ae8f7e8.css"
   ],
   "../../images/discover-windicss.png": [
-    "/peterroe.icu/assets/reimagine-atomic-css.73b4c582.js",
-    "/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.8aa8bc98.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
   ],
   "../../images/unocss-traditional-way.png": [
-    "/peterroe.icu/assets/reimagine-atomic-css.73b4c582.js",
-    "/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.8aa8bc98.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
   ],
   "../../images/unocss-on-demand-way.png": [
-    "/peterroe.icu/assets/reimagine-atomic-css.73b4c582.js",
-    "/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.8aa8bc98.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
   ],
   "pages/posts/reimagine-atomic-css.md": [
-    "/peterroe.icu/assets/reimagine-atomic-css.73b4c582.js",
-    "/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.8aa8bc98.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
   ],
-  "assets/reimagine-atomic-css.73b4c582.js-unocss-hash.css": [
-    "/peterroe.icu/assets/reimagine-atomic-css.73b4c582.js",
-    "/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
+  "assets/reimagine-atomic-css.8aa8bc98.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.8aa8bc98.js",
+    "https://peterroe.github.io/peterroe.icu/assets/reimagine-atomic-css.377af8fd.css"
   ],
   "pages/posts/reflection-of-speaking-in-public.md": [
-    "/peterroe.icu/assets/reflection-of-speaking-in-public.3cd63431.js"
+    "https://peterroe.github.io/peterroe.icu/assets/reflection-of-speaking-in-public.1e347e73.js"
   ],
   "pages/posts/publish-esm-and-cjs.md": [
-    "/peterroe.icu/assets/publish-esm-and-cjs.6b2a21d5.js",
-    "/peterroe.icu/assets/publish-esm-and-cjs.43b96f0f.css"
+    "https://peterroe.github.io/peterroe.icu/assets/publish-esm-and-cjs.b6c8361f.js",
+    "https://peterroe.github.io/peterroe.icu/assets/publish-esm-and-cjs.43b96f0f.css"
   ],
-  "assets/publish-esm-and-cjs.6b2a21d5.js-unocss-hash.css": [
-    "/peterroe.icu/assets/publish-esm-and-cjs.6b2a21d5.js",
-    "/peterroe.icu/assets/publish-esm-and-cjs.43b96f0f.css"
+  "assets/publish-esm-and-cjs.b6c8361f.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/publish-esm-and-cjs.b6c8361f.js",
+    "https://peterroe.github.io/peterroe.icu/assets/publish-esm-and-cjs.43b96f0f.css"
   ],
   "pages/posts/new-ways-to-vue-taiwan-2021.md": [
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.f6a25b95.js",
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.4eda6d02.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
   ],
-  "assets/new-ways-to-vue-taiwan-2021.f6a25b95.js-unocss-hash.css": [
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.f6a25b95.js",
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
+  "assets/new-ways-to-vue-taiwan-2021.4eda6d02.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.4eda6d02.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
   ],
   "pages/posts/new-ways-to-vue-london-2021.md": [
-    "/peterroe.icu/assets/new-ways-to-vue-london-2021.f7866130.js",
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-london-2021.bf047858.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
   ],
-  "assets/new-ways-to-vue-london-2021.f7866130.js-unocss-hash.css": [
-    "/peterroe.icu/assets/new-ways-to-vue-london-2021.f7866130.js",
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
+  "assets/new-ways-to-vue-london-2021.bf047858.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-london-2021.bf047858.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
   ],
   "pages/posts/new-house.md": [
-    "/peterroe.icu/assets/new-house.a7275817.js",
-    "/peterroe.icu/assets/watch-with-reactivity.e3de2f37.css"
+    "https://peterroe.github.io/peterroe.icu/assets/new-house.8268d39e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-house.538f33b8.css"
   ],
-  "assets/new-house.a7275817.js-unocss-hash.css": [
-    "/peterroe.icu/assets/new-house.a7275817.js",
-    "/peterroe.icu/assets/watch-with-reactivity.e3de2f37.css"
+  "assets/new-house.8268d39e.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/new-house.8268d39e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-house.538f33b8.css"
   ],
   "pages/posts/make-libraries-working-with-vue-2-and-3.md": [
-    "/peterroe.icu/assets/make-libraries-working-with-vue-2-and-3.911dc58e.js"
+    "https://peterroe.github.io/peterroe.icu/assets/make-libraries-working-with-vue-2-and-3.3645a787.js"
   ],
   "~icons/ph/circle-wavy-question-duotone": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/mdi/progress-question": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/line-md/question-circle": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/eos-icons/installing": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/svelte-icon": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/ant-design/carry-out-twotone": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/webcomponents": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/bx/bx-planet": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/rollup": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/javascript": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/tabler/writing-sign": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "src/components/icons/SolidLogo.vue": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/twemoji/star-struck": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/webpack": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/preact": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/uim/circle-layer": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/nuxt-icon": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/mdi/material-design": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/nextjs-icon": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/react": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/carbon/carbon": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "src/components/icons/ViteLogo.vue": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/logos/vue": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/twemoji/face-with-tears-of-joy": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/fa/beer": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/mdi/alarm": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/tabler/confetti": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/tabler/triangle-square-circle": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/tabler/bolt": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "~icons/tabler/code": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "pages/posts/journey-with-icons-continues.md": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
-  "assets/journey-with-icons-continues.2496d4d7.js-unocss-hash.css": [
-    "/peterroe.icu/assets/journey-with-icons-continues.2496d4d7.js",
-    "/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
+  "assets/journey-with-icons-continues.623b9890.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.623b9890.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons-continues.ac217a03.css"
   ],
   "pages/posts/journey-with-icons.md": [
-    "/peterroe.icu/assets/journey-with-icons.bee6cb4c.js",
-    "/peterroe.icu/assets/journey-with-icons.7a17bf06.css"
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons.bbff1292.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons.7a17bf06.css"
   ],
-  "assets/journey-with-icons.bee6cb4c.js-unocss-hash.css": [
-    "/peterroe.icu/assets/journey-with-icons.bee6cb4c.js",
-    "/peterroe.icu/assets/journey-with-icons.7a17bf06.css"
+  "assets/journey-with-icons.bbff1292.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons.bbff1292.js",
+    "https://peterroe.github.io/peterroe.icu/assets/journey-with-icons.7a17bf06.css"
   ],
   "pages/posts/icons-in-pure-css-zh.md": [
-    "/peterroe.icu/assets/icons-in-pure-css-zh.aed7245d.js",
-    "/peterroe.icu/assets/icons-in-pure-css-zh.3203ac5d.css"
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css-zh.bf09636e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css-zh.3203ac5d.css"
   ],
-  "assets/icons-in-pure-css-zh.aed7245d.js-unocss-hash.css": [
-    "/peterroe.icu/assets/icons-in-pure-css-zh.aed7245d.js",
-    "/peterroe.icu/assets/icons-in-pure-css-zh.3203ac5d.css"
+  "assets/icons-in-pure-css-zh.bf09636e.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css-zh.bf09636e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css-zh.3203ac5d.css"
   ],
   "pages/posts/icons-in-pure-css.md": [
-    "/peterroe.icu/assets/icons-in-pure-css.49caa7f3.js",
-    "/peterroe.icu/assets/icons-in-pure-css.4b6c767b.css"
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css.bb9e5fec.js",
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css.4b6c767b.css"
   ],
-  "assets/icons-in-pure-css.49caa7f3.js-unocss-hash.css": [
-    "/peterroe.icu/assets/icons-in-pure-css.49caa7f3.js",
-    "/peterroe.icu/assets/icons-in-pure-css.4b6c767b.css"
+  "assets/icons-in-pure-css.bb9e5fec.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css.bb9e5fec.js",
+    "https://peterroe.github.io/peterroe.icu/assets/icons-in-pure-css.4b6c767b.css"
   ],
   "pages/posts/domain-email.md": [
-    "/peterroe.icu/assets/domain-email.29def703.js"
+    "https://peterroe.github.io/peterroe.icu/assets/domain-email.7c97fa78.js"
   ],
   "pages/posts/destructuring-with-object-or-array.md": [
-    "/peterroe.icu/assets/destructuring-with-object-or-array.4b3011a5.js"
+    "https://peterroe.github.io/peterroe.icu/assets/destructuring-with-object-or-array.28cfcb89.js"
   ],
   "src/components/slides/Marker.vue": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "src/components/slides/MarkerTips.vue": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "src/components/slides/MarkerPattern.vue": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "src/components/slides/VueUseFn.vue": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "~icons/carbon/sun": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "~icons/carbon/moon": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "src/components/slides/DarkToggleButton.vue": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "src/components/slides/MarkerCore.vue": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "pages/posts/composable-vue-vueday-2021.md": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
-  "assets/composable-vue-vueday-2021.e4425518.js-unocss-hash.css": [
-    "/peterroe.icu/assets/composable-vue-vueday-2021.e4425518.js",
-    "/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
+  "assets/composable-vue-vueday-2021.2542610e.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.2542610e.js",
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueday-2021.1a72fd3c.css"
   ],
   "pages/posts/composable-vue-vueconf-china-2021.md": [
-    "/peterroe.icu/assets/composable-vue-vueconf-china-2021.0c65af6d.js",
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueconf-china-2021.f67056b0.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
   ],
-  "assets/composable-vue-vueconf-china-2021.0c65af6d.js-unocss-hash.css": [
-    "/peterroe.icu/assets/composable-vue-vueconf-china-2021.0c65af6d.js",
-    "/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
+  "assets/composable-vue-vueconf-china-2021.f67056b0.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/composable-vue-vueconf-china-2021.f67056b0.js",
+    "https://peterroe.github.io/peterroe.icu/assets/new-ways-to-vue-taiwan-2021.08cc4946.css"
   ],
   "pages/posts/binfe-2020-zh.md": [
-    "/peterroe.icu/assets/binfe-2020-zh.e1970ce5.js"
+    "https://peterroe.github.io/peterroe.icu/assets/binfe-2020-zh.f63261e6.js"
   ],
   "pages/posts/async-with-composition-api.md": [
-    "/peterroe.icu/assets/async-with-composition-api.2154249e.js",
-    "/peterroe.icu/assets/async-with-composition-api.a9fd33dd.css"
+    "https://peterroe.github.io/peterroe.icu/assets/async-with-composition-api.1318a56d.js",
+    "https://peterroe.github.io/peterroe.icu/assets/async-with-composition-api.a9fd33dd.css"
   ],
-  "assets/async-with-composition-api.2154249e.js-unocss-hash.css": [
-    "/peterroe.icu/assets/async-with-composition-api.2154249e.js",
-    "/peterroe.icu/assets/async-with-composition-api.a9fd33dd.css"
+  "assets/async-with-composition-api.1318a56d.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/async-with-composition-api.1318a56d.js",
+    "https://peterroe.github.io/peterroe.icu/assets/async-with-composition-api.a9fd33dd.css"
   ],
   "pages/posts/about-yak-shaving-zh.md": [
-    "/peterroe.icu/assets/about-yak-shaving-zh.ca9ea383.js"
+    "https://peterroe.github.io/peterroe.icu/assets/about-yak-shaving-zh.35d0da74.js"
   ],
   "pages/posts/about-yak-shaving.md": [
-    "/peterroe.icu/assets/about-yak-shaving.a5cf46ce.js",
-    "/peterroe.icu/assets/about-yak-shaving.c0bfc364.css"
+    "https://peterroe.github.io/peterroe.icu/assets/about-yak-shaving.a9208188.js",
+    "https://peterroe.github.io/peterroe.icu/assets/notes.852978b4.css"
   ],
-  "assets/about-yak-shaving.a5cf46ce.js-unocss-hash.css": [
-    "/peterroe.icu/assets/about-yak-shaving.a5cf46ce.js",
-    "/peterroe.icu/assets/about-yak-shaving.c0bfc364.css"
+  "assets/about-yak-shaving.a9208188.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/about-yak-shaving.a9208188.js",
+    "https://peterroe.github.io/peterroe.icu/assets/notes.852978b4.css"
   ],
   "pages/posts/index.md": [
-    "/peterroe.icu/assets/index.1b8db39e.js",
-    "/peterroe.icu/assets/index.7e8a2e0c.css"
+    "https://peterroe.github.io/peterroe.icu/assets/index.0d2210f4.js",
+    "https://peterroe.github.io/peterroe.icu/assets/talks.d43464c7.css"
   ],
-  "assets/index.1b8db39e.js-unocss-hash.css": [
-    "/peterroe.icu/assets/index.1b8db39e.js",
-    "/peterroe.icu/assets/index.7e8a2e0c.css"
+  "assets/index.0d2210f4.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/index.0d2210f4.js",
+    "https://peterroe.github.io/peterroe.icu/assets/talks.d43464c7.css"
   ],
   "pages/notes.md": [
-    "/peterroe.icu/assets/notes.6aeabce4.js",
-    "/peterroe.icu/assets/about-yak-shaving.c0bfc364.css"
+    "https://peterroe.github.io/peterroe.icu/assets/notes.d939ef60.js",
+    "https://peterroe.github.io/peterroe.icu/assets/notes.852978b4.css"
   ],
-  "assets/notes.6aeabce4.js-unocss-hash.css": [
-    "/peterroe.icu/assets/notes.6aeabce4.js",
-    "/peterroe.icu/assets/about-yak-shaving.c0bfc364.css"
+  "assets/notes.d939ef60.js-unocss-hash.css": [
+    "https://peterroe.github.io/peterroe.icu/assets/notes.d939ef60.js",
+    "https://peterroe.github.io/peterroe.icu/assets/notes.852978b4.css"
   ],
   "pages/bookmarks.md": [
-    "/peterroe.icu/assets/bookmarks.eae7dd85.js"
+    "https://peterroe.github.io/peterroe.icu/assets/bookmarks.1d78fa04.js"
   ],
   "pages/index.md": [
-    "/peterroe.icu/assets/index.0835bfbd.js"
+    "https://peterroe.github.io/peterroe.icu/assets/index.42426206.js"
   ],
   "pages/[...404].md": [
-    "/peterroe.icu/assets/_...404_.efbc6f9a.js"
+    "https://peterroe.github.io/peterroe.icu/assets/_...404_.85eeb176.js"
   ]
 }
