@@ -10,6 +10,7 @@ const imgs = ref([
 <template>
   <div class="p-0 rounded-4xl">
     <img class="border shadow-md" src="https://img-blog.csdnimg.cn/4bb7058dbca54521838b48c595ee6e34.png" alt="">
+    <div text-base my-auto flex justify-center><div i-carbon-arrow-down my-auto mr-1 /> Hover over it</div>
     <div class="grid gap-6 grid-cols-3" @click="imgClick">
       <img
         v-for="item in imgs"
