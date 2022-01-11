@@ -1,7 +1,7 @@
 ---
 title: 实现数字过渡效果
 date: 2021-12-23
-time: 6min
+duration: 6min
 ---
 
 目的：[实现此链接的效果](https://ungeui.github.io/ungeui/components/transit/)

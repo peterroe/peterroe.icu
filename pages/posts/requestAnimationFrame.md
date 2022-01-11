@@ -1,7 +1,7 @@
 ---
 title: 浅谈requestAnimationFrame
 date: 2021-12-11
-time: 10min
+duration: 10min
 ---
 
 
