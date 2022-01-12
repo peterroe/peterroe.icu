@@ -1,6 +1,6 @@
 ---
-title: object-fit
-date: 2021-11-27
+title: object-fit裁剪图片
+date: 2022-01-04
 ---
 
 `object-fit` 是一个`css属性`，该属性用来裁剪图片
