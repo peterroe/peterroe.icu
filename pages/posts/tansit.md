@@ -4,6 +4,8 @@ date: 2021-12-23
 duration: 6min
 ---
 
+[[toc]]
+
 目的：[实现此链接的效果](https://ungeui.github.io/ungeui/components/transit/)
 
 ---

@@ -5,6 +5,8 @@ duration: 3min
 description: gzip compress
 ---
 
+[[toc]]
+
 对于gzip最简洁的定义就是：
 
 >GZIP最早由Jean-loup Gailly和Mark Adler创建，用于UNIX系统的文件压缩

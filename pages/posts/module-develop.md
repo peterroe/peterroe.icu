@@ -5,6 +5,8 @@ duration: 5min
 description: the module development of JS
 ---
 
+[[toc]]
+
 🚀这几年前端蓬勃发展，前端从模版引擎调用过渡到框架组件，可能很多人会分不清**组件**和**模块**的区别
 
 因为看起来**组件**和**模块**有很多相似点
