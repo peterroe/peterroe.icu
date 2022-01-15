@@ -8,6 +8,7 @@ display: ''
     <router-link to="/notes" class="opacity-20 hover:opacity-50 !border-none !font-400">Css</router-link>
     JavaScript
     <router-link to="/vue" class="opacity-20 hover:opacity-50 !border-none !font-400">Vue</router-link>
+    <router-link to="/algorithm" class="opacity-20 hover:opacity-50 !border-none !font-400"> Algorithm</router-link>
   </h1>
 </div>
 
@@ -15,4 +16,4 @@ display: ''
   <Plum/>
 </ClientOnly>
 
-<ListPosts type="js"/>
+<ListNotes type="js"/>
