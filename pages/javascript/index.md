@@ -16,4 +16,4 @@ display: ''
   <Plum/>
 </ClientOnly>
 
-<ListNotes type="js"/>
+<ListNotes type="javascript"/>
