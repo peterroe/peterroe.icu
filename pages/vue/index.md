@@ -9,7 +9,8 @@ display: ''
     <router-link to="/notes" class="opacity-20 hover:opacity-50 !border-none !font-400">Css</router-link>
     <router-link to="/javascript" class="opacity-20 hover:opacity-50 !border-none !font-400"> JavaScript</router-link>
     Vue
-    <router-link to="/algorithm" class="opacity-20 hover:opacity-50 !border-none !font-400"> Algorithm</router-link>
+    <router-link to="/algorithm" class="opacity-20 hover:opacity-50 !border-none !font-400">Algorithm </router-link>
+    <router-link to="/net" class="opacity-20 hover:opacity-50 !border-none !font-400">Net </router-link>
   </h1>
 </div>
 

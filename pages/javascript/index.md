@@ -10,6 +10,7 @@ display: ''
     JavaScript
     <router-link to="/vue" class="opacity-20 hover:opacity-50 !border-none !font-400">Vue</router-link>
     <router-link to="/algorithm" class="opacity-20 hover:opacity-50 !border-none !font-400"> Algorithm</router-link>
+    <router-link to="/net" class="opacity-20 hover:opacity-50 !border-none !font-400"> Net</router-link>
   </h1>
 </div>
 
