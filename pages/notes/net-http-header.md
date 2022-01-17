@@ -126,7 +126,7 @@ location: http://www.baidu.com
 告诉浏览器实体主体的编码格式
 
 ```shell
-Content-Encodig: gzip,br,deflate
+Content-Encoding: gzip,br,deflate
 ```
 
 ## Content-Language
