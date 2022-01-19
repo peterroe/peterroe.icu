@@ -130,6 +130,10 @@ observer.disconnect();
 * `chidList`： Boolean，设为 true 以监视目标节点（如果 subtree 为 true，则包含子孙节点）添加或删除新的子节点
 * `subtree`： Boolean，监视范围扩展至目标节点整个节点树中的所有节点
 
+**为什么mutationObserver是微任务**
+
+在一次事件循环当中，属性可能会变化多次，将API设计成微任务，有利于节省性能，只获取属性最后的值。
+
 ## Resize Observer
 
 监听元素的尺寸变化
