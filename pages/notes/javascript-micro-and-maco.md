@@ -1,6 +1,7 @@
 ---
 title: 微任务与宏任务
 date: 2022-01-19
+type: javascript
 ---
 
 ## 宏任务
