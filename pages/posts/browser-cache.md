@@ -1,7 +1,7 @@
 ---
 title: 浏览器缓存与静态资源部署建议
 date: 2022-01-17
-duration: 5min
+duration: 3min
 ---
 
 [[toc]]
