@@ -1,5 +1,5 @@
 ---
-title: 浏览器进程详解
+title: 浏览器是如何渲染页面的
 date: 2022-01-
 duration: 13min
 ---
