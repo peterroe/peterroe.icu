@@ -1,6 +1,7 @@
 ---
 title: 递归和分治
 date: 2022-01-20
+type: algorithm
 ---
 
 ## 分治算法
