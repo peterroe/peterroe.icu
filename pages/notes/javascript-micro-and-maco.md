@@ -64,3 +64,27 @@ setImmediate(() => {
 >但是有一个问题，DOM更新是宏任务过程，那么Vue是如何在微任务时期就拿到更改后的最新DOM呢？
 
 答案是`Vue.nextTick`中拿到的不是真实DOM，而是经过`patch`后的虚拟DOM，通过获取它的结构从而获知最新的DOM，此时还没有渲染真实DOM到页面上
+
+## DOM渲染
+
+DOM渲染发生在微任务之后，宏任务之前
+
+```js
+document.body.style.backgroundColor = 'red'
+
+new Promise((res) => {
+  res()
+}).then(_ => {
+  document.body.style.backgroundColor = 'green'
+})
+
+setTimeout(() => {
+  document.body.style.backgroundColor = 'blue'
+})
+
+```
+
+如上的代码结果就是，**背景颜色先变绿，然后立马变蓝**，所以就证明了
+```shell
+微任务 -> DOM渲染 -> 宏任务
+```
