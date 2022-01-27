@@ -18,7 +18,7 @@ display: ''
     <router-link to="/algorithm" class="opacity-20 hover:opacity-50 !border-none !font-400">
       <i class="i-simple-icons-thealgorithms"></i> 
     </router-link>
-    <router-link to="/other" class="opacity-20 hover:opacity-50 !border-none !font-400">
+    <router-link to="/net" class="opacity-20 hover:opacity-50 !border-none !font-400">
       <i class="i-zondicons-network"></i>
     </router-link>
     <i class="i-icon-park-outline-application-one"></i> 
