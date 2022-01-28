@@ -1,5 +1,5 @@
 ---
-title: 单条语句翻转数组
+title: 单条语句轮转数组
 date: 2022-01-04
 type: javascript
 ---
