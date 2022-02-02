@@ -51,7 +51,7 @@ const list = ref<titleType[]>([
 </script>
 
 <template>
-  <div class="opacity-20 italic">Quick notes / tips</div>
+  <div class="opacity-20 italic">Quick notes / tips - {{ currentTitle }}</div>
   <h1 class="mb-0 flex justify-between">
   <template v-for="item in list" :key="item.title">
     <router-link

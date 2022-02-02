@@ -1,7 +1,7 @@
 ---
 title: husky踩坑
 date: 2022-02-02
-type: other
+type: project
 ---
 
 [`husky`](https://github.com/typicode/husky)能够让用户方便的编写`git`钩子
