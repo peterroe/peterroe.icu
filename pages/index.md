@@ -8,7 +8,7 @@ title: Peter Roe
 
 Hey👋, I am Peter Roe, a front end developer. Working on [UngeUI](https://github.com/UngeUI/ungeui) currently.
 
-As your can see. I am crazy about javascript and something around it. Dreaming up ideas and making them come true is where my passion lies. I will take some blogs or notes on this website.
+As your can see. I am crazy about javascript and something around it. Dreaming up ideas and making them come true is where my passion lies. I will take some blogs or notes on this website🖖.
 
 ***
 
