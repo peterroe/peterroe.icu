@@ -154,9 +154,110 @@ module.exports = {
 ```
 详见：[devServer](https://www.webpackjs.com/configuration/dev-server/)
 
-## devtool
+## source-map
 
-`devtool`选项和打包速度强关联，关于不同的方式，官网有[详细的介绍](https://www.webpackjs.com/configuration/devtool/)
+`source-map`可以通过配置`devtool`选项进行操作，不同的值有着不同的使用场景，官网有[详细的介绍](https://www.webpackjs.com/configuration/devtool/)。
+
+因为打包过后的代码和源文件有很大的出入，那么`source-map`的职责就是帮助开发者在浏览器报错后定位源代码的位置，以此快速找到报错的源码。
+
+`devtool`有太多可选值了，但是都可以通过如下的正则来匹配：
+
+`[inline-|hidden-|eval-][nosources-][cheap-[module-]]source-map`
+
+例如开头的`inline/hidden/eval`，以这三者有明显区别
+
+假如我们打包一个内容是`console.log("Hello, World!")`的`js`文件
+
+### inline
+
+在`inline`模式下，`source-map`会以**注释+base64**的形式在文件底部
+
+```js
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+console.log("Hello World!");
+/******/ })()
+;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibWFpbi5hMzQ4MTI2YTcyODJjMWRkNjZhZC5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWSxjQUFaLEUiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9teS13ZWJwYWNrLXByb2plY3QvLi9zcmMvaW5kZXguanMiXSwic291cmNlc0NvbnRlbnQiOlsiY29uc29sZS5sb2coXCJIZWxsbyBXb3JsZCFcIik7Il0sIm5hbWVzIjpbImNvbnNvbGUiLCJsb2ciXSwic291cmNlUm9vdCI6IiJ9
+```
+
+### eval
+
+在`eval`模式下，生成的`sourceMappingURL`会出现在`eval`内部的尾部
+
+```js
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ (() => {
+
+eval("console.log(\"Hello World!\");//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9teS13ZWJwYWNrLXByb2plY3QvLi9zcmMvaW5kZXguanM/YjYzNSJdLCJuYW1lcyI6WyJjb25zb2xlIiwibG9nIl0sIm1hcHBpbmdzIjoiQUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVksY0FBWiIsInNvdXJjZXNDb250ZW50IjpbImNvbnNvbGUubG9nKFwiSGVsbG8gV29ybGQhXCIpOyJdLCJmaWxlIjoiLi9zcmMvaW5kZXguanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/index.js\n");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval-source-map devtool is used.
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/index.js"]();
+/******/ 	
+/******/ })()
+;
+```
+
+### hidden
+
+`hidden`模式下，会生成与`xxx.js`文件同名的`xxx.js.map`文件，但是代码中没有`sourceMappingURL`，浏览器也不会自动引入
+
+```js
+//xxx.js.map
+{
+  "version": 3,
+  "file": "main.a348126a7282c1dd66ad.js",
+  "mappings": ";;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,cAAZ,E",
+  "sources": ["webpack://my-webpack-project/./src/index.js"],
+  "sourcesContent": ["console.log(\"Hello World!\");"],
+  "names": ["console", "log"],
+  "sourceRoot": ""
+}
+```
+
+上面是`source map v3`的规范，字段含义
+
+属性 | 含义
+| :--- | :--- |
+| version | Source Map文件版本 |
+| file | 该Source Map对应文件的名称 |
+| sourceRoot | 源文件根目录，这个值会加在每个源文件之前 |
+| sources | 源文件列表，用于mappings |
+| sourcesContent | 源代码字符串列表，用于调试时展示源文件，列表每一项对应于sources |
+| names | 源文件变量名和属性名，用于mappdings |
+| mappings | 位置信息 |
+
+
+### nosources
+
+使用了此关键字之后，`source map`不包含`sourceContent`选项，所以调试的时候无法看到源码，只能看到文件信息和行信息。
+
+### cheap 
+
+`cheap`出现代表不包含列信息
+
+### cheap-module
+
+`cheap-module`代表不包含列信息，源码是开发时的代码
+
+例如，假设使用了`hidden-nosources-source-map`，生成的`map`文件中将会**没有**`sourcesContent`选项
 
 ## HMR
 
