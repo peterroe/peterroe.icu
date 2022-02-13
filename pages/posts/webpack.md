@@ -168,6 +168,46 @@ module.exports = {
 
 假如我们打包一个内容是`console.log("Hello, World!")`的`js`文件
 
+`devtool`值是`source-map`，没有其余前缀，那么默认情况下，打包后会生成`xxx.js`和`xxx.js.map`，在`xxx.js`中注释`sourceMappingURL`指向`map`文件：
+
+```js
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+console.log("Hello World!");
+/******/ })()
+;
+//# sourceMappingURL=main.a348126a7282c1dd66ad.js.map
+```
+
+map文件：
+
+```js
+//main.a348126a7282c1dd66ad.js.map
+{
+  "version": 3,
+  "file": "main.a348126a7282c1dd66ad.js",
+  "mappings": ";;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,cAAZ,E",
+  "sources": ["webpack://my-webpack-project/./src/index.js"],
+  "names": ["console", "log"],
+  "sourceRoot": ""
+}
+```
+
+上面是`source map v3`的规范，字段含义
+
+属性 | 含义
+| :--- | :--- |
+| version | Source Map文件版本 |
+| file | 该Source Map对应文件的名称 |
+| sourceRoot | 源文件根目录，这个值会加在每个源文件之前 |
+| sources | 源文件列表，用于mappings |
+| sourcesContent | 源代码字符串列表，用于调试时展示源文件，列表每一项对应于sources |
+| names | 源文件变量名和属性名，用于mappdings |
+| mappings | 位置信息 |
+
 ### inline
 
 在`inline`模式下，`source-map`会以**注释+base64**的形式在文件底部
@@ -217,47 +257,74 @@ eval("console.log(\"Hello World!\");//# sourceURL=[module]\n//# sourceMappingURL
 
 ### hidden
 
-`hidden`模式下，会生成与`xxx.js`文件同名的`xxx.js.map`文件，但是代码中没有`sourceMappingURL`，浏览器也不会自动引入
+`hidden`模式下，会生成与`xxx.js`文件同名的`xxx.js.map`文件，但是代码中没有`sourceMappingURL`注释，浏览器也不会自动引入
 
 ```js
-//xxx.js.map
-{
-  "version": 3,
-  "file": "main.a348126a7282c1dd66ad.js",
-  "mappings": ";;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,cAAZ,E",
-  "sources": ["webpack://my-webpack-project/./src/index.js"],
-  "sourcesContent": ["console.log(\"Hello World!\");"],
-  "names": ["console", "log"],
-  "sourceRoot": ""
-}
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+console.log("Hello World!");
+/******/ })()
+;
 ```
-
-上面是`source map v3`的规范，字段含义
-
-属性 | 含义
-| :--- | :--- |
-| version | Source Map文件版本 |
-| file | 该Source Map对应文件的名称 |
-| sourceRoot | 源文件根目录，这个值会加在每个源文件之前 |
-| sources | 源文件列表，用于mappings |
-| sourcesContent | 源代码字符串列表，用于调试时展示源文件，列表每一项对应于sources |
-| names | 源文件变量名和属性名，用于mappdings |
-| mappings | 位置信息 |
-
 
 ### nosources
 
 使用了此关键字之后，`source map`不包含`sourceContent`选项，所以调试的时候无法看到源码，只能看到文件信息和行信息。
 
+例如，假设使用了`hidden-nosources-source-map`，生成的`map`文件中将会**没有**`sourcesContent`选项
+
 ### cheap 
 
-`cheap`出现代表不包含列信息
+`cheap`出现代表不包含列信息，例如`cheap-source-map`打包后可以看到，`mappings`字段要简洁的多
+
+```js
+{
+  "version": 3,
+  "file": "main.c32c21c1fbc5a6f64516.js",
+  "mappings": ";;;;;AAAA",
+  "sources": ["webpack://my-webpack-project/./src/index.js"],
+  "sourcesContent": ["console.log(\"Hello World!\");"],
+  "names": [],
+  "sourceRoot": ""
+}
+```
 
 ### cheap-module
 
-`cheap-module`代表不包含列信息，源码是开发时的代码
+`cheap-module`代表不包含列信息，将`loader source map`简化为每行一个映射，单纯的`cheap`则忽略`loader source map`。
 
-例如，假设使用了`hidden-nosources-source-map`，生成的`map`文件中将会**没有**`sourcesContent`选项
+### 总结
+
+`devtool`虽然有各式各样的值，但是都可以用表达式
+
+`[inline-|hidden-|eval-][nosources-][cheap-[module-]]source-map`来匹配
+
+* 默认的`source-map`打包后会生成`xxx.js`和`xxx.js.map`文件，`map`文件中记录了文件的映射信息
+* 以`inline`开头的，例如`inline-source-map`则会将映射信息直接放在`js`文件中，以`base64`存储
+* 以`eval`开头的，映射信息会在`eval()`内部以注释和`base64`形式存在
+* 以`hidden`开头的，`xxx.js`中将不存在指向`xxx.js.map`的路径注释
+* 包含`nosources`的，映射字段中将不包含`sourceContent`选项
+* 包含`cheap`的，`mapping`字段会更加简洁，不包含列信息。
+
+### 如何工作？
+
+上面介绍了不同模式的基本差别，那么我们只看到`webpack`是如何生成`source-map`的，但还是不了解代码是如何映射的。
+
+但其实映射的任务交给浏览器了，大多数浏览器是支持`source-map`的
+
+当浏览器读到：
+
+```js
+//# sourceMappingURL=xxxx
+```
+浏览器就会解析相应的`map`文件，注释的形式也是为了兼容不支持`source-map`的浏览器
+
+结合`map`文件，浏览器就可以正确输出我们想要的报错信息
+
+所以关于`source-map`，不是`webpack`独有的，而是一个**公共的标准**，[见标准详情](https://sourcemaps.info/spec.html)
 
 ## HMR
 
@@ -270,3 +337,5 @@ module.exports = {
   }
 }
 ```
+
+开启后，只要修改代码，浏览器就会在不刷新的前提下拿到文件最新的内容并更新，相对速度相比直接刷新要快上许多。
