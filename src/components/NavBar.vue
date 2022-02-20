@@ -1,10 +1,4 @@
-<!--
- * @Descripttion: 
- * @Author: peterroe
- * @Date: 2022-01-08 21:21:46
- * @LastEditors: peterroe
- * @LastEditTime: 2022-01-09 16:03:20
--->
+
 <script setup lang="ts">
 import { isDark } from '/~/logics'
 </script>
@@ -22,6 +16,7 @@ import { isDark } from '/~/logics'
     <nav class="nav">
       <div class="spacer" />
       <div class="right">
+        <!-- more icon visit: https://icones.js.org/collection/all -->
         <router-link to="/posts">
           <span class="lt-md:hidden">Blog</span>
           <ri-article-line class="md:hidden" />
@@ -40,7 +35,7 @@ import { isDark } from '/~/logics'
           <ri-sticky-note-line />
         </router-link>
         <a href="https://t.me/peterroe" target="_blank" title="Telegram">
-          <TablerBrandTelegram/>
+          <tabler-brand-telegram />
         </a>
         <a href="https://github.com/peterroe" target="_blank" title="GitHub">
           <uil-github-alt />
