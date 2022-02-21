@@ -1,5 +1,7 @@
-hello
+---
+title: Life - Peter Roe
+display: Life
+subtitle: Get rid of impetuosity and calm down
+---
 
-<div flex>
-  <div>s</div>
-</div>
+<LifeList />
