@@ -28,11 +28,17 @@ import { isDark } from '/~/logics'
           <span class="lt-md:hidden">Projects</span>
           <ri-lightbulb-line class="md:hidden" />
         </router-link>
+        <router-link to="/tools">
+          <span class="lt-md:hidden">Tools</span>
+        </router-link>
         <router-link to="/bookmarks" title="Bookmarks" class="lt-md:hidden">
           <ri-bookmark-line />
         </router-link>
         <router-link to="/notes" title="Notes">
           <ri-sticky-note-line />
+        </router-link>
+        <router-link to="/life" title="life">
+          <ri-calendar-check-line />
         </router-link>
         <a href="https://t.me/peterroe" target="_blank" title="Telegram">
           <tabler-brand-telegram />

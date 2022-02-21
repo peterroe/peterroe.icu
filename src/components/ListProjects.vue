@@ -35,12 +35,7 @@ defineProps<{ projects: Record<string, any[]> }>()
   <div class="markdown mt-10">
     <p class="opacity-75">
       <em>
-        Thanks for getting intersted in my works! If like them or find them useful, consider
-        <a
-          href="https://github.com/sponsors/antfu"
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-        >&nbsp;sponsoring me&nbsp;</a>to support me keeping them sustainable. Cheers! :)
+        Thanks for getting intersted in my works :)
       </em>
     </p>
   </div>
