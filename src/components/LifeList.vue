@@ -8,7 +8,7 @@ defineProps({
 <template>
   <div class="life">
     <UWaterfall :columnCount="4">
-      <template v-for="it in lists" :key="it.title">
+      <template v-for="it in lists.reverse()" :key="it.title">
       <div class="item" border border-gray rounded-xl >
         <img :src="it.img"/>
         <div p-3 class="word">
