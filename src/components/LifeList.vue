@@ -1,27 +1,24 @@
-<script setup>
+<script setup lang="ts">
 import { UWaterfall } from 'uwaterfall'
-// import 'uwaterfall/style.css'
+defineProps({
+  lists: Array,
+})
 </script>
 
 <template>
   <div class="life">
     <UWaterfall :columnCount="4">
-      <div class="item" border border-gray rounded-xl>
-        <img src="https://i.pinimg.com/474x/db/73/e2/db73e2452188e486ee087a3702dd249b.jpg"/>
+      <template v-for="it in lists" :key="it.title">
+      <div class="item" border border-gray rounded-xl >
+        <img :src="it.img"/>
         <div p-3 class="word">
-          没有最终的成功，也没有致命的失败，最可贵的是继续前进的勇气
+          {{ it.title }}
           <br>
-          --- 2022-2-20
+          <br>
+          {{ it.date }}
         </div>
       </div>
-      <div class="item" border border-gray rounded-xl>
-        <img src="https://i.pinimg.com/474x/03/b4/b0/03b4b0435157db8291714d6488b67a23.jpg"/>
-        <div p-3 class="word">
-          今日雾霾蔽日，但是不要害怕，太阳依旧在云端
-          <br>
-          --- 2022-2-21
-        </div>
-      </div>
+      </template>
     </UWaterfall>
   </div>
 </template>
