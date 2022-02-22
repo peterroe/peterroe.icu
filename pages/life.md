@@ -18,6 +18,9 @@ lists:
   - title: 今日雾霾蔽日，但是不要害怕，太阳依旧在云端
     date: '2022-02-21'
     img: https://i.pinimg.com/474x/9c/93/b3/9c93b3fb1b8b113872f8c0b37915048f.jpg
+  - title: 往往是那些善良的愿望，把人类带入了人间地狱
+    date: '2022-02-22'
+    img: https://i.pinimg.com/474x/7a/bd/d8/7abdd860beade981556826aaa1807630.jpg
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 ---
 
