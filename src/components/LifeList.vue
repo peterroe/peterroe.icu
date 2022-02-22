@@ -25,8 +25,8 @@ defineProps({
 
 <style>
 .life img {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 </style>
 
