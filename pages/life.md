@@ -21,6 +21,9 @@ lists:
   - title: 圆圈正义
     date: '2022-02-22'
     img: https://i.pinimg.com/474x/c4/b3/7f/c4b37f9b63b7671e9286cb5670666c1a.jpg
+  - title: 凡杀不死你的，都会让你更加强大
+    date: '2022-02-25'
+    img: https://i.pinimg.com/236x/1b/eb/7b/1beb7b63364e7f6405519ba8a1f2d405.jpg
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
 ---
 
