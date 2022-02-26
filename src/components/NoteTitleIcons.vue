@@ -40,6 +40,10 @@ const list = ref<titleType[]>([
     icon: 'i-simple-icons-thealgorithms',
   },
   {
+    title: 'rust',
+    icon: 'i-mdi-language-rust',
+  },
+  {
     title: 'net',
     icon: 'i-zondicons-network',
   },
