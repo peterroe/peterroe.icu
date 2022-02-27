@@ -58,7 +58,7 @@
     "vite-plugin-pages": "^0.18.2",
     "vite-plugin-pwa": "^0.11.6",
     "vite-plugin-yaml": "^1.0.5",
-    "vite-ssg": "^0.17.2"
+    "vite-ssg": "0.17.10"
   },
   "pnpm": {
     "overrides": {
