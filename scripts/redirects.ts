@@ -12,13 +12,13 @@ async function run() {
   for (let i = 1; i <= pages; i++) {
     const { data: repos } = await gh.repos.listForUser({
       type: 'owner',
-      username: 'antfu',
+      username: 'peterroe',
       per_page: 100,
       page: i,
     })
 
     for (const repo of repos) {
-      if (['test', 'static', 'repro', 'issue', 'resume', 'antfu'].some(i => repo.name.includes(i)))
+      if (['test', 'static', 'repro', 'issue', 'resume', 'peterroe'].some(i => repo.name.includes(i)))
         continue
       if (!repo.private && !repo.fork && !repo.archived)
         redirects.push([`/${repo.name}`, repo.url.replace('api.github.com/repos', 'github.com'), 302])

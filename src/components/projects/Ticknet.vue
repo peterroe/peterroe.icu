@@ -12,7 +12,7 @@
       class=" h-145 w-full bg-white
        m-auto
       "
-      src="https://home.ticknet.hnust.cn"
+      src="https://competent-heisenberg-50a2b6.netlify.app/"
       frameborder="0"></iframe>
       <div class="w-full flex justify-around pt-20px text-white">
         <div i-carbon-list></div>
