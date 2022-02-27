@@ -88,3 +88,7 @@ let array = [3.14; 2];  //=> [3.14, 3.14]
 //支持访问下标
 println!("first element is {}", array[0]);
 ```
+
+## 切片Slice类型
+
+`slice`类型没有所有权，允许引用集合中一段连续的元素序列
