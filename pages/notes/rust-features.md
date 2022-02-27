@@ -132,3 +132,36 @@ fn dangle() -> &String {
   &s
 }
 ```
+
+## match
+
+`match`配合`enum`
+
+```rust
+enum Tick{
+  one,
+  two,
+  other(i32)
+}
+
+fn back(t: Tick) -> i32{
+  match t {
+    Tick::one => 1,
+    Tick::two => 2,
+    Tick::other(num) => num
+  }
+}
+
+print!("{}", back(Tick::other(4)));
+```
+
+### 匹配剩余参数
+
+```rust
+let dict = 3;
+match dict {
+  1 => hello(),
+  2 => world(),
+  _ => ()
+}
+```

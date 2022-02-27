@@ -92,3 +92,184 @@ println!("first element is {}", array[0]);
 ## 切片Slice类型
 
 `slice`类型没有所有权，允许引用集合中一段连续的元素序列
+
+```rust
+let s = String::from("hello, world");
+let hello = &s[..5];
+
+let a = [1, 2, 3, 4];
+let b = &a[1..3];
+```
+
+### 字符串字面量就是slice类型
+
+```rust
+let s: &str = "hello, world";
+```
+
+兼容，使同时接受`String`类型和`&str`类型：
+
+```rust
+fn main() {
+    let x = "hello";
+    let y = String::from("world");
+    hello(x);
+    hello(&y);
+    hello(&y[2..5];
+    hello(&y[..];
+}
+
+fn hello(x: &str) {
+
+}
+```
+
+## 结构体
+
+创建结构体
+
+```rust
+struct User {
+    name: String,
+    age: i32,
+    height: f64,
+    sex: bool
+}
+```
+
+### 基本使用
+
+```rust
+//实例化
+let lsh = User {
+    name: String::from("lsh"),
+    age: 21,
+    height: 166.6,
+    sex: true
+};
+
+//支持混入
+let peter = User {
+    name: String::from("peterroe"),
+    ..lsh
+};
+```
+
+### 元组结构体
+
+结构体可以定义成元组类型
+
+```rust
+struct Message(i32, i32, i32);
+struct StringMessage(String);
+```
+
+## 接口
+
+```rust
+struct Rectangle {
+    width: u32,
+    height: u32
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {  //&self === self: &Self
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let c = Rectangle {
+        width: 2,
+        height: 5
+    };
+    dbg!(c.area());
+}
+```
+
+### 关联函数
+
+像`String::from`一样，通常用于实例化
+
+```rust
+struct Rectangle {
+    width: u32,
+    height: u32
+}
+
+impl Rectangle {
+    fn create(width: u32, height: u32) -> Rectangle {
+        Rectangle {
+            width,
+            height
+        }
+    }
+}
+
+fn main() {
+    let c = Rectangle::create(3, 4);
+    dbg!(c.area());
+}
+```
+
+## 枚举
+
+```rust
+#[derive(Debug)]
+enum Ip {
+    V4,
+    V6
+}
+
+fn main() {
+    let four: Ip = Ip::V4;
+    let six: Ip = Ip::V6;
+    print!("{:?}", four);
+}
+```
+
+### 关联数据
+
+枚举可以关联一个数据
+
+```rust
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+```
+
+* `Quit`没有包含数据
+* `Move`包含了一个匿名结构体
+* `Write`包含了一个`String`
+* `ChangeColor`包含了三个`i32`
+
+### 关联函数
+
+```rust
+impl Message {
+    fn hello(&self) {
+        println!("hello")
+    }
+}
+
+let a = Message::ChangeColor(2, 3, 4);
+a.hello();  //通过实例调用
+```
+
+### Option
+
+`Option`定义于标准库中:
+
+```rust
+enum Option<T> {
+  some(T),
+  None,
+}
+
+//可以直接使用Some/None
+let some_number = Some(5);
+let abset_number: Option<i32> = None; //使用None需要声明T的类型
+```

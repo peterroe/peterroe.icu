@@ -24,3 +24,17 @@ let a = 1;
 let b = 2;
 assert_eq!(a, b);
 ```
+
+## dbg!
+
+调试，表达式会**返回值的所有权**
+
+```rust
+let a = 3;
+let b = 4;
+let c = dbg!(3 + 4);
+
+/*
+[src\main.rs:20] 3 + 4 = 7
+*/
+```
