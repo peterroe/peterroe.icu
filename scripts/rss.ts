@@ -72,7 +72,7 @@ async function buildBlogRSS() {
 }
 
 async function buildNotesRSS() {
-  const raw = await fs.readFile('pages/notes.md', 'utf-8')
+  const raw = await fs.readFile('pages/notes/index.md', 'utf-8')
 
   const options = {
     title: 'Peter Roe',
