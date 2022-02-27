@@ -111,7 +111,7 @@ fn not_take_ownership(some_string: &String) {
 * 至少有一个指针被用来写入数据
 * 没有同步数据访问的机制
 
-在**同一时间**只能有一个**可变引用**
+在**同一时间**只能有一个**可变引用**(作用域不能重叠)
 
 **引用的作用域**
 
@@ -119,3 +119,16 @@ fn not_take_ownership(some_string: &String) {
 
 **悬垂引用（Dangling References）**
 
+指的是引用了一个被释放内容的地址，例如：
+
+```rust
+//error
+fn main() {
+  let x = dangle();
+}
+
+fn dangle() -> &String {
+  let s = String::from("hello");
+  &s
+}
+```
