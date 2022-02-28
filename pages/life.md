@@ -24,7 +24,9 @@ lists:
   - title: 凡杀不死你的，都会让你更加强大
     date: '2022-02-25'
     img: https://i.pinimg.com/236x/1b/eb/7b/1beb7b63364e7f6405519ba8a1f2d405.jpg
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+  - title: 人间正道是沧桑
+    date: '2022-02-27'
+    img: https://i.pinimg.com/474x/87/16/04/8716040b9d50abc3157b6307bb2a8285.jpg                                              
 ---
 
 <LifeList :lists="frontmatter.lists"/>

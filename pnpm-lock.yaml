@@ -48,7 +48,7 @@ specifiers:
   vite-plugin-pages: ^0.18.2
   vite-plugin-pwa: ^0.11.6
   vite-plugin-yaml: ^1.0.5
-  vite-ssg: ^0.17.2
+  vite-ssg: 0.17.10
   vue: ^3.2.22
   vue-router: ^4.0.12
 
@@ -101,7 +101,7 @@ devDependencies:
   vite-plugin-pages: 0.18.2_vite@2.6.14
   vite-plugin-pwa: 0.11.6_vite@2.6.14
   vite-plugin-yaml: 1.0.5_vite@2.6.14
-  vite-ssg: 0.17.2_6acdbf34162ba7e10d9a1c150af90728
+  vite-ssg: 0.17.10_6acdbf34162ba7e10d9a1c150af90728
 
 packages:
 
@@ -2077,6 +2077,12 @@ packages:
     hasBin: true
     dev: true
 
+  /acorn/8.7.0:
+    resolution: {integrity: sha512-V/LGr1APy+PXIwKebEWrkZPwoeoF+w1jiOBUmuxuiUIaOHtob8Qc9BTrYo7VuI5fR8tqsy+buA2WFooR5olqvQ==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true
+
   /agent-base/6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
     engines: {node: '>= 6.0.0'}
@@ -2592,6 +2598,10 @@ packages:
 
   /deep-is/0.1.3:
     resolution: {integrity: sha1-s2nW+128E+7PUk+RsHD+7cNXzzQ=}
+    dev: true
+
+  /deep-is/0.1.4:
+    resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
 
   /deepmerge/4.2.2:
@@ -3849,7 +3859,13 @@ packages:
       he: 1.2.0
       param-case: 2.1.1
       relateurl: 0.2.7
-      uglify-js: 3.14.5
+      uglify-js: 3.15.2
+    dev: true
+
+  /html5parser/2.0.2:
+    resolution: {integrity: sha512-L0y+IdTVxHsovmye8MBtFgBvWZnq1C9WnI/SmJszxoQjmUH1psX2uzDk21O5k5et6udxdGjwxkbmT9eVRoG05w==}
+    dependencies:
+      tslib: 2.3.1
     dev: true
 
   /htmlparser2/7.1.2:
@@ -4196,7 +4212,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.5
-      acorn: 8.6.0
+      acorn: 8.7.0
       acorn-globals: 6.0.0
       cssom: 0.5.0
       cssstyle: 2.3.0
@@ -4220,7 +4236,7 @@ packages:
       whatwg-encoding: 2.0.0
       whatwg-mimetype: 3.0.0
       whatwg-url: 10.0.0
-      ws: 8.3.0
+      ws: 8.5.0
       xml-name-validator: 4.0.0
     transitivePeerDependencies:
       - bufferutil
@@ -4319,6 +4335,10 @@ packages:
 
   /kolorist/1.5.0:
     resolution: {integrity: sha512-pPobydIHK884YBtkS/tWSZXpSAEpcMbilyun3KL37ot935qL2HNKm/tI45i/Rd+MxdIWEhm7/LmUQzWZYK+Qhg==}
+    dev: true
+
+  /kolorist/1.5.1:
+    resolution: {integrity: sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==}
     dev: true
 
   /leven/3.1.0:
@@ -4701,7 +4721,7 @@ packages:
     resolution: {integrity: sha512-+IW9pACdk3XWmmTXG8m3upGUJst5XRGzxMRjXzAuJ1XnIFNvfhjjIuYkDvysnPQ7qzqVzLt78BCruntqRhWQbA==}
     engines: {node: '>= 0.8.0'}
     dependencies:
-      deep-is: 0.1.3
+      deep-is: 0.1.4
       fast-levenshtein: 2.0.6
       levn: 0.3.0
       prelude-ls: 1.1.2
@@ -5536,8 +5556,8 @@ packages:
     resolution: {integrity: sha512-6t9LrLk3FhqTS+GW3IqlITtfRB5JAVr5MMNjpBECfK827W+Vh5Ilw/LhTcHWrt6b3hkeBvcbjx4Ti7QVFzmcww==}
     dev: true
 
-  /uglify-js/3.14.5:
-    resolution: {integrity: sha512-qZukoSxOG0urUTvjc2ERMTcAy+BiFh3weWAkeurLwjrCba73poHmG3E36XEjd/JGukMzwTL7uCxZiAexj8ppvQ==}
+  /uglify-js/3.15.2:
+    resolution: {integrity: sha512-peeoTk3hSwYdoc9nrdiEJk+gx1ALCtTjdYuKSXMTDqq7n1W7dHPqWDdSi+BPL0ni2YMeHD7hKUSdbj3TZauY2A==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     dev: true
@@ -5822,13 +5842,13 @@ packages:
       vite: 2.6.14
     dev: true
 
-  /vite-ssg/0.17.2_6acdbf34162ba7e10d9a1c150af90728:
-    resolution: {integrity: sha512-+cpU8GGT7eQknUgiSEYSKXsZyuKVxyLI/SB3c1FU9R/h/qJBdJXK1phHEQraohVcHuPo1/OFi45RbU8ktunqdw==}
+  /vite-ssg/0.17.10_6acdbf34162ba7e10d9a1c150af90728:
+    resolution: {integrity: sha512-gPcw5RLmAq5CwZ9Q/Ca9kJWUm6KdxhkNRBzm8P4bGDCRQLNQkgTiQmK7ZwsdqD7C8bah4CMBFDeqz2MKSQintw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     peerDependencies:
-      '@vueuse/head': ^0.5.1
-      critters: ^0.0.10
+      '@vueuse/head': ^0.5.0 || ^0.6.0 || ^0.7.0
+      critters: ^0.0.16
       vite: ^2.0.0
       vue: ^3.2.10
       vue-router: ^4.0.1
@@ -5837,16 +5857,17 @@ packages:
         optional: true
     dependencies:
       '@vueuse/head': 0.7.0_vue@3.2.26
-      chalk: 4.1.2
       critters: 0.0.14
       fs-extra: 10.0.0
       html-minifier: 4.0.0
+      html5parser: 2.0.2
       jsdom: 19.0.0
+      kolorist: 1.5.1
       prettier: 2.5.1
       vite: 2.6.14
       vue: 3.2.26
       vue-router: 4.0.12_vue@3.2.26
-      yargs: 17.3.0
+      yargs: 17.3.1
     transitivePeerDependencies:
       - bufferutil
       - canvas
@@ -6193,8 +6214,8 @@ packages:
     resolution: {integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=}
     dev: true
 
-  /ws/8.3.0:
-    resolution: {integrity: sha512-Gs5EZtpqZzLvmIM59w4igITU57lrtYVFneaa434VROv4thzJyV6UjIL3D42lslWlI+D4KzLYnxSwtfuiO79sNw==}
+  /ws/8.5.0:
+    resolution: {integrity: sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -6259,8 +6280,8 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /yargs/17.3.0:
-    resolution: {integrity: sha512-GQl1pWyDoGptFPJx9b9L6kmR33TGusZvXIZUT+BOz9f7X2L94oeAskFYLEg/FkhV06zZPBYLvLZRWeYId29lew==}
+  /yargs/17.3.1:
+    resolution: {integrity: sha512-WUANQeVgjLbNsEmGk20f+nlHgOqzRFpiGWVaBrYGYIGANIIu3lWjoyi0fNlFmJkvfhCZ6BXINe7/W2O2bV4iaA==}
     engines: {node: '>=12'}
     dependencies:
       cliui: 7.0.4
