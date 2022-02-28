@@ -35,6 +35,7 @@ defineProps({
 <style scoped>
 .item {
   break-inside: avoid;
+  word-break: break-all;
   text-align: justify;
   overflow: hidden;
   margin-bottom: 10px;

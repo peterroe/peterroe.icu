@@ -34,18 +34,21 @@ import { isDark } from '/~/logics'
         <router-link to="/bookmarks" title="Bookmarks" class="lt-md:hidden">
           <ri-bookmark-line />
         </router-link>
+        <router-link to="/packages" title="Packages" class="lt-md:hidden">
+          <MdiPackageVariantClosed />
+        </router-link>
         <router-link to="/notes" title="Notes">
           <ri-sticky-note-line />
         </router-link>
-        <!-- <router-link to="/life" title="life">
-          <ri-calendar-check-line />
-        </router-link> -->
         <a href="https://t.me/peterroe" target="_blank" title="Telegram">
           <tabler-brand-telegram />
         </a>
         <a href="https://github.com/peterroe" target="_blank" title="GitHub">
           <uil-github-alt />
         </a>
+        <router-link to="/life" title="life">
+          <ri-calendar-check-line />
+        </router-link>
         <toggle-theme />
       </div>
     </nav>
