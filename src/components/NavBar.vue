@@ -37,9 +37,9 @@ import { isDark } from '/~/logics'
         <router-link to="/notes" title="Notes">
           <ri-sticky-note-line />
         </router-link>
-        <router-link to="/life" title="life">
+        <!-- <router-link to="/life" title="life">
           <ri-calendar-check-line />
-        </router-link>
+        </router-link> -->
         <a href="https://t.me/peterroe" target="_blank" title="Telegram">
           <tabler-brand-telegram />
         </a>
