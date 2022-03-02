@@ -20,7 +20,9 @@ pnpm install husky
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
-    "pre-commit": "pnpm test"
+    "hooks": {
+      "pre-commit": "pnpm test"
+    }
   }
 }
 ```
