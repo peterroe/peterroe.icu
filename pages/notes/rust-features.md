@@ -165,3 +165,77 @@ match dict {
   _ => ()
 }
 ```
+
+### if let替代
+
+```rust
+let someValue = Some(0_u8);
+if let someValue = Some(0) {
+  println!("zero");
+} else {
+  println!("other");
+}
+```
+
+## crate
+
+`crate`是一个二进制项或者库，一个包中最多至多:
+
+**只能包含一个库crate，可以包含任意多个二进制crate**
+
+但最少也要包含一个`crate`
+
+* `src/main.rs`被认为是一个二进制crate
+* `src/lib.rs`被认为是一个库crate
+* `src/bin/`下所有的文件都被认为是独立的二进制crate
+
+### 模块系统
+
+需要使用`pub`关键字才能够向外暴露内部的模块、方法等等
+
+```rust
+mod front_of_house {
+    pub mod hosting {
+        pub fn add_to_waitlist() {
+            println!("hello");
+        }
+    }
+}
+
+use front_of_house::hosting::add_to_waitlist;
+fn main() {
+    add_to_waitlist(); //absolute path
+    front_of_house::hosting::add_to_waitlist(); //relative path
+}
+```
+
+**引入的两种方式:**
+
+```rust
+use std::cmp::Ordering;
+use str::io;
+//or
+use std::{cmp:: Ordering, io};
+
+
+use std::io;
+use std::io::Write;
+//or
+use std::io::{self Write};
+
+//continue line will import all public items to current scope
+use std::collection::*
+```
+
+### 外部引入
+
+`mod xxx;`将告诉rust在另一个于模块同名的文件中加载模块的内容。
+
+```rust
+mod lsh; //declare module
+//use crate::lsh::great::hello;
+fn main() {
+    add_to_waitlist();
+    lsh::great::hello();
+}
+```
