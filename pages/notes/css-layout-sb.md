@@ -5,26 +5,23 @@ date: 2022-03-08
 
 ```html
 <style>
-  #app {
+  #layout-sb {
     padding: 0 100px;
   }
   
   .center {
     width: 100%;
-    background-color: red;
   }
   
   .left {
     width: 100px;
     margin-left: -100%;
-    background-color: skyblue;
     position: relative;
     left: -100px;
   }
   
   .right {
     width: 100px;
-    background-color: aquamarine;
     margin-left: -100px;
     position: relative;
     left: 100px;
@@ -37,9 +34,13 @@ date: 2022-03-08
   }
 </style>
 
-<div id="app">
-  <div class="center">left</div>
-  <div class="left">center</div>
+<div id="layout-sb">
+  <div class="center">center</div>
+  <div class="left">left</div>
   <div class="right">right</div>
 </div>
 ```
+
+效果：
+
+<layoutSb />
