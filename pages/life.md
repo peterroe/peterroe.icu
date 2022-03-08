@@ -26,7 +26,10 @@ lists:
     img: https://i.pinimg.com/236x/1b/eb/7b/1beb7b63364e7f6405519ba8a1f2d405.jpg
   - title: 任何一个有效的东西，都会引来1000个模仿者
     date: '2022-02-27'
-    img: https://i.pinimg.com/474x/87/16/04/8716040b9d50abc3157b6307bb2a8285.jpg                                              
+    img: https://i.pinimg.com/474x/87/16/04/8716040b9d50abc3157b6307bb2a8285.jpg    
+  - title: 过好当下
+    date: '2022-03-06'
+    img: https://i.pinimg.com/474x/43/06/ec/4306ec216ee13ba2371b1e18cbb194ff.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
