@@ -30,6 +30,9 @@ lists:
   - title: 过好当下
     date: '2022-03-06'
     img: https://i.pinimg.com/474x/43/06/ec/4306ec216ee13ba2371b1e18cbb194ff.jpg
+  - title: Just do it，由此很多人进入了IT行业
+    date: '2022-03-10'
+    img: https://i.pinimg.com/474x/b3/db/48/b3db48d4f4e51db38ba2e0f1ee3d9f33.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
