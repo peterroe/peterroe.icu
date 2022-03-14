@@ -39,6 +39,8 @@ document.querySelector('#app').scrollIntoView({
 })
 ```
 
+---
+
 ## 数字
 
 ### 获得随机hex颜色
@@ -46,6 +48,8 @@ document.querySelector('#app').scrollIntoView({
 ```js
 Math.floor(Math.ramdon() * 0xffffff).toString(16) //3b8d2a
 ```
+
+---
 
 ## 骚操作
 
@@ -64,4 +68,15 @@ while(+new Date() < start + delay) {
 ```js
 let score = 3
 '★★★★★✰✰✰✰✰'.slice(5 - score, 10 - score)
+```
+
+---
+
+## 项目相关
+
+### files import
+
+```js
+// install all modules under `modules/`
+Object.values(import.meta.globEager('./modules/*.ts')).forEach(i => i.install?.(ctx))
 ```
