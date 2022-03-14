@@ -1,10 +1,12 @@
 ---
 title: unplugin-auto-import
-date: 2022-01-16
+date: 2022-03-14
 type: vite
 ---
 
 >自动导入api
+
+github: <https://github.com/antfu/unplugin-auto-import>
 
 安装：
 
