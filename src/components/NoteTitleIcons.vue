@@ -32,6 +32,10 @@ const list = ref<titleType[]>([
     icon: 'i-mdi-vuejs',
   },
   {
+    title: 'vite',
+    icon: 'i-simple-icons-vite',
+  },
+  {
     title: 'project',
     icon: 'i-mdi-tools',
   },
