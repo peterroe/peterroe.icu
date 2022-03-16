@@ -33,6 +33,9 @@ lists:
   - title: Just do it，由此很多人进入了IT行业
     date: '2022-03-10'
     img: https://i.pinimg.com/474x/b3/db/48/b3db48d4f4e51db38ba2e0f1ee3d9f33.jpg
+  - title: 春未绿，鬓先丝，人间久别不成悲
+    date: '2022-03-16'
+    img: https://i.pinimg.com/474x/34/f1/61/34f161e700c38b345b0fd180b2b69a7a.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
