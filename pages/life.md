@@ -36,6 +36,9 @@ lists:
   - title: 春未绿，鬓先丝，人间久别不成悲
     date: '2022-03-16'
     img: https://i.pinimg.com/474x/34/f1/61/34f161e700c38b345b0fd180b2b69a7a.jpg
+  - title: 让幸福感持续的唯一方法就是以感恩的心，谦卑的心接受一切成功与失败
+    date: '2022-03-18'
+    img: https://i.pinimg.com/474x/d4/37/9e/d4379e4c95bf1b2e05a3e4d254a79af7.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
