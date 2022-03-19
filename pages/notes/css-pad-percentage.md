@@ -3,7 +3,7 @@ title: padding百分比妙用
 date: 2022-03-19
 ---
 
-众所周知，`padding`属性值如果是以百分号为单位，那么参照的是**自身的宽度**大小
+众所周知，`padding`属性值如果是以百分号为单位，那么参照的是**父元素的宽度**大小
 
 那么，我们可以很容易做出一些效果
 
@@ -15,6 +15,7 @@ date: 2022-03-19
 <style>
   .box {
     height: 0;
+    width: 100%
     padding-botton: 50%
   }
 </style>
@@ -48,8 +49,9 @@ bg-green-500/30
 <style>
   .box {
     height: 0;
--    padding-botton: 50%
-+    padding-botton: 100%
+    width: 100%;
+-   padding-botton: 50%
++   padding-botton: 100%
   }
 </style>
 ```
