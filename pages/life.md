@@ -27,6 +27,9 @@ lists:
   - title: 任何一个有效的东西，都会引来1000个模仿者
     date: '2022-02-27'
     img: https://i.pinimg.com/474x/87/16/04/8716040b9d50abc3157b6307bb2a8285.jpg    
+  - title: 现实就是一本蹩脚的小说，它从不按常理出牌
+    date: '2022-03-01'
+    img: https://i.pinimg.com/474x/a9/ab/56/a9ab56c21983572c212c0f7866af4884.jpg
   - title: 过好当下
     date: '2022-03-06'
     img: https://i.pinimg.com/474x/43/06/ec/4306ec216ee13ba2371b1e18cbb194ff.jpg
