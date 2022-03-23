@@ -1,22 +1,24 @@
 <script setup lang="ts">
-// import Tribute from "tributejs";
-// import 'Tributejs/dist/tribute.css'
-// var tribute = new Tribute({
-//   values: [
-//     { key: "Phil Heartman", value: "pheartman" },
-//     { key: "Gordon Ramsey", value: "gramsey" }
-//   ]
-// });
-//  onMounted(() => {
-//    tribute.attach(document.querySelector("#tributeNode"));
-//  })
+const tributeNodeRef = ref()
+
+onMounted(() => {
+  import('tributejs').then(({ default: Tribute }) => {
+    const tribute = new Tribute({
+      values: [
+        { key: "Phil Heartman", value: "pheartman" },
+        { key: "Gordon Ramsey", value: "gramsey" }
+      ]
+    })
+    tribute.attach(tributeNodeRef.value)
+  })
+})
 </script>
 
 <template>
   <div>
     <input
       type="text"
-      id="tributeNode"
+      ref="tributeNodeRef"
       cols="30"
       rows="10"
       class="border resize-none"
