@@ -39,6 +39,9 @@ lists:
   - title: 让幸福感持续的唯一方法就是以感恩的心，谦卑的心接受一切成功与失败
     date: '2022-03-18'
     img: https://i.pinimg.com/474x/d4/37/9e/d4379e4c95bf1b2e05a3e4d254a79af7.jpg
+  - title: 落花人独立，微雨燕双飞
+    date: '2022-03-23'
+    img: https://i.pinimg.com/474x/3f/8e/6a/3f8e6aadb87e734d1d9a9af97d0dd7fd.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
