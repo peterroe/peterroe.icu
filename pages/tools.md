@@ -13,6 +13,10 @@ projects:
       link: 'https://github.com/peterroe/vue-component-starter'
       desc: 'typescript starter template.'
       icon: 'i-teenyicons-typescript-solid'
+    - name: 'login-hnust-auto'
+      link: 'https://github.com/peterroe/login-hnust-auto'
+      desc: 'Automatically log in by compiling the generated `.exe` file',
+      icon: 'i-mdi-login-variant'
 
   Plugins:
     - name: 'docusaurus-plugin-usevue'
@@ -57,6 +61,12 @@ projects:
       link: 'https://github.com/peterroe/create-js-lib'
       desc: 'Cli for create js library.'
       icon: 'i-mdi-tools'
+
+  Script:
+    - name: 'login-hnust-auto'
+      link: 'https://github.com/peterroe/login-hnust-auto'
+      desc: 'Automatically log in by compiling the generated `.exe` file',
+      icon: 'i-mdi-login-variant'
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
