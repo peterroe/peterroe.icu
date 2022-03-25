@@ -15,7 +15,7 @@ projects:
       icon: 'i-teenyicons-typescript-solid'
     - name: 'login-hnust-auto'
       link: 'https://github.com/peterroe/login-hnust-auto'
-      desc: 'Automatically log in by compiling the generated `.exe` file',
+      desc: 'Automatically log in by compiling the generated `.exe` file'
       icon: 'i-mdi-login-variant'
 
   Plugins:
@@ -65,7 +65,7 @@ projects:
   Script:
     - name: 'login-hnust-auto'
       link: 'https://github.com/peterroe/login-hnust-auto'
-      desc: 'Automatically log in by compiling the generated `.exe` file.'
+      desc: 'Automatically log in by compiling the generated `.exe` file'
       icon: 'i-mdi-login-variant'
 ---
 
