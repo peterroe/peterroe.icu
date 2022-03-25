@@ -45,6 +45,9 @@ lists:
   - title: 落花人独立，微雨燕双飞
     date: '2022-03-23'
     img: https://i.pinimg.com/474x/3f/8e/6a/3f8e6aadb87e734d1d9a9af97d0dd7fd.jpg
+  - title: 我所理解的生活就是和喜欢的一切在一起
+    date: '2022-03-25'
+    img: https://i.pinimg.com/474x/78/bc/fb/78bcfb3a1557acda4df5e1c3cc631461.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
