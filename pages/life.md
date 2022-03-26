@@ -48,6 +48,9 @@ lists:
   - title: 我所理解的生活就是和喜欢的一切在一起
     date: '2022-03-25'
     img: https://i.pinimg.com/474x/78/bc/fb/78bcfb3a1557acda4df5e1c3cc631461.jpg
+  - title: 醉后不知天在水，满船清梦压星河
+    date: '2022-03-27'
+    img: https://i.pinimg.com/474x/e8/67/19/e867193f632ec35d6a62b5632c93c4b2.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
