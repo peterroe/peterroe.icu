@@ -5,6 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: 'xtj'
+      link: 'https://github.com/peterroe/xtj'
+      desc: 'Convert xml to javascript object'
+      icon: 'i-mdi-xml'
     - name: 'vue-component-starter'
       link: 'https://github.com/peterroe/vue-component-starter'
       desc: 'Vue3 component template.'
@@ -17,6 +21,12 @@ projects:
       link: 'https://github.com/peterroe/login-hnust-auto'
       desc: 'Automatically log in by compiling the generated `.exe` file'
       icon: 'i-mdi-login-variant'
+
+  Units:
+    - name: 'xtj'
+      link: 'https://github.com/peterroe/xtj'
+      desc: 'Convert xml to javascript object'
+      icon: 'i-mdi-xml'
 
   Plugins:
     - name: 'docusaurus-plugin-usevue'
@@ -67,6 +77,7 @@ projects:
       link: 'https://github.com/peterroe/login-hnust-auto'
       desc: 'Automatically log in by compiling the generated `.exe` file'
       icon: 'i-mdi-login-variant'
+  
 ---
 
 <ListProjects :projects="frontmatter.projects"/>
