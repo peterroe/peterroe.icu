@@ -17,6 +17,7 @@
     "prism-theme-vars": "^0.2.2",
     "uwaterfall": "^1.0.3",
     "vue": "^3.2.22",
+    "vue-img-lazy-tiny": "^1.1.4",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {

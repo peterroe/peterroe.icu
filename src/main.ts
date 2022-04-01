@@ -10,6 +10,7 @@ import NProgress from 'nprogress'
 import { ViteSSG } from 'vite-ssg'
 import type { RouterScrollBehavior } from 'vue-router'
 import dayjs from 'dayjs'
+import vilt from 'vue-img-lazy-tiny'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import App from './App.vue'
 
@@ -38,9 +39,9 @@ const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
 export const createApp = ViteSSG(
   App,
   { routes, scrollBehavior },
-  ({ router, isClient }) => {
+  ({ router, isClient, app }) => {
     dayjs.extend(LocalizedFormat)
-
+    app.use(vilt)
     if (isClient) {
       router.beforeEach(() => { NProgress.start() })
       router.afterEach(() => { NProgress.done() })
