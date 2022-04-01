@@ -51,6 +51,9 @@ lists:
   - title: 醉后不知天在水，满船清梦压星河
     date: '2022-03-27'
     img: https://i.pinimg.com/474x/e8/67/19/e867193f632ec35d6a62b5632c93c4b2.jpg
+  - title: 遇事不决，可问春风，春风不语，遵循己心
+    date: '2022-04-01'
+    img: https://i.pinimg.com/474x/bc/6b/3a/bc6b3a80cd1d9d6581fdf6b6bdd672d7.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
