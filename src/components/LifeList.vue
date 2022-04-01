@@ -12,7 +12,7 @@ defineProps<Array<{
     <UWaterfall :columnCount="4" columnGap="10px">
       <template v-for="it in lists.reverse()" :key="it.title">
         <div class="item" border border-gray rounded-xl>
-          <img v-lazy="it.img"/>
+          <img :src="it.img"/>
           <div p-3 class="word">
             {{ it.title }}
             <br>
