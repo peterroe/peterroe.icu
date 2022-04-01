@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { UWaterfall } from 'uwaterfall'
-defineProps<Array<{
-  img: string
-  title: string
-  date: string
-}>>()
+defineProps({
+  lists: Array,
+})
 </script>
 
 <template>
@@ -12,7 +10,7 @@ defineProps<Array<{
     <UWaterfall :columnCount="4" columnGap="10px">
       <template v-for="it in lists.reverse()" :key="it.title">
         <div class="item" border border-gray rounded-xl>
-          <img :src="it.img"/>
+          <img v-lazy="it.img"/>
           <div p-3 class="word">
             {{ it.title }}
             <br>

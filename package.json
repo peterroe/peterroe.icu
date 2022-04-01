@@ -46,6 +46,7 @@
     "markdown-it-prism": "^2.2.1",
     "markdown-it-shiki": "^0.3.0",
     "markdown-it-table-of-contents": "^0.6.0",
+    "patch-vue-directive-ssr": "^0.0.1",
     "pnpm": "^6.24.2",
     "prismjs": "^1.25.0",
     "tributejs": "^5.1.3",
