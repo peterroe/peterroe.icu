@@ -54,6 +54,9 @@ lists:
   - title: 遇事不决，可问春风，春风不语，遵循己心
     date: '2022-04-01'
     img: https://i.pinimg.com/474x/bc/6b/3a/bc6b3a80cd1d9d6581fdf6b6bdd672d7.jpg
+  - title: 长足的信念，驱动着你的内心
+    date: '2022-04-03'
+    img: https://i.pinimg.com/474x/0c/54/ac/0c54ac84de341dab1465b2dbeebf42c7.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
