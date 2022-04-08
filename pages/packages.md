@@ -32,3 +32,14 @@ $ caxa --input "./src" --output "hello.exe" -- "{{caxa}}/node_modules/.bin/node"
 即生成`exe`程序
 
 地址：<GitHubLink repo="leafac/caxa" />
+
+### pkg -- 将js脚本跨平台打包（windows、mac、linux）
+
+执行：
+
+```shell
+$ npm install -g pkg
+$ pkg ./log.js
+```
+
+地址：<GitHubLink repo="vercel/pkg" />
