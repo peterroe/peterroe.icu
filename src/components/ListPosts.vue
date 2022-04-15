@@ -28,9 +28,9 @@ const posts = computed(() =>
         <div class="title text-lg">
           {{ route.meta.frontmatter.title }}
           <sup
-            v-if="route.meta.frontmatter.lang === 'zh'"
+            v-if="route.meta.frontmatter.lang === 'translation'"
             class="text-xs border border-current rounded px-1 pb-0.2"
-          >中文</sup>
+          >翻译</sup>
         </div>
         <div class="time opacity-50 text-sm -mt-1">
           {{ formatDate(route.meta.frontmatter.date) }} <span v-if="route.meta.frontmatter.duration" class="opacity-50">· {{ route.meta.frontmatter.duration }}</span>
