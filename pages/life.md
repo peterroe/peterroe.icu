@@ -60,6 +60,9 @@ lists:
   - title: 我所理解的生活就是和喜欢的一切在一起
     date: '2022-04-12'
     img: https://i.pinimg.com/736x/1b/3c/48/1b3c48a630f8a46b5e24bdf17554eda9.jpg
+  - title: 天道酬勤
+    date: '2022-04-20'
+    img: https://i.pinimg.com/474x/cd/4b/6e/cd4b6e5104a4ec6c007efeb92fab3972.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
