@@ -1,5 +1,5 @@
 ---
-title: Project
+title: Projects
 subtitle: List of projects that I am proud of
 ---
 
