@@ -5,6 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: 'name-transform'
+      link: 'https://github.com/peterroe/name-transform'
+      desc: 'A tiny library for transforming names'
+      icon: 'i-icon-park-outline-transform'
     - name: 'uspin'
       link: 'https://github.com/peterroe/uspin'
       desc: 'A vue3 component that spins on load'
@@ -17,16 +21,16 @@ projects:
       link: 'https://github.com/peterroe/xtj'
       desc: 'Convert xml to javascript object'
       icon: 'i-mdi-xml'
-    - name: 'vue-component-starter'
-      link: 'https://github.com/peterroe/vue-component-starter'
-      desc: 'Vue3 component template.'
-      icon: 'i-logos-component'
 
   Units:
     - name: 'xtj'
       link: 'https://github.com/peterroe/xtj'
       desc: 'Convert xml to javascript object'
       icon: 'i-mdi-xml'
+    - name: 'name-transform'
+      link: 'https://github.com/peterroe/name-transform'
+      desc: 'A tiny library for transforming names'
+      icon: 'i-icon-park-outline-transform'
 
   Plugins:
     - name: 'docusaurus-plugin-usevue'
