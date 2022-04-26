@@ -63,6 +63,9 @@ lists:
   - title: 天道酬勤
     date: '2022-04-20'
     img: https://i.pinimg.com/474x/cd/4b/6e/cd4b6e5104a4ec6c007efeb92fab3972.jpg
+  - title: 永远年轻，永远热泪盈眶
+    date: '2022-04-27'
+    img: https://i.pinimg.com/474x/53/a4/7b/53a47b71225ac6115265da6c2301ff92.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
