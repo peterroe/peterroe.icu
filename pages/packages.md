@@ -152,4 +152,7 @@ img {
   margin-left:10px;
   display: inline-block;
 }
+a {
+  margin-left: 0.5em;
+}
 </style>
