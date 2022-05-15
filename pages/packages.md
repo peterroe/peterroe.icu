@@ -7,7 +7,7 @@ subtitle: npm packages
 
 Gather some npm packages
 
-### lz-string -- 字符串压缩 <img src="https://badgen.net/github/stars/pieroxy/lz-string/?icon=github&color=4ab8a1" />
+### lz-string -- 字符串压缩 <GitHubStar repo="pieroxy/lz-string" />
 
 主要是用于解决例如`localStorage`等场景下的储存空间不足问题，通过压缩算法进行压缩后再储存。
 
@@ -35,7 +35,7 @@ $ lz-string index.ts > test.txt
 
 ---
 
-### zustand -- React状态管理库<img src="https://badgen.net/github/stars/pmndrs/zustand?icon=github&color=4ab8a1" />
+### zustand -- React状态管理库 <GitHubStar repo="pmndrs/zustand" />
 
 相比于`Redux`: 
 
@@ -48,7 +48,7 @@ $ lz-string index.ts > test.txt
 
 ---
 
-### fake-indexeddb -- 用JS轻松操作 IndexedDB<img src="https://badgen.net/github/stars/dumbmatter/fakeIndexedDB?icon=github&color=4ab8a1" />
+### fake-indexeddb -- 用JS轻松操作 IndexedDB <GitHubStar repo="dumbmatter/fakeIndexedDB" />
 
 ```ts
 import "fake-indexeddb/auto"
@@ -71,7 +71,7 @@ request.onupgradeneeded = function () {
 
 ---
 
-### stitches -- CSS-in-js 方案（React）<img src="https://badgen.net/github/stars/modulz/stitches?icon=github&color=4ab8a1" />
+### stitches -- CSS-in-js 方案（React）<GitHubStar repo="modulz/stitches" />
 
 有着非常灵活的`CSS`配置，在继承、主题、全局场景下支持很好，适用于`CSS属性`切换频率高的项目
 
@@ -90,7 +90,7 @@ const Button = styled('button', {
 
 ---
 
-### Radix-ui -- 交互体验极佳的react的UI框架<img src="https://badgen.net/github/stars/radix-ui/primitives?icon=github&color=4ab8a1" />
+### Radix-ui -- 交互体验极佳的react的UI框架 <GitHubStar repo="radix-ui/primitives" />
 
 支持键盘导航、焦点管理、屏幕阅读器测试。支持**鼠标右键下拉菜单**，原生推荐单组件使用：
 
@@ -103,7 +103,7 @@ $ npm install @radix-ui/react-hover-card
 
 ---
 
-### fuite -- 检测内存泄露工具<img src="https://badgen.net/github/stars/nolanlawson/fuite?icon=github&color=4ab8a1" />
+### fuite -- 检测内存泄露工具 <GitHubStar repo="nolanlawson/fuite" />
 
 原理：通过使用`Puppeteer`启动`Chrome`，模拟点击页面上的各个链接，再返回，检测内存大小的变化
 
@@ -116,7 +116,7 @@ $ fuite https://www.baidu.com
 
 ---
 
-### caxa -- 将js脚本打包成exe程序<img src="https://badgen.net/github/stars/leafac/caxa?icon=github&color=4ab8a1" />
+### caxa -- 将js脚本打包成exe程序 <GitHubStar repo="leafac/caxa" />
 
 示例：在`src`文件夹下，新建`index.js`，编写内容后执行：
 
@@ -131,7 +131,7 @@ $ caxa --input "./src" --output "hello.exe" -- "{{caxa}}/node_modules/.bin/node"
 
 ---
 
-### pkg -- 将js脚本跨平台打包（windows、mac、linux）<img src="https://badgen.net/github/stars/vercel/pkg?icon=github&color=4ab8a1" />
+### pkg -- 将js脚本跨平台打包（windows、mac、linux）<GitHubStar repo="vercel/pkg" />
 
 执行：
 

@@ -10,6 +10,7 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "jsx": "preserve",
     "forceConsistentCasingInFileNames": true,
     "types": ["vite/client", "vite-plugin-pages/client"],
     "paths": {
