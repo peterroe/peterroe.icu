@@ -31,6 +31,9 @@ import { isDark } from '/~/logics'
         <router-link to="/tools" title="Tools" class="lt-md:hidden">
           <span class="lt-md:hidden">Tools</span>
         </router-link>
+        <router-link to="/quickFind" title="Find">
+          <CarbonLightning />
+        </router-link>
         <router-link to="/bookmarks" title="Bookmarks" class="lt-md:hidden">
           <ri-bookmark-line />
         </router-link>

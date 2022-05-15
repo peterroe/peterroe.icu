@@ -57,7 +57,7 @@ lists:
   - title: 长足的信念，驱动着你的内心
     date: '2022-04-03'
     img: https://i.pinimg.com/474x/0c/54/ac/0c54ac84de341dab1465b2dbeebf42c7.jpg
-  - title: 我所理解的生活就是和喜欢的一切在一起
+  - title: 时光会把你雕刻成你应有的样子
     date: '2022-04-12'
     img: https://i.pinimg.com/736x/1b/3c/48/1b3c48a630f8a46b5e24bdf17554eda9.jpg
   - title: 天道酬勤
@@ -66,6 +66,9 @@ lists:
   - title: 永远年轻，永远热泪盈眶
     date: '2022-04-27'
     img: https://i.pinimg.com/474x/53/a4/7b/53a47b71225ac6115265da6c2301ff92.jpg
+  - title: 真正走掉那次，关门声最小
+    date: '2022-05-15'
+    img: https://i.pinimg.com/474x/47/a3/15/47a315a4d8dbea1992e97062fd1f285b.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
