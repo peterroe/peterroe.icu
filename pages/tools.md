@@ -37,14 +37,6 @@ projects:
       link: 'https://github.com/peterroe/docusaurus-plugin-usevue'
       desc: 'A plugin to use vue-component in docusaurus.'
       icon: 'i-mdi-react'
-    - name: 'terser-loader'
-      link: 'https://github.com/peterroe/terser-loader'
-      desc: 'a loader of webpack to remove console.log.'
-      icon: 'i-mdi-screw-machine-round-top'
-    - name: 'count-webpack-plugin'
-      link: 'https://github.com/peterroe/count-webpack-plugin'
-      desc: 'Count the number of chars in file.'
-      icon: 'i-zondicons-plugin'
   
   Scaffolds:
     - name: 'create-js-lib'

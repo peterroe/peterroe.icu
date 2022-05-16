@@ -7,9 +7,91 @@ subtitle: npm packages
 
 Gather some npm packages
 
+### TDD ---> 一些测试框架
+
+<GitHubLink repo="avajs/ava" /> <GitHubStar repo="avajs/ava" />
+
+<GitHubLink repo="facebook/jest" /> <GitHubStar repo="facebook/jest" />
+
+<GitHubLink repo="mochajs/mocha" /> <GitHubStar repo="mochajs/mocha" />
+
+<GitHubLink repo="substack/tape" /> <GitHubStar repo="substack/tape" />
+
+<GitHubLink repo="lukeed/uvu" /> <GitHubStar repo="lukeed/uvu" />
+
+```shell
+~> "ava"   took   594ms  (  ???  )
+~> "jest"  took   962ms  (356  ms)
+~> "mocha" took   209ms  (  4  ms)
+~> "tape"  took   122ms  (  ???  )
+~> "uvu"   took    72ms  (  1.3ms)
+```
+
+
+---
+
+### zod ---> 类型校验和提示 <GitHubStar repo="colinhacks/zod" />
+
+像正则表达式的作用，但写起来要轻松许多，校验支持也更加丰富，而且更简单。
+
+```ts
+import { z } from 'zod'
+
+const mySchema = z.string({
+  invalid_type_error: 'name必须是字符串',
+})
+
+mySchema.parse('123')  // '123'
+mySchema.parse(123)  // throw Error
+
+mySchema.safeParse('123') // { success: true, data: '123' }
+mySchema.safeParse(123); // => { success: false; error: ZodError }
+```
+
+地址：<GitHubLink repo="colinhacks/zod" />
+
+相似项目：<GitHubLink repo="chaijs/chai" />
+
+---
+
+### pretty-bytes ---> 字节格式化处理 <GitHubStar repo="sindresorhus/pretty-bytes" />
+
+```ts
+import prettyBytes from 'pretty-bytes';
+
+prettyBytes(1337);
+//=> '1.34 kB'
+
+prettyBytes(100);
+//=> '100 B'
+```
+
+地址：<GitHubLink repo="sindresorhus/pretty-bytes" />
+
+---
+
+### tiny-glob ---> 高效的文件glob匹配 <GitHubStar repo="terkelg/tiny-glob" />
+
+
+```ts
+import glob from 'tiny-glob'
+
+(async() => {
+  let files = await glob('test/*/*.{js,md}');
+  console.log(files)
+  //=> [ 'test/README.md', 'test/webpack.config.js' ]
+})()
+```
+
+地址：<GitHubLink repo="terkelg/tiny-glob" />
+
+相似项目：<GitHubLink repo="mrmlnc/fast-glob" />
+
+---
+
 ### turborepo ---> monorepo脚手架 <GitHubStar repo="vercel/turborepo" />
 
-快速创建一个`monorepo`项目：
+快速创建一个基于`React`的`monorepo`项目：
 
 ```shell
 $ npx create-turbo@latest
