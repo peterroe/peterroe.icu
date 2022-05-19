@@ -1,11 +1,108 @@
 ---
 title: Packages
-subtitle: npm packages
+subtitle: Gather some npm packages
 ---
 
 [[toc]]
 
-Gather some npm packages
+### shiki ---> 语法高亮 <GitHubStar repo="shikijs/shiki" />
+
+```ts
+import shiki from 'shiki'
+
+shiki
+  .getHighlighter({
+    theme: 'nord'
+  })
+  .then(highlighter => {
+    console.log(highlighter.codeToHtml(`console.log('shiki');`, { lang: 'js' }))
+  })
+
+// <pre class="shiki" style="background-color: #2e3440"><code>
+//   <!-- Highlighted Code -->
+// </code></pre>
+```
+
+地址：<GitHubLink repo="shikijs/shiki" />
+
+---
+### del ---> glob匹配删除文件 <GitHubStar repo="sindresorhus/del" />
+
+```ts
+import del from 'del'
+
+(async () => {
+	const deletedFilePaths = await del(['temp/*.js', '!temp/unicorn.js']);
+	const deletedDirectoryPaths = await del(['temp', 'public']);
+
+	console.log('Deleted files:\n', deletedFilePaths.join('\n'));
+	console.log('\n\n');
+	console.log('Deleted directories:\n', deletedDirectoryPaths.join('\n'));
+})();
+```
+
+地址：<GitHubLink repo="sindresorhus/del" />
+
+---
+
+### showdown ---> HTML/Markdown转换器 <GitHubStar repo="showdownjs/showdown" />
+
+用`JavaScript`编写的双向`Markdown`到`HTML`到`Markdown`转换器
+
+```ts
+import showdown from 'showdown'
+
+var converter = new showdown.Converter(),
+    text      = '# hello, markdown!',
+    html      = converter.makeHtml(text);
+
+//=>  <h1 id="hellomarkdown">hello, markdown!</h1>
+
+```
+
+地址：<GitHubLink repo="showdownjs/showdown" />
+
+---
+
+### escape-goat ---> 实体符号转换 <GitHubStar repo="sindresorhus/escape-goat" />
+
+将部分符号转化为实体 
+
+```ts
+import { htmlEscape, htmlUnescape } from 'escape-goat'
+
+console.log(htmlEscape('Hello <em>World</em>'))
+//=> 'Hello &lt;em&gt;World&lt;/em&gt'
+
+const url = 'https://sindresorhus.com?x="🦄"';
+console.log(htmlEscape`<a href="${url}">Unicorn</a>`)
+//=> '<a href="https://sindresorhus.com?x=&quot;🦄&quot;">Unicorn</a>'
+
+```
+
+地址：<GitHubLink repo="sindresorhus/escape-goat" />
+
+---
+
+### open ---> 打开一切 <GitHubStar repo="sindresorhus/open" />
+
+```ts
+import open from 'open'
+
+await open('./dog.png') // 默认的图片查看器打开
+
+await open('./index.ts') // 默认的编辑器打开
+
+await open('https://peterroe.icu') // 默认浏览器打开网页
+
+await open('https://peterroe.icu', { app: { name: 'firefox' }) // firefox打开
+
+await open('xcode') // 打开一个软件
+```
+
+地址：<GitHubLink repo="sindresorhus/open" />
+
+---
 
 ### ufo ---> 功能丰富的URL处理 <GitHubStar repo="unjs/ufo" />
 
