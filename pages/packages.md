@@ -7,6 +7,52 @@ subtitle: npm packages
 
 Gather some npm packages
 
+### ufo ---> 功能丰富的URL处理 <GitHubStar repo="unjs/ufo" />
+
+用法多样，解决大多数`URL`处理问题。包括提取内容、替换内容、判断内容等。
+
+```ts
+import { parseURL, withQuery, ... } from 'ufo'
+
+// Result: { protocol: 'http:', auth: '', host: 'foo.com', pathname: '/foo', search: '?test=123', hash: '#token' }
+parseURL('http://foo.com/foo?test=123#token')
+
+// Result: /foo?page=a&token=secret
+withQuery('/foo?page=a', { token: 'secret' })
+
+// Result: { test: '123', unicode: '好' }
+getQuery('http://foo.com/foo?test=123&unicode=%E5%A5%BD')
+
+// Result: true
+isSamePath('/foo', '/foo/')
+
+// Result: http://example.com
+withHttp('https://example.com')
+```
+
+地址：<GitHubLink repo="unjs/ufo" />
+
+---
+
+### ohash ---> 轻便的内容哈希 <GitHubStar repo="unjs/ohash" />
+
+```ts
+import { hash, objectHash, murmurHash } from 'ohash'
+
+console.log(objectHash({ foo: 'bar'}))  //将对象转为稳定安全的哈希字符串
+// "object:1:string:3:foo:string:3:bar,"
+
+console.log(murmurHash('Hello World')) // 将字符串转为32位正整数
+// "2708020327"
+
+console.log(hash({ foo: 'bar'})) // 先objectHash ，后murmurHash
+// "2736179692"
+```
+
+地址：<GitHubLink repo="unjs/ohash" />
+
+---
+
 ### TDD ---> 一些测试框架
 
 <GitHubLink repo="avajs/ava" /> <GitHubStar repo="avajs/ava" />

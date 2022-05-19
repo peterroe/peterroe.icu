@@ -4,6 +4,26 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### CSS单行省略和多行省略
+
+```css
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+```
+
+```css
+{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*设置对齐模式*/
+  -webkit-line-clamp: 2; /*设置多行的行数*/
+}
+```
+
 ### Git清除缓存
 
 ```shell
