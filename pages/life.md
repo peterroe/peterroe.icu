@@ -69,6 +69,9 @@ lists:
   - title: 真正走掉那次，关门声最小
     date: '2022-05-15'
     img: https://i.pinimg.com/474x/47/a3/15/47a315a4d8dbea1992e97062fd1f285b.jpg
+  - title: 人生如逆旅，我亦是行人
+    date: '2022-05-19'
+    img: https://i.pinimg.com/474x/71/23/40/7123402f2ea679f08a09fa9dfae46c75.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
