@@ -5,6 +5,19 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### conventional-changelog-cli ---> 自动生成日志 <GitHubStar repo="conventional-changelog/conventional-changelog" />
+
+根据`git`记录，生成`CHANGELOG.md`日志
+
+```shell
+$ npm i conventional-changelog-cli -g
+$ conventional-changelog -p angular -i CHANGELOG.md -s
+```
+
+地址：<GitHubLink repo="conventional-changelog/conventional-changelog" />
+
+---
+
 ### csstype ---> 为css-in-js提供类型支持 <GitHubStar repo="frenic/csstype" />
 
 支持`ts`和`flowJs`写法，让`CSS`也拥有类型能力

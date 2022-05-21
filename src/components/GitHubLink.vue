@@ -9,6 +9,6 @@ defineProps<{ repo: string }>()
       class="opacity-50 ml-1"
       :href="`https://github.com/${repo}`"
       target="_blank"
-    >{{ repo.startsWith('peterroe/') ? repo.slice(6) : repo }}</a>
+    >{{ repo }}</a>
   </span>
 </template>
