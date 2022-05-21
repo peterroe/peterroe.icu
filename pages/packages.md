@@ -5,6 +5,118 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### debug ---> 埋点调试 <GitHubStar repo="debug-js/debug" />
+
+通过设置环境变量，灵活选择调试的模块
+
+```ts
+var a = require('debug')('worker:a')
+  , b = require('debug')('worker:b');
+
+function work() {
+  a('doing lots of uninteresting work');
+  setTimeout(work, Math.random() * 1000);
+}
+
+work();
+
+function workb() {
+  b('doing some work');
+  setTimeout(workb, Math.random() * 2000);
+}
+
+workb();
+```
+
+```shell
+$ DEBUG=worker:* node index.js
+$ DEBUG=worker:b node index.js
+```
+
+地址：<GitHubLink repo="debug-js/debug" />
+
+---
+
+### typedoc ---> ts类型文档生成器 <GitHubStar repo="TypeStrong/typedoc" />
+
+为你的导出的`ts`类型生成文档
+
+```shell
+$ npm install typedoc
+$ typedoc src/index.ts
+```
+
+地址：<GitHubLink repo="TypeStrong/typedoc" />
+
+---
+
+### dotenv --->  添加环境变量到node进程中 <GitHubStar repo="motdotla/dotenv" />
+
+```shell
+# .env
+S3_BUCKET="YOURS3BUCKET"
+SECRET_KEY="YOURSECRETKEYGOESHERE"
+```
+
+```ts
+import 'dotenv/config'
+console.log(process.env)
+
+/*
+  {
+    ...
+    S3_BUCKET="YOURS3BUCKET"
+    SECRET_KEY="YOURSECRETKEYGOESHERE"
+  }
+*/
+```
+
+地址：<GitHubLink repo="motdotla/dotenv" />
+
+---
+
+### minimist --->  解析命令行参数 <GitHubStar repo="substack/minimist" />
+
+```ts
+var argv = require('minimist')(process.argv.slice(2));
+console.log(argv);
+```
+
+```shell
+$ node example/parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
+{ _: [ 'foo', 'bar', 'baz' ],
+  x: 3,
+  y: 4,
+  n: 5,
+  a: true,
+  b: true,
+  c: true,
+  beep: 'boop' }
+```
+
+地址：<GitHubLink repo="substack/minimist" />
+
+---
+
+### markdown-it ---> 经典markdown解析器 <GitHubStar repo="markdown-it/markdown-it" />
+
+```ts
+// 基本用法
+var MarkdownIt = require('markdown-it'),
+    md = new MarkdownIt();
+var result = md.render('# markdown-it rulezz!');
+
+// 丰富的插件机制
+var md = require('markdown-it')()
+  .use(plugin1)
+  .use(plugin2, opts, ...)
+  .use(plugin3);
+```
+
+地址：<GitHubLink repo="markdown-it/markdown-it" />
+
+---
+
 ### conventional-changelog-cli ---> 自动生成日志 <GitHubStar repo="conventional-changelog/conventional-changelog" />
 
 根据`git`记录，生成`CHANGELOG.md`日志
@@ -327,7 +439,7 @@ import glob from 'tiny-glob'
 
 地址：<GitHubLink repo="terkelg/tiny-glob" />
 
-相似项目：<GitHubLink repo="mrmlnc/fast-glob" />
+相似项目：<GitHubLink repo="mrmlnc/fast-glob" />、<GitHubLink repo="sindresorhus/globby" /> 、<GitHubLink repo="isaacs/node-glob" />、<GitHubLink repo="isaacs/minimatch" />
 
 ---
 
