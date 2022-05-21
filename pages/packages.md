@@ -5,6 +5,91 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### csstype ---> 为css-in-js提供类型支持 <GitHubStar repo="frenic/csstype" />
+
+支持`ts`和`flowJs`写法，让`CSS`也拥有类型能力
+
+```ts
+import type * as CSS from 'csstype';
+
+const style: CSS.Properties = {
+  colour: 'white', // Type error on property
+  textAlign: 'middle', // Type error on value
+};
+
+let button = document.createElement('button');
+
+Object.assign(button.style, style);
+```
+
+地址：<GitHubLink repo="frenic/csstype" />
+
+---
+
+### unified ---> markdown语法解析接口 <GitHubStar repo="unifiedjs/unified" />
+
+通过语法树解析、检查、转换和序列化内容的接口
+
+```ts
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
+import rehypeDocument from 'rehype-document'
+import rehypeFormat from 'rehype-format'
+import rehypeStringify from 'rehype-stringify'
+import {reporter} from 'vfile-reporter'
+
+unified()
+  .use(remarkParse)
+  .use(remarkRehype)
+  .use(rehypeDocument, {title: '👋🌍'})
+  .use(rehypeFormat)
+  .use(rehypeStringify)
+  .process('# Hello world!')
+  .then(
+    (file) => {
+      console.error(reporter(file))
+      console.log(String(file))
+    },
+    (error) => {
+      // Handle your error here!
+      throw error
+    }
+  )
+
+/*
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>👋🌍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1>Hello world!</h1>
+  </body>
+</html>
+ */
+```
+
+地址：<GitHubLink repo="unifiedjs/unified" />
+
+---
+
+### marked ---> 高效的Markdown解析器 <GitHubStar repo="markedjs/marked" />
+
+```ts
+import * as marked from 'marked'
+
+console.log(marked.parse('## hello world'))
+
+// <h2 id="hello-world">hello world</h2>
+```
+
+地址：<GitHubLink repo="markedjs/marked" />
+
+---
+
 ### shiki ---> 语法高亮 <GitHubStar repo="shikijs/shiki" />
 
 ```ts
@@ -26,6 +111,7 @@ shiki
 地址：<GitHubLink repo="shikijs/shiki" />
 
 ---
+
 ### del ---> glob匹配删除文件 <GitHubStar repo="sindresorhus/del" />
 
 ```ts
