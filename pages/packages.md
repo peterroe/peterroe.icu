@@ -5,6 +5,165 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### data-fns ---> 日期操作库 <GitHubStar repo="date-fns/date-fns" />
+
+操作包括，给日期做加减法、找出最靠近某个日期的日期等等，还有最重要的支持`i18n`的格式化：
+
+```js
+const { formatDistance, subDays } = require('date-fns')
+const { zhCN }  = require('date-fns/locale')
+
+console.log(formatDistance(new Date('2022-05-26'), new Date(), { addSuffix: true, locale: zhCN }))
+// 大约 16 小时前
+
+console.log(formatDistance(new Date('2022-05-20'), new Date(), { addSuffix: true, locale: zhCN }))
+// 7 天前
+```
+
+地址：<GitHubLink repo="date-fns/date-fns" />
+
+---
+
+### deepmerge ---> 深度合并对象 <GitHubStar repo="TehShrike/deepmerge" />
+
+`Object.assign`只能合并一级对象，而`deepmerge`可以合并多级对象。
+
+```ts
+const x = {
+	foo: { bar: 3 },
+	array: [{ does: 'work', too: [ 1, 2, 3 ]}]
+}
+
+const y = {
+	foo: { baz: 4 },
+	quux: 5,
+	array: [{ does: 'work', too: [ 4, 5, 6 ] }, { really: 'yes' }]
+}
+
+const output = {
+	foo: { bar: 3, baz: 4},
+	array: [{ does: 'work',too: [ 1, 2, 3 ] }, { does: 'work', too: [ 4, 5, 6 ] }, { really: 'yes' }],
+	quux: 5
+}
+
+merge(x, y) // => output
+
+Object.assign(x, y) // => 
+/*
+{
+  foo: { baz: 4 },
+  array: [{ does: 'work', too: [4, 5, 6]}, { really: 'yes' }],
+  quux: 5
+}
+*/
+```
+
+地址：<GitHubLink repo="TehShrike/deepmerge" />
+
+---
+ 
+### joi ---> 精确地描述数据与预期的差异 <GitHubStar repo="sideway/joi" />
+
+通过配置标准数据的预定格式，给出与测试数据不一致的描述
+
+```ts
+import Joi from 'joi'
+
+const schema = Joi.object({
+  username: Joi.string().alphanum().min(3).max(30).required(),
+
+  password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
+
+  repeat_password: Joi.ref('password'),
+
+  access_token: [ Joi.string(), Joi.number()],
+
+  birth_year: Joi.number().integer().min(1900).max(2013),
+
+  email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
+
+}).with('username', 'birth_year')
+  .xor('password', 'access_token')
+  .with('password', 'repeat_password');
+
+
+console.log(schema.validate({ username: 'abc', birth_year: 1994 }))
+/*
+{
+  value: { username: 'abc', birth_year: 1994 },
+  error: [Error [ValidationError]: "value" must contain at least one of [password, access_token]] {
+    _original: { username: 'abc', birth_year: 1994 },
+    details: [ [Object] ]
+  }
+}
+*/
+```
+
+地址：<GitHubLink repo="sideway/joi" />
+
+---
+
+### sharp ---> 高性能NodeJs图片加工 <GitHubStar repo="lovell/sharp" />
+
+典型用例是将常见格式的大图像转换为更小的、对 Web 友好的、不同尺寸的 JPEG、PNG、WebP、GIF 和 AVIF 图像
+
+```ts
+const sharp = require('sharp')
+
+sharp('test.svg')
+  .rotate()
+  .resize(200)
+  .jpeg({ mozjpeg: true })
+  .toFile('hh.jpeg')
+```
+
+地址：<GitHubLink repo="lovell/sharp" />
+
+---
+
+### trpc ---> 配合zod，提供端到端类型安全的API <GitHubStar repo="trpc/trpc" />
+
+<img class="!mx-0 shadow" src="https://camo.githubusercontent.com/807db37b3325f74c704760be6dbf76f652b6fe50b1b83fd32eba7f2c5780f985/68747470733a2f2f73746f726167652e676f6f676c65617069732e636f6d2f747270632f747270636769662e676966" />
+
+地址：<GitHubLink repo="trpc/trpc" />
+
+---
+
+### sanitizi-html ---> 验证属于白名单的html元素  <GitHubStar repo="apostrophecms/sanitize-html" />
+
+验证`html`元素或者属性的结构是否是预期的，或者转化为预期的结构
+
+```ts
+const dirty = 'some really tacky HTML';
+
+const clean = sanitizeHtml(dirty, {
+  allowedTags: [ 'b', 'i', 'em', 'strong', 'a' ],
+  allowedAttributes: {
+    'a': [ 'href' ]
+  },
+  allowedIframeHostnames: ['www.youtube.com'],
+  allowedStyles: {
+    '*': {
+      // Match HEX and RGB
+      'color': [/^#(0x)?[0-9a-f]+$/i, /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/],
+      'text-align': [/^left$/, /^right$/, /^center$/],
+      // Match any number with px, em, or %
+      'font-size': [/^\d+(?:px|em|%)$/]
+    },
+    'p': {
+      'font-size': [/^\d+rem$/]
+    }
+  },
+  transformTags: {
+    'ol': sanitizeHtml.simpleTransform('ul', {class: 'foo'}),
+  }
+});
+```
+
+地址：<GitHubLink repo="apostrophecms/sanitize-html" />
+
+---
+
 ### debug ---> 埋点调试 <GitHubStar repo="debug-js/debug" />
 
 通过设置环境变量，灵活选择调试的模块
