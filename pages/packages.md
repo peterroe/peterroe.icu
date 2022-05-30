@@ -5,9 +5,9 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
-### trash ---> 移动文件到回收站
+### trash ---> 移动文件到回收站 <GitHubStar repo="sindresorhus/trash" />
 
-不同于`rimraf/del`，`trash`只是将文件移动到回收站，而不是删除。 <GitHubStar repo="sindresorhus/trash" />
+不同于`rimraf/del`，`trash`只是将文件移动到回收站，而不是删除。
 
 ```ts
 import trash from 'trash';
