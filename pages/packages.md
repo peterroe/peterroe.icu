@@ -5,6 +5,47 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### trash ---> 移动文件到回收站
+
+不同于`rimraf/del`，`trash`只是将文件移动到回收站，而不是删除。 <GitHubStar repo="sindresorhus/trash" />
+
+```ts
+import trash from 'trash';
+
+await trash(['*.png', '!rainbow.png']);
+```
+
+地址：<GitHubLink repo="sindresorhus/trash" />
+
+---
+
+### cac ---> 命令行参数解析工具 <GitHubStar repo="cacjs/cac" />
+
+如果你想开发一款命令行工具，试试它
+
+```ts
+const cli = require('cac')()
+
+cli
+  .command('build <entry> [...otherFiles]', 'Build your app')
+  .option('--foo', 'Foo option')
+  .action((entry, otherFiles, options) => {
+    console.log(entry)
+    console.log(otherFiles)
+    console.log(options)
+  })
+
+cli.help()
+
+cli.parse()
+```
+
+<img src="https://user-images.githubusercontent.com/8784712/48979056-47125080-f0f0-11e8-9d8f-3219e0beb0ed.png" />
+
+地址：<GitHubLink repo="cacjs/cac" />
+
+---
+
 ### data-fns ---> 日期操作库 <GitHubStar repo="date-fns/date-fns" />
 
 操作包括，给日期做加减法、找出最靠近某个日期的日期等等，还有最重要的支持`i18n`的格式化：
