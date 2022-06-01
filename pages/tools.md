@@ -5,6 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: 'cli-starter'
+      link: 'https://github.com/peterroe/cli-starter'
+      desc: 'A command line tool template'
+      icon: 'i-icon-park-outline-command'
     - name: 'name-transform'
       link: 'https://github.com/peterroe/name-transform'
       desc: 'A tiny library for transforming names'
@@ -17,10 +21,6 @@ projects:
       link: 'https://github.com/peterroe/vue-img-lazy-tiny'
       desc: 'A Tiny img lazy load `vue directive`'
       icon: 'i-ion-images-outline'
-    - name: 'xtj'
-      link: 'https://github.com/peterroe/xtj'
-      desc: 'Convert xml to javascript object'
-      icon: 'i-mdi-xml'
 
   Units:
     - name: 'xtj'
@@ -51,6 +51,10 @@ projects:
       link: 'https://github.com/peterroe/vue-component-starter'
       desc: 'typescript starter template.'
       icon: 'i-teenyicons-typescript-solid'
+    - name: 'cli-starter'
+      link: 'https://github.com/peterroe/cli-starter'
+      desc: 'A command line tool template'
+      icon: 'i-icon-park-outline-command'
 
   Components:
     - name: Unge UI

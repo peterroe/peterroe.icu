@@ -479,6 +479,15 @@ var converter = new showdown.Converter(),
 
 将部分符号转化为实体 
 
+```txt
+& to &amp;
+< to &lt;
+> to &gt;
+" to &quot;
+' to &#x27;
+` to &#x60;
+```
+
 ```ts
 import { htmlEscape, htmlUnescape } from 'escape-goat'
 

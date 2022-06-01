@@ -6,7 +6,7 @@ title: Peter Roe
   <Plum/>
 </ClientOnly>
 
-Hey👋, I am Peter Roe, a front end developer. Working on [Rss-Reader](https://github.com/peterroe/Rss-Reader) currently.
+Hey👋, I am Peter Roe, a front end developer. Working on [tind](https://github.com/peterroe/tind) currently.
 
 I enjoy explore everything around coding. Dreaming up ideas and making them come true is where my passion lies. I will take some blogs or notes on this website🖖.
 
