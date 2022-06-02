@@ -5,6 +5,65 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### happy-dom ---> 更加轻量和快速的DOM环境 <GitHubStar repo="capricorn86/happy-dom" />
+
+相比于`JSDOM`，更加轻量和快速，常用于测试框架、`SSR`框架中
+
+```ts
+import { Window } from 'happy-dom';
+
+const window = new Window();
+const document = window.document;
+
+document.body.innerHTML = '<div class="container"></div>';
+
+const container = document.querySelector('.container');
+const button = document.createElement('button');
+
+container.appendChild(button);
+
+// Outputs "<div class="container"><button></button></div>"
+console.log(document.body.innerHTML);
+```
+
+地址：<GitHubLink repo="capricorn86/happy-dom" />
+
+---
+
+### jsdom ---> 在NodeJs提供DOM环境 <GitHubStar repo="jsdom/jsdom" />
+
+属于比较早期的库，很可惜不支持`esm`
+
+```js
+const { JSDOM } = require('jsdom');
+
+const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
+console.log(dom.window.document.querySelector("p").textContent); // "Hello world"
+```
+
+地址：<GitHubLink repo="jsdom/jsdom" />
+
+---
+
+### tilg ---> 一个调试React组件的钩子 <GitHubStar repo="shuding/tilg" />
+
+会在控制太打印出相关的信息，包括`props、children、lifecycle`等。
+
+```ts
+import useTilg from 'tilg'
+
+function MyButton() {
+  useTilg()
+  return <button>Click me</button>
+}
+```
+
+<img src="https://github.com/shuding/tilg/raw/main/screenshots/life-cycle-events.png" />
+
+地址：<GitHubLink repo="shuding/tilg" />
+
+---
+
 ### trash ---> 移动文件到回收站 <GitHubStar repo="sindresorhus/trash" />
 
 不同于`rimraf/del`，`trash`只是将文件移动到回收站，而不是删除。
