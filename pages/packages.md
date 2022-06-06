@@ -5,6 +5,156 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### mem ---> 缓存结果 <GitHubStar repo="sindresorhus/mem" />
+
+缓存相同的输入，以便更快的输出
+
+```ts
+import mem from 'mem';
+import got from 'got';
+import delay from 'delay';
+
+const memGot = mem(got, {maxAge: 1000});
+
+await memGot('https://sindresorhus.com');
+
+// This call is cached
+await memGot('https://sindresorhus.com');
+
+await delay(2000);
+
+// This call is not cached as the cache has expired
+await memGot('https://sindresorhus.com');
+```
+
+地址：<GitHubLink repo="sindresorhus/mem" />
+
+---
+
+### nock ---> 基于NodeJs的http服务模拟 <GitHubStar repo="nock/nock" />
+
+```js
+import got from 'got';
+import nock from 'nock';
+
+const scope = nock('https://sindresorhus.com')
+	.get('/')
+	.reply(500, 'Internal server error')
+	.persist();
+
+try {
+	await got('https://sindresorhus.com')
+} catch (error) {
+	console.log(error.response.body);
+	//=> 'Internal server error'
+
+	console.log(error.response.retryCount);
+	//=> 2
+}
+
+scope.persist(false);
+```
+
+地址：<GitHubLink repo="nock/nock" />
+
+---
+
+### got ---> 友好的NodeJs的http请求库 <GitHubStar repo="sindresorhus/got" />
+
+用法类似`axios`，但是又很多特性：
+
+* http2支持
+* 代理
+* 重发
+* Cache
+* Unix域Socket
+* 测试
+* Stream
+* ...
+
+地址：<GitHubLink repo="sindresorhus/got" />
+
+---
+
+### dom-chef ---> 使用JSX构建DOM <GitHubStar repo="vadimdemedes/dom-chef" />
+
+使用需要进行配置
+
+```jsx
+//xx.jsx
+import {h} from 'dom-chef';
+
+const handleClick = e => {
+	// <button> was clicked
+};
+
+const el = (
+	<div className="header">
+		<button className="btn-link" onClick={handleClick}>
+			Download
+		</button>
+	</div>
+);
+
+document.body.appendChild(el);
+```
+```js
+//babel.config.js
+const plugins = [
+	[
+		'@babel/plugin-transform-react-jsx',
+		{
+			pragma: 'h',
+			pragmaFrag: 'DocumentFragment',
+		},
+	],
+];
+```
+```json
+//tsconfig.json
+{
+	"compilerOptions": {
+		"jsxFactory": "h",
+		"jsxFragmentFactory": "DocumentFragment"
+	}
+}
+```
+
+当然，也可以默认导出`React`的方式来配置
+
+```ts
+import React from 'dom-chef';
+```
+
+地址：<GitHubLink repo="vadimdemedes/dom-chef" />
+
+---
+
+### delegate-it ---> 轻量的事件代理库 <GitHubStar repo="fregante/delegate-it" />
+
+假设有如下`DOM`元素：
+
+```html
+<div id="app">
+  <p></p>
+  <p></p>
+  <p></p>
+  <!-- ... -->
+<div>
+```
+
+当我们需要在`p`上触发一个事件，显然由于`p`元素过多，性能不佳。因此可以将事件代理在`div`上：
+
+```ts
+delegate('#app', 'p', 'click', function(e) {
+    console.log(e.delegateTarget);
+}, false);
+```
+
+地址：<GitHubLink repo="fregante/delegate-it" />
+
+---
+
 ### trash ---> 移动文件到回收站 <GitHubStar repo="sindresorhus/trash" />
 
 不同于`rimraf/del`，`trash`只是将文件移动到回收站，而不是删除。
@@ -702,6 +852,8 @@ $ lz-string index.ts > test.txt
 * [可以暂时通知组件（不导致渲染）](https://github.com/pmndrs/zustand#transient-updates-for-often-occuring-state-changes)
 
 地址：<GitHubLink repo="pmndrs/zustand" />
+
+相似仓库：<GitHubLink repo="pmndrs/jotai" />
 
 ---
 
