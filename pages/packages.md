@@ -5,6 +5,29 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### nijia-keys <GitHubStar repo="ssleptsov/ninja-keys" />
+
+为网站添加快捷键
+
+```html
+<template>
+  <ninja-keys
+    @selected="selected"
+    @change="change"
+    :data="hotkeys"
+  ></ninja-keys>
+</template>
+
+<script setup>
+import "ninja-keys";
+// data etc..
+</script>
+```
+
+地址：<GitHubLink repo="ssleptsov/ninja-keys" />
+
+---
+
 ### mem ---> 缓存结果 <GitHubStar repo="sindresorhus/mem" />
 
 缓存相同的输入，以便更快的输出
