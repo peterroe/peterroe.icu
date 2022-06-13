@@ -5,6 +5,39 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### qnm ---> 查看依赖的详情信息 <GitHubStar repo="ranyitz/qnm" />
+
+```shell
+$ npm i -g qnm
+$ qnm lodash
+lodash 4.17.21 ↰ 2 days ago
+├── 4.17.21 ✓
+├─┬ cli-table2
+│ └── 3.10.1 ⇡ 1 year ago
+└─┬ karma
+  └── 3.10.1 ⇡ 1 year ago
+```
+
+地址：<GitHubLink repo="ranyitz/qnm" />
+
+---
+
+### shx ---> node的便携式shell命令 <GitHubStar repo="shelljs/shx" />
+
+无关平台，执行shell命令，只需要加上前缀，例如：
+
+```shell
+$ npm install -g shx
+$ shx rm -rf node_modules
+$ shx cp a.txt b.txt
+```
+
+适合在没有`shell`的环境，如`windows`上使用
+
+地址：<GitHubLink repo="shelljs/shx" />
+
+---
+
 ### playwright ---> e2e测试框架 <GitHubStar repo="microsoft/playwright" />
 
 一些特性：
