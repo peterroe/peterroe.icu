@@ -5,7 +5,39 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
-### nijia-keys <GitHubStar repo="ssleptsov/ninja-keys" />
+### playwright ---> e2e测试框架 <GitHubStar repo="microsoft/playwright" />
+
+一些特性：
+
+* 支持chromium、firefox、webkit
+* 页面截图
+* 模拟手机型号与地理位置
+* 获取浏览器上下文信息
+* 拦截网络请求
+
+```ts
+import { test, devices } from '@playwright/test';
+
+test.use({
+  ...devices['iPhone 13 Pro'],
+  locale: 'en-US',
+  geolocation: { longitude: 12.492507, latitude: 41.889938 },
+  permissions: ['geolocation'],
+})
+
+test('Mobile and geolocation', async ({ page }) => {
+  await page.goto('https://maps.google.com');
+  await page.locator('text="Your location"').click();
+  await page.waitForRequest(/.*preview\/pwa/);
+  await page.screenshot({ path: 'colosseum-iphone.png' });
+});
+```
+
+地址：<GitHubLink repo="microsoft/playwright" />
+
+---
+
+### nijia-keys ---> 为网站添加快捷键 <GitHubStar repo="ssleptsov/ninja-keys" />
 
 为网站添加快捷键
 
