@@ -4,6 +4,18 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### 删除远程分支
+
+```
+$ git push origin --delete main
+```
+
+### 三个很有用的git命令
+
+* git grep <关键词> - 搜索含有指定关键词的文件
+* git blame <文件名> - 查看指定文件每一行的提交人和提交时间
+* git log -p <文件名> - 查看指定文件的每一次提交和改动
+
 ### CSS单行省略和多行省略
 
 ```css
