@@ -362,6 +362,21 @@ console.log(formatDistance(new Date('2022-05-20'), new Date(), { addSuffix: true
 
 ---
 
+### defu ---> 深度合并对象 <GitHubStar repo="unjs/defu" />
+
+和`deepmerge`不同的是会保留原对象的属性，而不是覆盖它们。
+
+```ts
+import { defu } from 'defu'
+
+console.log(defu({ 'a': { 'b': 2 } }, { 'a': { 'b': 1, 'c': 3 } }))
+// => { a: { b: 2, c: 3 } }
+```
+
+地址：<GitHubLink repo="unjs/defu" />
+
+---
+ 
 ### deepmerge ---> 深度合并对象 <GitHubStar repo="TehShrike/deepmerge" />
 
 `Object.assign`只能合并一级对象，而`deepmerge`可以合并多级对象。
