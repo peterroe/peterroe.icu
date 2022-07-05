@@ -1,6 +1,6 @@
 ---
 title: split技巧
-date: 2022-06-02
+date: 2022-06-22
 duration: 2min
 ---
 
@@ -13,13 +13,12 @@ duration: 2min
 ```html
 <script setup>
   const handleKeyWordHighlight = (before, keyWord) => {
-    
     const before = 'aabbccbb'  //原始字符串
-  const keyWord = 'bb'       //希望高亮的文字
-  const after = 
+    const keyWord = 'bb'       //希望高亮的文字
+    const after = before
   }
 </script>
 <div>
-  <span>{{}}</span>
+  <span v-ht>{{}}</span>
 <div>
 ```

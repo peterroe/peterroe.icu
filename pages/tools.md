@@ -5,6 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: 'tind'
+      link: 'https://github.com/peterroe/tind'
+      desc: 'Password manager for the terminal'
+      icon: 'i-carbon-password'
     - name: 'cli-starter'
       link: 'https://github.com/peterroe/cli-starter'
       desc: 'A command line tool template'
@@ -17,10 +21,6 @@ projects:
       link: 'https://github.com/peterroe/uspin'
       desc: 'A vue3 component that spins on load'
       icon: 'i-ion-sync-outline'
-    - name: 'vue-img-lazy-tiny'
-      link: 'https://github.com/peterroe/vue-img-lazy-tiny'
-      desc: 'A Tiny img lazy load `vue directive`'
-      icon: 'i-ion-images-outline'
 
   Units:
     - name: 'xtj'
@@ -78,9 +78,11 @@ projects:
       desc: 'Let the numbers transition when it change.'
       icon: 'i-mdi-transition'
 
-  
-
-  Script:
+  Cli:
+    - name: 'tind'
+      link: 'https://github.com/peterroe/tind'
+      desc: 'Password manager for the terminal'
+      icon: 'i-carbon-password'
     - name: 'login-hnust-auto'
       link: 'https://github.com/peterroe/login-hnust-auto'
       desc: 'Automatically log in by compiling the generated `.exe` file'

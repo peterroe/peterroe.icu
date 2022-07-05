@@ -6,7 +6,7 @@ subtitle: Tips and tricks for quick finding
 
 ### 删除远程分支
 
-```
+```shell
 $ git push origin --delete main
 ```
 

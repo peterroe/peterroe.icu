@@ -5,6 +5,30 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### canvas-confetti ---> Canvas礼花特效  <GitHubStar repo="catdad/canvas-confetti" />
+
+想为你的网站添加礼花特效？试试它～
+
+```ts
+var myCanvas = document.createElement('canvas');
+document.body.appendChild(myCanvas);
+
+var myConfetti = confetti.create(myCanvas, {
+  resize: true,
+  useWorker: true
+});
+myConfetti({
+  particleCount: 100,
+  spread: 160
+  // any other options from the global
+  // confetti function
+});
+```
+
+地址：<GitHubLink repo="catdad/canvas-confetti" />
+
+---
+
 ### happy-dom ---> 更加轻量和快速的DOM环境 <GitHubStar repo="capricorn86/happy-dom" />
 
 相比于`JSDOM`，更加轻量和快速，常用于测试框架、`SSR`框架中
