@@ -73,7 +73,7 @@ lists:
     date: '2022-05-19'
     img: https://i.pinimg.com/474x/71/23/40/7123402f2ea679f08a09fa9dfae46c75.jpg
   - title: 道阻且长,行则将至
-    data: '2022-07-06'
+    date: '2022-07-06'
     img: https://i.pinimg.com/474x/0f/71/0b/0f710bb81c2ff1aff8976239c18acfd2.jpg
 ---
 
