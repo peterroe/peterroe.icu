@@ -6,9 +6,11 @@ title: Peter Roe
   <Plum/>
 </ClientOnly>
 
-Hey👋, I am Peter Roe, a front end developer. Working on [tind](https://github.com/peterroe/tind) currently.
+Hey👋, I am Peter Roe, a software developer.
 
-I enjoy explore everything around coding. Dreaming up ideas and making them come true is where my passion lies. I will take some blogs or notes on this website🖖.
+I enjoy explore everything around coding. Dreaming up ideas and making them come true is where my passion lies.
+
+Welcome to share your thoughts with me😜.
 
 ***
 
