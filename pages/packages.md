@@ -5,6 +5,26 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### depark ---> 通过PangRank算法计算最重要文件  <GitHubStar repo="codemix/deprank" />
+
+```shell
+$ npx deprank ./fixtures
+```
+
+```shell
+| Filename               | Lines | Dependents | PageRank |
+----------------------------------------------------------
+| fixtures/core.js       | 3     | 1          | 0.284098 |
+| fixtures/utils.js      | 4     | 3          | 0.268437 |
+| fixtures/user/user.js  | 4     | 1          | 0.132253 |
+| fixtures/todo.js       | 6     | 1          | 0.089796 |
+| fixtures/user/index.js | 1     | 1          | 0.089796 |
+| fixtures/concepts.js   | 4     | 1          | 0.079694 |
+| fixtures/index.js      | 4     | 0          | 0.055926 |
+```
+
+地址：<GitHubLink repo="codemix/deprank" />
+
 ### canvas-confetti ---> Canvas礼花特效  <GitHubStar repo="catdad/canvas-confetti" />
 
 想为你的网站添加礼花特效？试试它～
