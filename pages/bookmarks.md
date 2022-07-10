@@ -34,6 +34,12 @@ subtitle: Some of my favorite websites/tools with excellent design and UX that I
 - [RegExper](https://regexper.com/) - Regex Visualizer
 - [Bundle Phobia](https://bundlephobia.com/) - Check your npm package size
 - [transform](https://transform.tools/) - Collection of code transformers
+- [diffchecker](https://www.diffchecker.com/) - Compare text to find the difference between two text files.
+
+### Code Snippets
+
+- [snappify](https://snappify.io/) - Unleash the power of our Editor!
+- [Carbon](https://carbon.now.sh/) - Carbon is the easiest way to create and share beautiful images of your source code.
 
 #### CSS
 
