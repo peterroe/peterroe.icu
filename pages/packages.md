@@ -5,6 +5,21 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### chokidar ---> 监听文件修改  <GitHubStar repo="paulmillr/chokidar" />
+
+基于`NodeJs`的`fs.watch`，但是有着更多的优点
+
+```js
+const chokidar = require('chokidar');
+
+// One-liner for current directory
+chokidar.watch('.').on('all', (event, path) => {
+  console.log(event, path);
+});
+```
+
+地址：<GitHubLink repo="paulmillr/chokidar" />
+
 ### depark ---> 通过PangRank算法计算最重要文件  <GitHubStar repo="codemix/deprank" />
 
 ```shell
@@ -986,6 +1001,8 @@ prettyBytes(100);
 ```
 
 地址：<GitHubLink repo="sindresorhus/pretty-bytes" />
+
+相似仓库：<GitHubLink repo="avoidwork/filesize.js" />
 
 ---
 
