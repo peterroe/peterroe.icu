@@ -75,6 +75,9 @@ lists:
   - title: 道阻且长,行则将至
     date: '2022-07-06'
     img: https://i.pinimg.com/474x/0f/71/0b/0f710bb81c2ff1aff8976239c18acfd2.jpg
+  - title: 很多事只是最初看起来有意义，但经过多次重复就慢慢失去了意义
+    date: '2022-07-15'
+    img: https://i.pinimg.com/474x/57/0e/c8/570ec82942b82f6dacb8da223630c6b1.jpg
 ---
 
 <LifeList :lists="frontmatter.lists"/>
