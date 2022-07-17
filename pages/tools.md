@@ -5,6 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: renames
+      link: 'https://github.com/peterroe/renames'
+      icon: 'i-carbon-folder'
+      desc:  'A good helper for batch renaming files.'
     - name: 'tind'
       link: 'https://github.com/peterroe/tind'
       desc: 'Password manager for the terminal'
@@ -17,10 +21,6 @@ projects:
       link: 'https://github.com/peterroe/name-transform'
       desc: 'A tiny library for transforming names'
       icon: 'i-icon-park-outline-transform'
-    - name: 'uspin'
-      link: 'https://github.com/peterroe/uspin'
-      desc: 'A vue3 component that spins on load'
-      icon: 'i-ion-sync-outline'
 
   Units:
     - name: 'xtj'
@@ -79,6 +79,10 @@ projects:
       icon: 'i-mdi-transition'
 
   Cli:
+    - name: renames
+      link: 'https://github.com/peterroe/renames'
+      icon: 'i-carbon-folder'
+      desc:  'A good helper for batch renaming files.'
     - name: 'tind'
       link: 'https://github.com/peterroe/tind'
       desc: 'Password manager for the terminal'
