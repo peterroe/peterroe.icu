@@ -193,6 +193,16 @@ Array.from('my nameIsPeterroe'.matchAll(/\s(\w)|[A-Z]/g))
 
 > 由于字符串和正则密不可分的关系，因此有的时候他们能够兼容使用
 
+### String.prototype.search
+
+`search`用于查找字符串中是否包含指定的字符串，如果包含，则返回字符串中第一个匹配的字符串的索引，否则返回`-1`
+
+当传入一个正则表达式时，`search`方法可以提供匹配位置的下标信息，例如：
+
+```ts
+'this is a test'.search(/\s/) //=> 4
+```
+
 ### String.property.split
 
 通常情况下，我们使用`split`方法来分割字符串：
