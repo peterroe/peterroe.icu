@@ -13,6 +13,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ```
 
+### 拉取远程分支
+
+```shell
+# 拉取main分支
+$ git checkout -b main origin/main
+```
+
 ### 删除远程分支
 
 ```shell

@@ -197,7 +197,7 @@ Array.from('my nameIsPeterroe'.matchAll(/\s(\w)|[A-Z]/g))
 
 `search`用于查找字符串中是否包含指定的字符串，如果包含，则返回字符串中第一个匹配的字符串的索引，否则返回`-1`
 
-当传入一个正则表达式时，`search`方法可以提供匹配位置的下标信息，例如：
+与`String.prototype.indexOf`不同，`search`方法还可以传入一个正则表达式，返回匹配位置的下标信息，例如：
 
 ```ts
 'this is a test'.search(/\s/) //=> 4
