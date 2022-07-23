@@ -5,6 +5,84 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### cosmiconfig ---> 加载配置文件 <GitHubStar repo="siddharthkp/bundlesize" />
+
+例如当`moduleName`是`myapp`时，会依次加载查找：
+
+* 带有`myapp`属性的`package.json`
+* `JSON`和`YAML`格式的`.myapprc`
+* `.myapprc.json`,`.myapprc.yaml`,`.myapprc.yml`,`.myapprc.js`,`.myapprc.cjs`
+* `myapp.config.js`,`myapp.config.cjs`
+
+```js
+const { cosmiconfig, cosmiconfigSync } = require('cosmiconfig');
+// ...
+const explorer = cosmiconfig(moduleName);
+
+// Search for a configuration by walking up directories.
+// See documentation for search, below.
+explorer.search()
+  .then((result) => {
+    // result.config is the parsed configuration object.
+    // result.filepath is the path to the config file that was found.
+    // result.isEmpty is true if there was nothing to parse in the config file.
+  })
+  .catch((error) => {
+    // Do something constructive.
+  });
+
+```
+
+地址：<GitHubLink repo="open-cli-tools/concurrently" />
+
+---
+
+### concurrently ---> 同时执行多个scripts命令 <GitHubStar repo="open-cli-tools/concurrently" />
+
+支持命令行使用：
+
+```shell
+$ npm i concurrently -g
+$ concurrently "command1 arg" "command2 arg"
+```
+或者在脚本中使用：
+```json
+{
+  "scripts": {
+    "start": "concurrently \"npm run dev\" \"npm run build\"",
+  }
+}
+```
+
+地址：<GitHubLink repo="open-cli-tools/concurrently" />
+
+---
+
+### bundlesize ---> 检验打包产物大小 <GitHubStar repo="siddharthkp/bundlesize" />
+
+保证产物的大小不超过预期值
+
+```shell
+$ npm i bundlesize
+```
+```json
+{
+  "scripts": {
+    "test": "bundlesize"
+  },
+  "bundlesize": [
+    {
+      "path": "./build/vendor.js",
+      "maxSize": "3 kB"
+    }
+  ]
+}
+```
+
+地址：<GitHubLink repo="siddharthkp/bundlesize" />
+
+---
+
 ### chokidar ---> 监听文件修改  <GitHubStar repo="paulmillr/chokidar" />
 
 基于`NodeJs`的`fs.watch`，但是有着更多的优点
@@ -19,6 +97,8 @@ chokidar.watch('.').on('all', (event, path) => {
 ```
 
 地址：<GitHubLink repo="paulmillr/chokidar" />
+
+---
 
 ### depark ---> 通过PangRank算法计算最重要文件  <GitHubStar repo="codemix/deprank" />
 
@@ -39,6 +119,8 @@ $ npx deprank ./fixtures
 ```
 
 地址：<GitHubLink repo="codemix/deprank" />
+
+---
 
 ### canvas-confetti ---> Canvas礼花特效  <GitHubStar repo="catdad/canvas-confetti" />
 
