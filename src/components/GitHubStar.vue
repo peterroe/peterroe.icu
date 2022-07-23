@@ -8,6 +8,6 @@ defineProps<{ repo: string }>()
 
 <style scoped>
 img {
-  margin-right: 1px;
+  margin-right: 30px;
 }
 </style>
