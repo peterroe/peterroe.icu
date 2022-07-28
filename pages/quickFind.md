@@ -4,6 +4,23 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### 配置目录下面到所有命令到.zshrc
+
+```shell
+export PATH=/xx/xx/xx/:$PATH
+
+# eg
+export PATH=$HOME/.cargo/bin/:$PATH
+```
+
+### git强制远程覆盖本地
+
+```shell
+git fetch --all
+git reset --hard origin/master
+git pull
+```
+
 ### 在esm中使用__dirname
 
 ```ts

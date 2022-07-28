@@ -5,6 +5,31 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### craco ---> 为`create-react-app`项目添加配置文件 <GitHubStar repo="dilanx/craco" />
+
+基于已有的`create-react-app`项目使用，让配置更加灵活，更加方便。
+
+```shell
+$ npm i @craco/craco
+```
+
+```diff
+/* package.json */
+
+"scripts": {
+-   "start": "react-scripts start",
++   "start": "craco start",
+-   "build": "react-scripts build",
++   "build": "craco build"
+-   "test": "react-scripts test",
++   "test": "craco test"
+}
+```
+
+地址：<GitHubLink repo="dilanx/craco" />
+
+---
+
 ### cosmiconfig ---> 加载配置文件 <GitHubStar repo="siddharthkp/bundlesize" />
 
 例如当`moduleName`是`myapp`时，会依次加载查找：
