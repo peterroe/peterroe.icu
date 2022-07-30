@@ -4,6 +4,13 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### 查找某个文件
+
+```shell
+$ find /user -name nginx.conf
+$ find / -name "*.conf"
+```
+
 ### 配置目录下面到所有命令到.zshrc
 
 ```shell
