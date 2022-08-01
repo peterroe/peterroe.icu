@@ -5,10 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
-    - name: wasm-starter
+    - name: 'wasm-starter'
       link: 'https://github.com/peterroe/wasm-starter'
       icon: 'i-carbon-assembly'
-      description: 'A template to help you start a new wasm(Rust) project'
+      desc: 'A template to help you start a new wasm(Rust) project'
     - name: renames
       link: 'https://github.com/peterroe/renames'
       icon: 'i-carbon-folder'
@@ -55,10 +55,10 @@ projects:
       link: 'https://github.com/peterroe/cli-starter'
       desc: 'A command line tool template'
       icon: 'i-icon-park-outline-command'
-    - name: wasm-starter
+    - name: 'wasm-starter'
       link: 'https://github.com/peterroe/wasm-starter'
       icon: 'i-carbon-assembly'
-      description: 'A template to help you start a new wasm(Rust) project'
+      desc: 'A template to help you start a new wasm(Rust) project'
 
   Components:
     - name: Unge UI
