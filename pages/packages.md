@@ -7,6 +7,8 @@ subtitle: Gather some npm packages
 
 ### atropos ---> 令人惊叹的悬停视差效果
 
+支持原生JS、Vue、React等
+
 ```html
 <!-- main Atropos container (required), add your custom class here -->
 <div class="atropos my-atropos">
