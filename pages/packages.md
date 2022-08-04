@@ -5,6 +5,41 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### atropos ---> 令人惊叹的悬停视差效果
+
+```html
+<!-- main Atropos container (required), add your custom class here -->
+<div class="atropos my-atropos">
+  <!-- scale container (required) -->
+  <div class="atropos-scale">
+    <!-- rotate container (required) -->
+    <div class="atropos-rotate">
+      <!-- inner container (required) -->
+      <div class="atropos-inner">
+        <!-- put your custom content here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// import Atropos library
+import Atropos from 'atropos';
+
+// Initialize
+const myAtropos = Atropos({
+  el: '.my-atropos',
+  // rest of parameters
+});
+</script>
+```
+
+---
+
+<Atropos />
+
+---
+
 ### craco ---> 为`create-react-app`项目添加配置文件 <GitHubStar repo="dilanx/craco" />
 
 基于已有的`create-react-app`项目使用，让配置更加灵活，更加方便。

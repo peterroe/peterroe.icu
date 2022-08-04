@@ -16,6 +16,7 @@ specifiers:
   '@vitejs/plugin-vue': ^1.9.4
   '@vueuse/core': ^6.9.2
   '@vueuse/head': 0.7.0
+  atropos: ^1.0.2
   critters: 0.0.14
   cross-env: ^7.0.3
   dayjs: ^1.10.7
@@ -58,6 +59,7 @@ specifiers:
 dependencies:
   '@vueuse/core': 6.9.2_vue@3.2.26
   '@vueuse/head': 0.7.0_vue@3.2.26
+  atropos: 1.0.2
   dayjs: 1.10.7
   nprogress: 0.2.0
   prism-theme-vars: 0.2.2
@@ -2215,6 +2217,11 @@ packages:
     resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
     engines: {node: '>= 4.0.0'}
     dev: true
+
+  /atropos/1.0.2:
+    resolution: {integrity: sha512-0RqyHfMyIhRXgnHuSQz2LVOE81jtAQ7EZTrF75ngiipklIsxajZ2vD042EXdiIEDs6eEAzfE10k+YhIbNl4/eg==}
+    engines: {node: '>= 12.0.0'}
+    dev: false
 
   /available-typed-arrays/1.0.4:
     resolution: {integrity: sha512-SA5mXJWrId1TaQjfxUYghbqQ/hYioKmLJvPJyDuYRtXXenFNMjj4hSSt1Cf1xsuXSXrtxrVC5Ot4eU6cOtBDdA==}

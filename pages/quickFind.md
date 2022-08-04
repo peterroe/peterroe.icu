@@ -4,6 +4,21 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### git克隆所有分支
+
+```bash
+$ mkdir testRepo # 必要，新建一个文件夹，最好和仓库同名
+$ cd testRepo
+$ git clone --bare git@github.com:peterroe/testRepo.git .git
+$ git config --bool core.bare false
+$ git reset --hard
+$ git branch
+```
+
+```
+$ git push --all origin # 推送所有分支
+```
+
 ### 查找某个文件
 
 ```shell
