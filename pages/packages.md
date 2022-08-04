@@ -5,7 +5,7 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
-### atropos ---> 令人惊叹的悬停视差效果
+### atropos ---> 令人惊叹的悬停视差效果 <GitHubStar repo="nolimits4web/atropos" />
 
 支持原生JS、Vue、React等
 
@@ -36,7 +36,7 @@ const myAtropos = Atropos({
 </script>
 ```
 
----
+地址：<GitHubLink repo="nolimits4web/atropos" />
 
 <Atropos />
 
