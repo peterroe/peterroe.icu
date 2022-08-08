@@ -15,7 +15,7 @@ $ git reset --hard
 $ git branch
 ```
 
-```
+```shell
 $ git push --all origin # 推送所有分支
 ```
 
@@ -93,9 +93,21 @@ $ git rm -r --cached
 
 ### brew切换node版本
 
+安装：
+
 ```shell
 $ brew search node # 查看所有的node版本
 $ brew install node@16 # 安装node@16
 $ brew link -overwrite --force node@16 # 创建node@16的链接
 $ node -v # 确认node@16已经安装
+```
+
+切换：
+
+```shell
+$ brew search node
+$ brew install node@18
+$ brew unlink node@16 # 删除node@16的链接
+$ brew link --overwrite --force node@18 
+$ node -v
 ```
