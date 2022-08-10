@@ -14,6 +14,7 @@
     "@vueuse/head": "^0.7.2",
     "atropos": "^1.0.2",
     "dayjs": "^1.10.7",
+    "easyqrcodejs": "^4.4.12",
     "nprogress": "^0.2.0",
     "prism-theme-vars": "^0.2.2",
     "uwaterfall": "^1.0.3",

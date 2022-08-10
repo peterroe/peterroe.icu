@@ -32,6 +32,12 @@ import { isDark } from '/~/logics'
           <span class="lt-md:hidden">Tools</span>
           <carbon-tools class="md:hidden" />
         </router-link>
+        <router-link to="/kits" title="Kits">
+          <span class="lt-md:hidden">Kits</span>
+          <carbon-cics-system-group
+            class="md:hidden"
+          />
+        </router-link>
         <router-link to="/quickFind" title="Find">
           <CarbonLightning />
         </router-link>
@@ -41,12 +47,12 @@ import { isDark } from '/~/logics'
         <router-link to="/packages" title="Packages">
           <MdiPackageVariantClosed />
         </router-link>
-        <router-link to="/notes" title="Notes" class="lt-md:hidden">
+        <!-- <router-link to="/notes" title="Notes" class="lt-md:hidden">
           <ri-sticky-note-line />
-        </router-link>
-        <a href="https://t.me/peterroe" target="_blank" title="Telegram" >
+        </router-link> -->
+        <!-- <a href="https://t.me/peterroe" target="_blank" title="Telegram" >
           <tabler-brand-telegram />
-        </a>
+        </a> -->
         <a href="https://github.com/peterroe" target="_blank" title="GitHub">
           <uil-github-alt />
         </a>
