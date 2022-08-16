@@ -1,6 +1,6 @@
 /* https://github.com/antfu/prism-theme-vars */
 @import 'prism-theme-vars/base.css';
-
+@import 'ungeui/dist/style.css';
 :root {
   --prism-font-size: 0.9rem;
   --prism-font-family: 'Fira Code', monospace;

@@ -4,6 +4,19 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### 设置NPM源
+
+```shell
+$ npm set registry=https://registry.npmjs.org
+$ npm set registry=https://bnpm.byted.org
+```
+
+### mac添加zsh运行shell权限
+
+```shell
+$ chmod u+x *.sh
+```
+
 ### git克隆所有分支
 
 ```bash
