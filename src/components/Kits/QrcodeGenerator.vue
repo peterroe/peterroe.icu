@@ -6,8 +6,9 @@ const qrcode = ref()
 const url = ref('')
 const isParseExpression = ref(false) // 是否解析表达式
 const isParseParams = ref(false) // 是否解析参数
+const isDecodeParams = ref(false) // 是否解码参数
 
-watch([url, isParseExpression, isParseParams], () => {
+watch([url, isParseExpression, isParseParams, isDecodeParams], () => {
   // console.log(new URL(url.value).search.slice(1).split('&').map(v => v.split('=')))
   if (isParseExpression.value && url.value.startsWith('`'))
     url.value = eval(url.value)
@@ -19,17 +20,17 @@ watch([url, isParseExpression, isParseParams], () => {
 const params = computed(() => {
   if (!isParseParams.value) return []
   try {
-    return new URL(url.value).search.slice(1).split('&').map(v => v.split('='))
+    return new URL(url.value).search.slice(1).split('&').filter(it => it.length).map(v => v.split('='))
   }
   catch (e) {
   }
 })
-
 const parseUrl = async() => {
   url.value = await navigator.clipboard.readText()
 }
 
-const paramValueChange = (item: Array<string>) => {
+const paramValueChange = (item: Array<string>, newValue: string) => {
+  item[1] = newValue
   const urlInstance = new URL(url.value)
   urlInstance.searchParams.set(item[0], item[1])
   url.value = urlInstance.toString()
@@ -44,6 +45,9 @@ const paramValueChange = (item: Array<string>) => {
       </u-checkbox>
       <u-checkbox v-model:checked="isParseParams">
         解析参数
+      </u-checkbox>
+      <u-checkbox v-model:checked="isDecodeParams">
+        Decode参数
       </u-checkbox>
       <section gap="4" flex my="3" items="center">
         <u-input
@@ -60,7 +64,7 @@ const paramValueChange = (item: Array<string>) => {
       <div flex="~ wrap" gap-y="5" mb="10" justify="between">
         <span v-for="item in params" :key="item[0]">
           <u-input v-model:value="item[0]" disabled w="30" color="black" />
-          <u-input v-model:value="item[1]" w="45" @update:value="paramValueChange(item)" />
+          <u-input :value="isDecodeParams ? decodeURIComponent(item[1]) : item[1]" w="45" @update:value="(newValue: any) => paramValueChange(item, newValue)" />
         </span>
       </div>
       <div ref="qrcode" flex justify="center" />
