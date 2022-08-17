@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import QRCode from 'easyqrcodejs'
-import { UButton, UCheckbox, UInput, USpace } from 'ungeui'
+import { UButton, UCheckbox, UInput, message } from 'ungeui'
 
 const qrcode = ref()
-const url = ref('')
+const url = ref()
 const isParseExpression = ref(false) // 是否解析表达式
 const isParseParams = ref(false) // 是否解析参数
 const isDecodeParams = ref(false) // 是否解码参数
@@ -17,6 +17,10 @@ watch([url, isParseExpression, isParseParams, isDecodeParams], () => {
   url.value && new QRCode(qrcode.value, url.value)
 })
 
+onMounted(() => {
+  url.value = 'https://peterroe.icu?name=peterroe&github=https%3A%2F%2Fgithub.com%2Fpeterroe'
+})
+
 const params = computed(() => {
   if (!isParseParams.value) return []
   try {
@@ -25,8 +29,13 @@ const params = computed(() => {
   catch (e) {
   }
 })
+
 const parseUrl = async() => {
   url.value = await navigator.clipboard.readText()
+}
+const getUrl = async() => {
+  await navigator.clipboard.writeText(url.value)
+  message.success('复制成功')
 }
 
 const paramValueChange = (item: Array<string>, newValue: string) => {
@@ -59,6 +68,9 @@ const paramValueChange = (item: Array<string>, newValue: string) => {
         />
         <u-button deep size="medium" @click="parseUrl">
           粘贴
+        </u-button>
+        <u-button size="medium" @click="getUrl">
+          复制
         </u-button>
       </section>
       <div flex="~ wrap" gap-y="5" mb="10" justify="between">
