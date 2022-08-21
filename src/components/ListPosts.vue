@@ -17,7 +17,7 @@ const posts = computed(() =>
 </script>
 
 <template>
-  <ul>
+  <ul pl-0>
     <router-link
       v-for="route in posts"
       :key="route.path"
