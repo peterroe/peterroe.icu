@@ -5,6 +5,17 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### openapi-typescript ---> 将Swagger OpenAPI规范转为ts类型 <GitHubStar repo="googleapis/release-please" />
+
+
+```shell
+$ npx openapi-typescript https://petstore.swagger.io/v2/swagger.json --output petstore.ts
+```
+
+地址：<GitHubLink repo="googleapis/release-please" />
+
+---
+
 ### atropos ---> 令人惊叹的悬停视差效果 <GitHubStar repo="nolimits4web/atropos" />
 
 支持原生JS、Vue、React等
