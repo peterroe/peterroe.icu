@@ -87,7 +87,7 @@ const letterMap = {
 }
 const hexUpdate = (newValue: string) => {
   if (!/^[0-9|a-f|A-F]*$/.test(newValue)) {
-    alertError('二')
+    alertError('十六')
     return
   }
   // hex to decimal
