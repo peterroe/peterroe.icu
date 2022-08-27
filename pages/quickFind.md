@@ -4,6 +4,23 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### URL
+
+```js
+'https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash'
+
+protocol: `https:`
+username: `user`
+password: `pass`
+hostname: `sub.example.com`
+port: `8080`
+origin: `https://sub.example.com:8080`
+pathname: `/p/a/t/h`
+search: `?query=string`
+hash: `#hash`
+href: `https://user:pass@sub.example.com:8080/p/a/t/h?query=string#hash`
+```
+
 ### 设置NPM源
 
 ```shell
