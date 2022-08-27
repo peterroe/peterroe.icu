@@ -14,6 +14,7 @@ username: `user`
 password: `pass`
 hostname: `sub.example.com`
 port: `8080`
+host: `sub.example.com:8080`
 origin: `https://sub.example.com:8080`
 pathname: `/p/a/t/h`
 search: `?query=string`
