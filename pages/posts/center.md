@@ -24,7 +24,7 @@ duration: 4min
 </style>
 <div class="father">
   <div class="son">hello</div>
-<div>
+</div>
 ```
 
 默认效果：
@@ -123,7 +123,7 @@ duration: 4min
 }
 ```
 
-## 伪元素
+## 伪元素V1
 
 > 骚操作，比较复杂
 
@@ -145,9 +145,30 @@ duration: 4min
 }
 ```
 
-### table-cell
+## 伪元素V2
 
-> 意义不大
+> 需要知道子元素的高度
+
+```css
+.father {
+  text-align: center; 
+}
+
+.son {
+  display: inline-block; 
+  vertical-align: middle; 
+}
+
+.father::before { 
+  content: '';
+  line-height: 200px;
+  vertical-align: middle;
+}
+```
+
+## table-cell
+
+> 比较古老的方式
 
 ```css
 .father {
