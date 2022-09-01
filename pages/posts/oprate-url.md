@@ -79,7 +79,7 @@ console.log(url.hostname) // sub.example.com
 console.log(url.port) // 8080
 ```
 
-你可能注意到了打印出来的`URL`实例有一个未提及的熟悉`searchParams`
+你可能注意到了打印出来的`URL`实例有一个未提及的属性`searchParams`
 
 ### URLSearchParams
 
