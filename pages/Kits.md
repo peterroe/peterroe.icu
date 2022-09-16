@@ -2,6 +2,10 @@
 title: Kits
 ---
 
+### Params Parser
+
+<ParamsParser />
+
 ---
 
 ### 二维码生成
