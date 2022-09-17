@@ -1,7 +1,10 @@
 <script setup>
 import { UButton, UInput, message } from 'ungeui'
 
-const str = ref('')
+const str = ref(`enable_dark:   true
+hobby:   SDK,,
+
+like_count  :  true`)
 const after = ref('')
 
 watch([str], () => {
@@ -11,11 +14,15 @@ watch([str], () => {
   after.value = arr.filter(it => it.length === 2).map((item) => {
     return `${item[0]}=${item[1]}&`
   }).join('').slice(0, -1)
-})
+}, { immediate: true })
 
 const getParams = async() => {
   await navigator.clipboard.writeText(after.value)
   message.success('复制成功')
+}
+
+const setParams = async() => {
+  str.value = await navigator.clipboard.readText()
 }
 
 </script>
@@ -28,6 +35,9 @@ const getParams = async() => {
       <u-input size="large" flex="1" :value="after" />
       <u-button @click="getParams">
         复制
+      </u-button>
+      <u-button deep @click="setParams">
+        粘贴
       </u-button>
     </div>
   </div>
