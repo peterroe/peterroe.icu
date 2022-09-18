@@ -3,6 +3,96 @@ title: Algorithm - Peter Roe
 display: ''
 ---
 
+## 不同纬度看Z行变换
+
+> https://leetcode.cn/problems/zigzag-conversion/
+
+```js
+/**
+ * @param {string} s
+ * @param {number} numRows
+ * @return {string}
+ */
+var convert = function(s, numRows) {
+    let arr = new Array(numRows).fill('')
+    let index = 0
+    let flag = 1
+    for(let c of s) {
+        arr[index] += c
+        if(index == 0 || index == numRows - 1) flag = -flag
+        index += flag
+    }
+    return arr.join('')
+};
+```
+
+俯视图看起来像是Z字形分布在二维数组，但是右视图看起来像是一维数组，这就是Z字形变换的关键。
+
+## 中心扩散看最长回文串
+
+> https://leetcode.cn/problems/longest-palindromic-substring/
+
+```js
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var longestPalindrome = function(s) {
+    let maxLen = 0
+    let str = ''
+    for(let i = 0; i < s.length; i++) {
+        let j = i;
+        let k = i;
+        while(j - 1 >=0 && s[j - 1] == s[i]) j--
+        while(k + 1 < s.length && s[k + 1] == s[i]) k--
+        while(j - 1 >=0 && s.length && s[j - 1] == s[k + 1]) {
+            j--
+            k++
+        }
+        if(k - j + 1 > maxLen) {
+            maxLen = k - j + 1
+            str = s.slice(j, k + 1)
+        }
+    }
+    return str
+};
+```
+
+中心扩散法核心在于，确定**中心点**。可能是一个字符，也可能是两个或多个字符
+
+但是它们一定是**相同**的字符
+
+## 滑动窗口看最长子串
+
+> https://leetcode.cn/problems/longest-substring-without-repeating-characters/
+
+```js
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+    let set = new Set()
+    let l = 0
+    let r = 0
+    let len = 0
+    while(l < s.length) {
+        while(!set.has(s[r]) && r < s.length) {
+            set.add(s[r])
+            r ++
+        }
+        len = Math.max(len, r - l)
+        set.delete(s[l])
+        l++
+    }
+    return len
+};
+```
+
+解体的思路在于穷举 `s[i] (0 < i < s.length)` 作为**子串起始字符**的最长连续不重复子串，得出最大长度
+
+上面的方法相比穷举法而言，好处在于利用 Set 储存了上一个状态的结果，避免了重复计算。
+
 ## 从兜底逻辑看两数相加
 
 > https://leetcode.cn/problems/add-two-numbers/
