@@ -38,6 +38,12 @@ import { isDark } from '/~/logics'
             class="md:hidden"
           />
         </router-link>
+        <router-link to="/Column" title="Column">
+          <span class="lt-md:hidden">Column</span>
+          <carbon-column-dependency
+            class="md:hidden"
+          />
+        </router-link>
         <router-link to="/quickFind" title="Find">
           <CarbonLightning />
         </router-link>

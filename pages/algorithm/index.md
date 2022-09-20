@@ -3,6 +3,8 @@ title: Algorithm - Peter Roe
 display: ''
 ---
 
+[[toc]]
+
 ## 不同纬度看Z行变换
 
 > https://leetcode.cn/problems/zigzag-conversion/
@@ -27,6 +29,8 @@ var convert = function(s, numRows) {
 ```
 
 俯视图看起来像是Z字形分布在二维数组，但是右视图看起来像是一维数组，这就是Z字形变换的关键。
+
+上文还有巧妙的一点，用 flag 记录每次方向
 
 ## 中心扩散看最长回文串
 
