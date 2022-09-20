@@ -13,8 +13,9 @@ import matter from 'gray-matter'
 import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import markdownAttr from 'markdown-it-link-attributes'
+import markdownContainer from 'markdown-it-container'
 import Unocss from 'unocss/vite'
-import { presetAttributify, presetUno, presetIcons } from 'unocss'
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
 // @ts-expect-error
 import TOC from 'markdown-it-table-of-contents'
 import { slugify } from './scripts/slugify'
@@ -96,6 +97,22 @@ const config: UserConfig = {
       },
       markdownItSetup(md) {
         md.use(Prism)
+        md.use(markdownContainer, '', {
+          validate() {
+            return true
+          },
+          render(tokens, idx) {
+            if (tokens[idx].nesting === 1) {
+              const name = tokens[idx].info.trim()
+              return `<section class="base-container ${name}">`
+            }
+            else {
+              // closing tag
+              return '</section>\n'
+            }
+          },
+        }),
+
         md.use(anchor, {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({
