@@ -18,19 +18,19 @@ title: 市值腰斩！英伟达到底怎么了？
 hello
 :::
 
+::: info
+hello
+:::
+
 ::: tip
 hello
 :::
 
-::: success
+::: danger
 hello
 :::
 
-::: error
-hello
-:::
-
-谁谁谁都减持了股票
+谁谁谁都减持{了股票}(sdfadf)
 
 > 基本面没变？为什么下降？
 核心部门 游戏和数据中心 -> 占比收入 90% -> 都出现了严重的问题

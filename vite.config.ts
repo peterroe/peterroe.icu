@@ -18,6 +18,7 @@ import Unocss from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 // @ts-expect-error
 import TOC from 'markdown-it-table-of-contents'
+import comment from './comment.js'
 import { slugify } from './scripts/slugify'
 
 import 'prismjs/components/prism-regex'
@@ -104,7 +105,13 @@ const config: UserConfig = {
           render(tokens, idx) {
             if (tokens[idx].nesting === 1) {
               const name = tokens[idx].info.trim()
-              return `<section class="base-container ${name}">`
+              const icon = {
+                info: '<carbon-information/>',
+                warning: '<carbon-warning/>',
+                danger: '<carbon-error-outline/>',
+                tip: '<carbon-checkmark-outline/>',
+              }
+              return `<section class="base-container ${name}">${icon[name]}`
             }
             else {
               // closing tag
@@ -113,6 +120,7 @@ const config: UserConfig = {
           },
         }),
 
+        md.use(comment, 12, 45)
         md.use(anchor, {
           slugify,
           permalink: anchor.permalink.linkInsideHeader({

@@ -4,27 +4,34 @@
   padding: 1px 20px;
   border-radius: 8px;
   margin: 20px 0;
+  display: flex;
+  align-items: center;
 }
+
+.base-container svg {
+  margin-right: 10px;
+}
+
 .warning {
   color: #9f6000;
   background-color: #FEEFB3;
-  border-top: 6px solid #9f6000;
+  border-left: 6px solid #9f6000;
+}
+
+.info {
+  color: #00529B;
+  background-color: #BDE5F8;
+  border-left: 6px solid #00529B;
 }
 
 .tip {
-  color: #00529B;
-  background-color: #BDE5F8;
-  border-top: 6px solid #00529B;
-}
-
-.success {
   color: #4F8A10;
   background-color: #DFF2BF;
-  border-top: 6px solid #4F8A10;
+  border-left: 6px solid #4F8A10;
 }
 
-.error {
+.danger {
   color: #D8000C;
   background-color: #FFBABA;
-  border-top: 6px solid #D8000C;
+  border-left: 6px solid #D8000C;
 }
