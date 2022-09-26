@@ -272,6 +272,62 @@ function showContent() {
 </script>
 ```
 
+#### time
+
+time 标签用于定义日期/时间，样式没有变化，实现了 HTMLTIMEElement 接口，可以通过`dateTime`属性获取时间
+
+```html
+我在 <time datetime="2016-02-14">情人节</time> 有个约会
+
+<script>
+  var time = document.querySelector('time');
+  console.log(time.dateTime); // 2016-02-14
+</script>
+```
+
+#### details
+
+details 标签用于定义一个细节，可以通过`open`属性来控制初态是否展开，结合 summary 标签可以实现一个可折叠的内容
+
+```html
+<details open>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+```
+
+---
+
+<details open>
+  <summary>Epcot Center</summary>
+  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+</details>
+
+---
+
+#### ruby
+
+ruby 标签用于定义 ruby 注释，即在文字旁边添加注释，可以用来标注拼音、音标等
+
+在东亚使用，显示的是东亚字符的发音
+
+```html
+<ruby>
+  <rb>英雄</rb>
+  <rt>Ying Xiong</rt>
+  <rp>(备用内容)</rp>
+</ruby>
+```
+
+---
+
+<ruby>
+    <rb>英雄</rb>
+    <rt>Ying Xiong</rt>
+    <rp>(备用内容)</rp>
+</ruby>
+
+---
 ### 短语标签 Phrase Tags
 
 这里指的是，一些不通过 CSS 来实现的文字装饰标签，包含我们最常用的 斜体、粗体、下划线、删除线等
@@ -322,3 +378,23 @@ function showContent() {
 <!-- 标识计算机输出 -->
 <samp>这是计算机输出的内容</samp>
 ```
+
+## CSS
+
+CSS 与 HTML 协同工作，通过 CSS 可以对 HTML 标签进行样式的定义，使得页面更加美观
+
+CSS由多组“规则”组成。每个规则由“选择器”（selector）、“属性”（property）和“值”（value）组成：
+
+* 选择器（Selector）：多个选择器可以半角逗号（,）隔开。
+* 属性（property）：CSS1、CSS2、CSS3规定了许多的属性，目的在控制选择器的样式。
+* 值（value）：指属性接受的设置值，多个关键字时大都以空格隔开
+
+### 历史
+
+CSS 由 W3C 组织制定，CSS1 于 1996 年发布，CSS2 于 1998 年发布，CSS3 于 2011 年发布
+
+### 缺点
+
+* 没有父选择器
+* 不能明确地指定继承性
+* 垂直控制的局限
