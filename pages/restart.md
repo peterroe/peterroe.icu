@@ -328,6 +328,63 @@ ruby 标签用于定义 ruby 注释，即在文字旁边添加注释，可以用
 </ruby>
 
 ---
+
+#### datalist
+
+datalist 标签用于定义输入域的选项列表，配合 input 标签的 list 属性使用，可以做到一种类似于自动补全的效果
+
+```html
+<input list="browsers" />
+<datalist id="browsers">
+  <option value="Internet Explorer">
+  <option value="Firefox">
+  <option value="Chrome">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+```
+
+---
+
+<input list="browsers" border/>
+<datalist id="browsers">
+  <option value="Internet Explorer" />
+  <option value="Firefox" />
+  <option value="Chrome" />
+  <option value="Opera" />
+  <option value="Safari" />
+</datalist>
+
+---
+
+#### fieldset
+
+fieldset 标签用于定义一个数据区域，配合 legend 标签控制标题的内容，经常结合表单使用
+
+```html
+<form>
+  <fieldset>
+    <legend>Personalia:</legend>
+    Name: <input type="text"><br>
+    Email: <input type="text"><br>
+    Date of birth: <input type="text">
+  </fieldset>
+</form>
+```
+
+---
+
+<form>
+  <fieldset border p-4>
+    <legend>Personalia:</legend>
+    Name: <input type="text" border mt-1/><br>
+    Email: <input type="text" border mt-1/><br>
+    Date of birth: <input type="text" border mt-1>
+  </fieldset>
+</form>
+
+---
+
 ### 短语标签 Phrase Tags
 
 这里指的是，一些不通过 CSS 来实现的文字装饰标签，包含我们最常用的 斜体、粗体、下划线、删除线等
