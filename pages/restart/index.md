@@ -385,25 +385,78 @@ fieldset 标签用于定义一个数据区域，配合 legend 标签控制标题
 
 ---
 
+#### cite 
+
+cite 标签用来定义作品（比如书籍、歌曲、电影、电视节目、绘画、雕塑等等）的标题，例如：
+
+```html
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+```
+
+样式上表现为斜体，所以也是一个语义标签，有利于例如可以根据这个标签抓取一篇文档引用的所有作品
+
+---
+
+<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+---
+
+#### ins
+
+del 和 ins 一起使用，描述文档中的更新和修正。浏览器通常会在已删除文本上添加一条删除线，在新插入文本下添加一条下划线
+
+```html
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+```
+
+---
+
+<p>My favorite color is <del>blue</del> <ins>red</ins>!</p>
+
+---
+
+#### pre
+
+之前提到，浏览器会将多个空格合并为一个空格，而 pre 标签用于定义预格式化的文本，文本中的空格和换行都会被**保留**，所以通常用于显示源代码
+
+```html
+<pre>
+let a = 2
+let b = 3
+a + b
+</pre>
+```
+
+---
+
+<pre>
+let a = 2
+let b = 3
+a + b
+</pre>
+
+---
+
+
 ### 短语标签 Phrase Tags
 
 这里指的是，一些不通过 CSS 来实现的文字装饰标签，包含我们最常用的 斜体、粗体、下划线、删除线等
 ```html
 <!-- 斜体 -->
-<i>斜体</i>
-<em>斜体</em>
+<i>斜体</i>  <!-- 单纯想要斜体样式 -->
+<em>斜体</em> <!-- 强调语义的斜体 -->
 
 <!-- 粗体 -->
-<b>粗体</b>
-<strong>粗体</strong>
+<b>粗体</b>  <!-- 单纯想要粗体样式 -->
+<strong>粗体</strong>  <!-- 强调语义的粗体 -->
 
 <!-- 下划线 -->
-<u>下划线</u>
-<ins>下划线</ins>
+<u>下划线</u> <!-- 单纯想要下划线样式 -->
+<ins>下划线</ins>  <!-- 表示替代内容，和del搭配使用 -->
 
 <!-- 删除线 -->
-<s>删除线</s>
-<del>删除线</del>
+<s>删除线</s>  <!-- 单纯想要斜体样式 -->
+<del>删除线</del>  <!-- 表示删除内容，和ins搭配使用 -->
 
 <!-- 高亮 -->
 <mark>高亮</mark>
@@ -435,6 +488,10 @@ fieldset 标签用于定义一个数据区域，配合 legend 标签控制标题
 <!-- 标识计算机输出 -->
 <samp>这是计算机输出的内容</samp>
 ```
+
+拓展：
+
+* [被遗忘的HTML标签](/restart/html/delete-reason)
 
 ## CSS
 
