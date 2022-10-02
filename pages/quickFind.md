@@ -4,6 +4,18 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### windows查看端口占用
+
+```sh
+$ netstat -ano | findstr "端口号"
+```
+
+查看进程详情
+
+```sh
+$ tasklist | findstr "进程ID"
+```
+
 ### URL
 
 ```js

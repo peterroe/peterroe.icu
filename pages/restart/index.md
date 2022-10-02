@@ -42,8 +42,14 @@ title: 重学前端
 
 ### `html lang`声明
 
+`<html lang="en">` 表示使用哪种语言，之所以 lang 属性写在 html 标签上，是因为想把所有的内容都为其定义 lang，但其实这是一个**全局属性**，可以为任意标签添加此属性
 
-`<html lang="en">` 表示使用哪种语言，这样浏览器或者相关插件就可以根据语言来进行翻译
+所以我们还可以进行局部 lang 声明，例如 `<p lang="fr">Français</p>`
+
+声明 lang 的作用其实主要有两点：
+
+* 方便浏览器及搜索引擎识别网页语言
+* 开发者根据不同的 lang 改变整个页面或者局部页面的 CSS 文字样式
 
 ### [`meta`声明](https://zh.wikipedia.org/wiki/Meta%E5%85%83%E7%B4%A0)
 
@@ -138,17 +144,21 @@ viewport 值得单独拿出来说一下。早期我们都是以PC端为标准开
 
 #### [abbr](https://www.runoob.com/tags/tag-abbr.html)
 
-`<abbr>`标签定义缩写，当鼠标悬停在缩写上时，会显示完整的单词
+`<abbr>`标签定义缩写，当鼠标悬停在缩写上时，会显示完整的单词。
+
+值得注意的是，abbr 标签只有语义以及下划线的 CSS 效果，**悬停显示的效果来自于全局属性title**
 
 ```html
-The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. <br />
+The <span title="World Health Organization">WHO</span> was founded in 1948.
 ```
 
 例子： 
 
 ---
 
-<RestartAbbr />
+The <abbr title="World Health Organization">WHO</abbr> was founded in 1948. <br />
+The <span title="World Health Organization">WHO</span> was founded in 1948.
 
 ---
 
@@ -490,6 +500,44 @@ a + b
 <!-- 标识计算机输出 -->
 <samp>这是计算机输出的内容</samp>
 ```
+
+### 一些全局属性
+
+所谓 HTML 全局属性，其实就是我们日常在可以在所有 HTML 标签上使用的属性，像 class，is，style 等等
+
+在上面其实已经提到了像 lang 和 title 这样的全局属性，除此之外，还有一些全局属性值得了解
+
+**conteneditable**
+
+可以让指定元素的内容可编辑
+
+```html
+<p contenteditable="true">这是一段可编辑的内容</p>
+```
+
+---
+
+<p contenteditable="true">这是一段可编辑的内容</p>
+
+---
+
+::: info
+有意思的是我们可以在浏览器 URL 栏中输入：`data:text/html, <html contenteditable>`，让整个页面变成编辑器！
+:::
+
+**draggable**
+
+这个属性用于指定元素是否可以拖动，配合浏览器提供的拖放 API，可以实现很多有趣的功能
+
+```html 
+<p draggable="true">这是一段可移动的段落。请把该段落拖入上面的矩形。</p>
+```
+
+---
+
+<RestartDraggable />
+
+---
 
 ### 拓展
 
