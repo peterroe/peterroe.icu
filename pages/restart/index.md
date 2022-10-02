@@ -405,7 +405,7 @@ cite 标签用来定义作品（比如书籍、歌曲、电影、电视节目、
 <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
 ```
 
-样式上表现为斜体，所以也是一个语义标签，有利于例如可以根据这个标签抓取一篇文档引用的所有作品
+样式上表现为斜体，所以也是一个语义标签，有利于例如爬虫可以根据这个标签抓取一篇文档引用的所有作品
 
 ---
 
@@ -448,6 +448,107 @@ a + b
 </pre>
 
 ---
+
+#### input
+
+input 标签也值得一讲，因为它是表单中最常用的标签之一，type 取值丰富
+
+包括 `button、checkbox、color、date、datetime、datetime-local、email、file、hidden、image、month、number、password、radio、range、reset、search、submit、tel、text、time、url、week`
+
+---
+
+`<input type="button" value="button" />`（普通按钮）
+
+<input type="button" value="button" border placeholder="radio" />  <br />  
+
+`<input type="checkbox" />`（多选框）
+
+<input type="checkbox" placeholder="checkbox" />  <br />
+
+`<input type="color" />`（颜色选择器）
+
+<input type="color" border placeholder="请输入颜色" /> <br />
+
+`<input type="date" />`（年月日选择器）
+
+<input type="date" border placeholder="请输入日期" /> <br />
+
+`<input type="datetime" placeholder="请输入日期时间" />`（不鼓励使用）
+
+<input type="datetime" border placeholder="请输入日期时间" /> <br />
+
+`<input type="datetime-local" />`（年月日时分选择器，鼓励使用）
+
+<input type="datetime-local" border placeholder="请输入本地日期时间" /> <br />
+
+`<input type="email" placeholder="请输入邮箱" />`（对拉起键盘优化，如联想邮箱后缀，语义化，使用和type=text一样）
+
+<input type="email" border placeholder="请输入邮箱" /> <br />
+
+`<input type="file" placeholder="请输入文件" />`（选择文件）
+
+<input type="file" placeholder="请输入文件" /> <br />
+
+`<input type="hidden" />`（想利用`<form>`提交，但又不想用户在界面看见的某些字段）
+
+<input type="hidden" border/> <br />
+
+`<input type="image" src="https://peterroe.icu/favicon.ico" />`（同type=submit但是是图片）
+
+<input type="image" src="https://peterroe.icu/favicon.ico" border/> <br />
+
+`<input type="month" />`（年月选择器）
+
+<input type="month" border placeholder="请输入月份" /> <br />
+
+`<input type="number" placeholder="请输入数字" />`（数字输入框）
+
+<input type="number" border placeholder="请输入数字" /> <br />
+
+`<input type="password" placeholder="请输入密码" />`（密码输入框）
+
+<input type="password" border placeholder="请输入密码" /> <br />
+
+`<input type="radio" />`（单选框）
+
+<input type="radio" placeholder="radio" /> <br />
+
+`<input type="range" />`（范围选择器）
+
+<input type="range" border placeholder="请输入范围" /> <br />
+
+`<input type="reset" value="重置" />`（重置表单字段）
+
+<input type="reset" border value="重置" /> <br />
+
+`<input type="search" />`（让拉起的键盘，回车处显示“搜索”字样，并且有清除功能）
+
+<input type="search" border value="搜索" /> <br />
+
+`<input type="submit" value="提交" />`（提交表单）
+
+<input type="submit" border value="提交" /> <br />
+
+`<input type="tel" placeholder="请输入电话" />`（尽可能拉起数字键盘，语义化，其他和type=text一致）
+
+<input type="tel" border placeholder="请输入电话" /> <br />
+
+`<input type="text" border placeholder="请输入内容" />`（普通输入框）
+
+<input type="text" border placeholder="请输入内容" /> <br />
+
+`<input type="time" />`（时分选择器）
+
+<input type="time" border placeholder="请输入时间" /> <br />
+
+`<input type="url" placeholder="请输入网址" />`（尽可能键盘优化，例如联想.com，语义化，其他和type=text一致）
+
+<input type="url" border placeholder="请输入网址" /> <br />
+
+`<input type="week" />`（周选择器）
+
+<input type="week" border placeholder="请输入周" /> <br />
+
 
 
 ### 短语标签 Phrase Tags
@@ -538,6 +639,81 @@ a + b
 <RestartDraggable />
 
 ---
+
+**accesskey**
+
+这个属性用于指定一个快捷键，可以用键盘来快速访问元素，不同的浏览器，访问方式略有不同
+
+```html
+<a href="https://github.com/peterroe" accesskey="g">My Github</a><br>
+<a href="https://peterroe.icu" accesskey="w">My Website</a>
+```
+
+Browser | Windows |	Linux |	Mac
+:---:|:---:|:---:|:---:
+Chrome |	[Alt] + accesskey |	[Alt] + accesskey	[Control] |  [Alt] + accesskey
+Firefox |	[Alt] [Shift] + accesskey |	[Alt] [Shift] + accesskey |	[Control] [Alt] + accesskey
+Safari |	[Alt] + accesskey |	N/A |	[Control] [Alt] + accesskey
+---
+
+<a href="https://github.com/peterroe" accesskey="g">My Github</a><br>
+<a href="https://peterroe.icu" accesskey="w">My Profile</a>
+
+---
+
+**hidden**
+
+其实 HTML 标签都有一个属性 hidden，控制元素是否显示
+
+```html
+<div hidden>我消失了</div>
+```
+
+究其原理，如果用浏览器控制台查看元素，你会发现其实本质上还是用了 CSS 的 display: none 来隐藏元素的
+
+```css
+[hidden] {
+    display: none;
+}
+```
+
+**tabindex**
+
+我们知道，用 Tab 键可以在页面上切换焦点，而 tabindex 属性就是用来控制焦点的顺序的
+
+```html
+<a href="//www.github.com//" tabindex="2">GitHub</a><br />
+<a href="//www.google.com/" tabindex="1">Google</a><br />
+<a href="//www.microsoft.com/" tabindex="3">Microsoft</a>
+```
+
+**data-***
+
+可以用来绑定一些数据到 DOM 元素上，访问的时候通过 dataset 属性来获取
+
+```html
+<div id="app" data-name="Peter" onclick="showName(event)">sdf</div>
+
+<script>
+  function showName(e) {
+      console.log(e.target.dataset.name);
+  }
+</script>
+```
+
+这种技巧是可选的，因为我们通常可以将数据绑定在 JS 函数参数上
+
+```html
+<div id="app" onclick="showName(event, 'Peter')">sdf</div>
+
+<script>
+  function showName(e, name) {
+      console.log(e.target, name);
+  }
+</script>
+```
+
+不过你如果想要在 HTML 中直接绑定数据，脱离 JS的函数参数绑定，那么 data-* 就是一个不错的选择。某些场景，例如图片懒加载，就会用 data-img 来绑定图片地址
 
 ### 拓展
 
