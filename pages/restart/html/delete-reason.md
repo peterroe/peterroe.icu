@@ -30,3 +30,13 @@ subtitle: Forgotten History
 
 <input placeholder="input here"/> <br />
 <button>按钮</button>
+
+#### 为什么废弃了 font 标签？
+
+font 标签的作用是改变文字的字体，但是这个功能在 CSS 中已经有了，所以 font 标签也就没有存在的必要了。
+
+font 可以用来定义字体的三个属性：字体族、字体大小、字体颜色。
+
+```html
+<font color="#FF0000" face="Helvetica" size="+2" ></font>
+```
