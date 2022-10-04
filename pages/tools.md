@@ -5,6 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: 'markdown-it-comment'
+      link: 'https://github.com/peterroe/markdown-it-comment'
+      icon: 'i-bi-markdown-fill'
+      desc: 'Plugin for creating custom comment for markdown-it markdown parser'
     - name: 'wasm-starter'
       link: 'https://github.com/peterroe/wasm-starter'
       icon: 'i-carbon-assembly'
@@ -37,6 +41,10 @@ projects:
       link: 'https://github.com/peterroe/docusaurus-plugin-usevue'
       desc: 'A plugin to use vue-component in docusaurus.'
       icon: 'i-mdi-react'
+    - name: 'markdown-it-comment'
+      link: 'https://github.com/peterroe/markdown-it-comment'
+      icon: 'i-bi-markdown-fill'
+      desc: 'Plugin for creating custom comment for markdown-it markdown parser'
   
   Scaffolds:
     - name: 'create-js-lib'

@@ -162,6 +162,9 @@ h6:focus .header-anchor {
   .table-of-contents {
     display: none;
   }
+  .comment {
+    display: none;
+  }
 }
 
 .table-of-contents {
@@ -193,4 +196,31 @@ h6:focus .header-anchor {
 
 ul {
   padding-left: 0 !important;
+}
+
+.content {
+  display: inline-block;
+  border-bottom: 2px solid #ffc60a;
+}
+.content:hover {
+  background-color: #faf1d1;
+}
+.content:hover + .comment {
+  opacity: 1;
+}
+.comment {
+  opacity: 0;
+  text-align: left;
+  position: fixed;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 30px;
+  border: 1px solid #ddd;
+  border-top: 6px solid #ffc60a;
+  border-radius: 8px;
+  padding: 10px 16px;
+  box-shadow: 0px 0px 16px #ddd;
+  transition: all .4s ease-out;
+  color: #555;
+  width: 250px;
 }

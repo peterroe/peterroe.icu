@@ -14,6 +14,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import anchor from 'markdown-it-anchor'
 import markdownAttr from 'markdown-it-link-attributes'
 import markdownContainer from 'markdown-it-container'
+import markdownComment from 'markdown-it-comment'
 import Unocss from 'unocss/vite'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 // @ts-expect-error
@@ -147,6 +148,8 @@ const config: UserConfig = {
           includeLevel: [1, 2, 3],
           slugify,
         })
+
+        md.use(markdownComment)
       },
     }),
 

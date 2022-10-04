@@ -141,7 +141,7 @@ ul li:first-of-type {  /* 即找到 li，而且要求第一个元素就是 li */
 
 **backface-visibility**
 
-通常用于 3D 旋转时候，当元素旋转到背面时，让背面的内容不可见
+通常用于 3D 旋转时候，当元素[旋转]-到背-面时，让背面的内容不可见
 
 ```css
 .backface-hidden {

@@ -40,3 +40,29 @@
 	border: 2px solid #D4D4D4;
 	background-color: #e5eecc !important;
 }
+
+.content {
+      display: inline-block;
+      /* background-color: yellow; */
+      border-bottom: 2px solid #ffc60a;
+    }
+    .content:hover {
+      background-color: #faf1d1;
+    }
+    .comment {
+      /* background-color: red; */
+      border: 1px solid #ddd;
+      border-top: 6px solid #ffc60a;
+      border-radius: 8px;
+      padding: 10px 16px;
+      box-shadow: 0px 0px 16px #ddd;
+      color: #555;
+      width: 250px;
+    }
+    .comment-ref {
+      border-left: 3px solid #bbbfc4;
+      padding-left: 10px;
+      color: #646a73;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
