@@ -30,7 +30,7 @@ specifiers:
   gray-matter: ^4.0.3
   markdown-it: ^12.3.0
   markdown-it-anchor: ^8.4.1
-  markdown-it-comment: 1.2.0
+  markdown-it-comment: 2.0.1
   markdown-it-container: ^3.0.0
   markdown-it-link-attributes: ^3.0.0
   markdown-it-prism: ^2.2.1
@@ -97,7 +97,7 @@ devDependencies:
   gray-matter: 4.0.3
   markdown-it: 12.3.0
   markdown-it-anchor: 8.4.1_1f85d0cd950c8d82ba02e2ef922b5f6a
-  markdown-it-comment: 1.2.0
+  markdown-it-comment: 2.0.1
   markdown-it-link-attributes: 3.0.0
   markdown-it-prism: 2.2.1
   markdown-it-shiki: 0.3.0
@@ -4481,8 +4481,8 @@ packages:
       markdown-it: 12.3.0
     dev: true
 
-  /markdown-it-comment/1.2.0:
-    resolution: {integrity: sha512-PL7PRVKTo8H9n2B0w5ayJAYlDNIfX4grU282YcxrX6455V/82ysx50VUVTDZT76bq+c6qEKSS+x6jYiAS88y4Q==}
+  /markdown-it-comment/2.0.1:
+    resolution: {integrity: sha512-5Zcwb60VK7itYUamHQmuzeLm+5aDINAE4fNDfo1MRTyOindVNq4hZiu5kIV3AwmR4Pw5YMGc/RYf7y1p5VPYAg==}
     dev: true
 
   /markdown-it-container/3.0.0:
