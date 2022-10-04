@@ -4,15 +4,33 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### Commit description
+
+* **feat: new feature**
+* **fix: bug fix**
+* **chore: change build tool etc**
+* docs: changes to documentation
+* pref: performance improvement
+* test: adding missing tests
+* ci: changes to CI configuration files and scripts
+
+Detail
+
+* fix(style): style bug fix
+
+Breaking
+
+* fix!: breaking change
+
 ### windows查看端口占用
 
-```sh
+```bash
 $ netstat -ano | findstr "端口号"
 ```
 
 查看进程详情
 
-```sh
+```bash
 $ tasklist | findstr "进程ID"
 ```
 

@@ -4,6 +4,28 @@ display: Bookmarks
 subtitle: Some of my favorite websites/tools with excellent design and UX that I highly recommend
 ---
 
+### Article
+
+[Dev Genius]-Coding, Tutorials, News, UX, UI and much more related to development- =>  https://blog.devgenius.io.
+
+Evan Prodromou's Blog => https://evanp.me/. 
+
+Antfu's Blog => https://antfu.me/.
+
+[Noted]-Bringing the latest in Self Hosted applications and Open Source software.- => https://noted.lol/.
+
+[Backblaze]-Backblaze is a pioneer in robust, scalable low cost cloud backup and storage services. Personal online backup to enterprise scale data storage solutions.- => https://www.backblaze.com/
+
+[Smashing Magazine]-Articles all around CSS, JavaScript, front-end, UX and design. For designers and web developers.- => https://www.smashingmagazine.com/
+
+[Stefen Judis' Blog]-I love building things for the web. And I love writing sharing things about the web.- => https://www.stefanjudis.com/.
+
+[Letter To A New Developers]-What I wish I had known when starting my development career- => https://letterstoanewdeveloper.com/
+
+[Davidamos]-Curious About Code- => https://davidamos.dev/
+
+Lexoral's Blog => https://lexoral.com/blog/
+
 ### Design
 
 - [Font Playground](https://play.typedetail.com/)

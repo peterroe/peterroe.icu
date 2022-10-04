@@ -207,8 +207,29 @@ ul {
 }
 .content:hover + .comment {
   opacity: 1;
+  animation: appear 0.5s;
 }
+
+@keyframes appear {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 30px;
+  }
+}
+
+@keyframes disappear {
+  from {
+    left: 30px;
+  }
+  to {
+    left: -100px;
+  }
+}
+
 .comment {
+  animation: disappear 0.5s;
   opacity: 0;
   text-align: left;
   position: fixed;
