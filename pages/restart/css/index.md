@@ -154,3 +154,63 @@ ul li:first-of-type {  /* 即找到 li，而且要求第一个元素就是 li */
 <BackFace />
 
 ---
+
+**border-collapse**
+
+用于设置表格的边框是否合并，合并后的表格边框看起来更加美观，默认值是 separate，即不合并。
+
+```css
+table {
+  border-collapse: collapse;
+}
+```
+
+---
+
+<BorderCollapse />
+
+---
+
+**caption-side**
+
+默认的表格标题是在表格的上方，如果想要将表格标题放在表格的下方，可以使用 caption-side 属性
+
+```css
+table {
+  caption-side: bottom;
+}
+```
+
+---
+
+<CaptionSide />
+
+---
+
+**empty-cells**
+
+用于设置表格中空单元格的显示方式，默认值是 show，即显示空单元格，如果想要隐藏空单元格，可以使用 empty-cells 属性
+
+```css
+table {
+  empty-cells: hide;
+}
+```
+
+---
+
+<EmptyCells />
+
+---
+
+**clip-path**
+
+进行图像的裁剪，可以使用 clip-path 属性，这个属性的值是一个路径，可以使用内置的路径，也可以使用自定义的路径。
+
+[这个网站可以帮助调试生成CSS](https://bennettfeely.com/clippy/)
+
+```css
+.clip-path {
+  clip-path: circle(50%);
+}
+```

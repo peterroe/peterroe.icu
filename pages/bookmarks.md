@@ -20,6 +20,8 @@ Antfu's Blog => https://antfu.me/.
 
 [Smashing Magazine]{Articles all around CSS, JavaScript, front-end, UX and design. For designers and web developers.} => https://www.smashingmagazine.com/
 
+Chrome developers' Blog => https://developer.chrome.com/blog/
+
 [Stefen Judis' Blog]{I love building things for the web. And I love writing sharing things about the web.} => https://www.stefanjudis.com/.
 
 [Letter To A New Developers]{What I wish I had known when starting my development career} => https://letterstoanewdeveloper.com/
@@ -43,6 +45,8 @@ Vue-SFC => https://sfc.vuejs.org/
 ### Color
 
 Scale => https://hihayk.github.io/scale/
+
+WebGradients => https://webgradients.com/
 
 Wheel => https://hihayk.github.io/wheel/
 
@@ -109,3 +113,7 @@ Isoflow => https://isoflow.io/
 ### Music
 
 Music for programming => https://musicforprogramming.net/fifteen
+
+### Transform
+
+[Cloud convert]{File converter service - more than 200 different audio, video, document, ebook, archive, image, spreadsheet and presentation formats supported.} => https://cloudconvert.com
