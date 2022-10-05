@@ -5,6 +5,10 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: 'chrome-plugin-display-tag'
+      link: 'https://github.com/peterroe/chrome-plugin-display-tag' 
+      icon: 'i-teenyicons-chrome-solid'
+      desc: 'A chrome plugin to display the tag name of the element in the browser.'
     - name: 'markdown-it-comment'
       link: 'https://github.com/peterroe/markdown-it-comment'
       icon: 'i-bi-markdown-fill'
@@ -17,14 +21,6 @@ projects:
       link: 'https://github.com/peterroe/renames'
       icon: 'i-carbon-folder'
       desc:  'A good helper for batch renaming files.'
-    - name: 'tind'
-      link: 'https://github.com/peterroe/tind'
-      desc: 'Password manager for the terminal'
-      icon: 'i-carbon-password'
-    - name: 'cli-starter'
-      link: 'https://github.com/peterroe/cli-starter'
-      desc: 'A command line tool template'
-      icon: 'i-icon-park-outline-command'
 
   Units:
     - name: 'xtj'
@@ -45,6 +41,10 @@ projects:
       link: 'https://github.com/peterroe/markdown-it-comment'
       icon: 'i-bi-markdown-fill'
       desc: 'Plugin for creating custom comment for markdown-it markdown parser'
+    - name: 'chrome-plugin-display-tag'
+      link: 'https://github.com/peterroe/chrome-plugin-display-tag' 
+      icon: 'i-teenyicons-chrome-solid'
+      desc: 'A chrome plugin to display the tag name of the element in the browser.'
   
   Scaffolds:
     - name: 'create-js-lib'
@@ -90,7 +90,7 @@ projects:
       desc: 'Let the numbers transition when it change.'
       icon: 'i-mdi-transition'
 
-  Cli:
+  Command line:
     - name: renames
       link: 'https://github.com/peterroe/renames'
       icon: 'i-carbon-folder'
