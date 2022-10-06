@@ -214,3 +214,158 @@ table {
   clip-path: circle(50%);
 }
 ```
+
+**outline**
+
+input 标签自带了 outline 效果，视觉上表示强调的效果，原理上类似于这样的实现：
+
+```css
+input::focus {
+  outline: 1px solid #000;
+}
+```
+
+同样的，我们也可以在其它元素上使用它，使用方法和 border 类似，可以进行简写
+
+```html
+<style>
+#app {
+  outline: 4px dashed #000;
+  border: 2px solid red;
+  // 可以用offset 来控制边框的偏移
+  outline-offset: 5px; 
+}
+</style>
+
+<div id="app">Hello</div>
+```
+
+---
+
+<div id="app" border="2px solid red" outline="4px solid black" outline-offset-2>Hello</div>
+
+
+---
+
+### CSS 变量
+
+**使用方式**
+
+通过 `--`声明，`var()` 访问
+
+```css
+:root {
+  --box-height: 12px  
+}
+
+div {
+  height: var(--box-height);
+}
+```
+
+**优先级**
+
+声明全局变量，一般在 `:root` 选择器中声明全局变量，这样可以让所有选择器都能够访问到
+
+```css
+:root {
+  --main-color: red;
+}
+```
+
+相对应的，存在局部变量，当全局变量和局部变量都存在的时候，会使用局部变量，下面的例子，三段文字的颜色是不一样的
+
+```html
+<style>
+  :root { --color: blue; }
+  div { --color: green; }
+  #alert { --color: red; }
+  * { color: var(--color); }
+</style>
+
+<p>蓝色</p>
+<div>绿色</div>
+<div id="alert">红色</div>
+```
+
+**使用目的**
+
+如果在项目中使用了 CSS 变量，无非就两个目的：
+
+* 抽取公共变量，方便维护修改值
+* 适配
+
+而适配是最主要的场景，其中又可以根据屏幕宽度适配和主题适配
+
+```css
+/* 响应式适配 */
+@media screen and (min-width: 768px) {
+  :root {
+    --main-color: pink;
+  }
+}
+
+/* 暗黑模式适配 */
+.dark-mode {
+  :root {
+    --main-color: pink;
+  }
+} 
+```
+
+**运算**
+
+为了更加 CSS变量 灵活，允许对变量进行一定的运算，可以使用 `calc`，例如：
+
+```diff
+:root {
+  --small: 20;
+}
+
+.app {
+-  border-width: var(--small)px;  // 错误的写法
++  border-width: calc(var(--small) * 1px); // 正确的写法
+}
+```
+
+### 多列
+
+某些情况下，我们需要文字多列排布，类似于如下的效果
+
+---
+
+<style>
+#columns-test p{
+  column-count: 3;
+  /* column-width: 100px; */
+  column-gap: 40px;
+  column-rule: 3px dashed green;
+}
+</style>
+
+<div id="columns-test">
+  <p>
+  Front-end development focuses on the visual aspects of a website – the part that users see and interact with. Back-end development comprises a site's structure, system, data, and logic
+  </p>
+</div>
+
+---
+
+
+```html
+<style>
+#columns-test p{
+  column-count: 3;
+  // 也可以使用宽度
+  // column-width: 100px;
+  column-gap: 40px;
+  column-rule: 3px dashed green;
+}
+</style>
+
+<div id="columns-test">
+  <p>
+  Front-end development focuses on the visual aspects of a website – the part that users see and interact with. Back-end development comprises a site's structure, system, data, and logic
+  </p>
+</div>
+```
