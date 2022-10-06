@@ -198,14 +198,14 @@ ul {
   padding-left: 0 !important;
 }
 
-.content {
+.md-content {
   display: inline-block;
   border-bottom: 2px solid #ffc60a;
 }
-.content:hover {
+.md-content:hover {
   background-color: #faf1d1;
 }
-.content:hover + .comment {
+.md-content:hover + .md-comment {
   opacity: 1;
   animation: appear 0.5s;
 }
@@ -228,7 +228,7 @@ ul {
   }
 }
 
-.comment {
+.md-comment {
   animation: disappear 0.5s;
   opacity: 0;
   text-align: left;
