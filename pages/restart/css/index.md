@@ -232,7 +232,7 @@ input::focus {
 #app {
   outline: 4px dashed #000;
   border: 2px solid red;
-  // 可以用offset 来控制边框的偏移
+  /* 可以用offset 来控制边框的偏移 */
   outline-offset: 5px; 
 }
 </style>
@@ -244,6 +244,18 @@ input::focus {
 
 <div id="app" border="2px solid red" outline="4px solid black" outline-offset-2>Hello</div>
 
+---
+
+
+**object-fit**
+
+* contain 保证图片等比例完全显示
+* cover 保证图片被填满，部分显示
+* fill 拉伸图片，非原比例放大
+
+---
+
+<objectFit />
 
 ---
 
@@ -288,7 +300,7 @@ div {
 <div id="alert">红色</div>
 ```
 
-**使用目的**
+**使用场景**
 
 如果在项目中使用了 CSS 变量，无非就两个目的：
 
@@ -323,8 +335,8 @@ div {
 }
 
 .app {
--  border-width: var(--small)px;  // 错误的写法
-+  border-width: calc(var(--small) * 1px); // 正确的写法
+-  width: var(--small)px;  // 错误的写法
++  width: calc(var(--small) * 1px); // 正确的写法
 }
 ```
 
@@ -355,9 +367,10 @@ div {
 ```html
 <style>
 #columns-test p{
+  /* 指定列数 */
   column-count: 3;
-  // 也可以使用宽度
-  // column-width: 100px;
+  /* 或者列度 */
+  /* column-width: 100px; */
   column-gap: 40px;
   column-rule: 3px dashed green;
 }
@@ -369,3 +382,43 @@ div {
   </p>
 </div>
 ```
+
+### 动画库
+
+动画是 CSS 最强大的功能之一，可以实现各种复杂炫酷的效果，想要写好 CSS 动画，除了考验代码功底，更多地是设计交互能力的体验，好在社区里也有大量动画库提供我们选择
+
+**1.Animate.css** => <GitHubLink repo="animate-css/animate.css" />
+
+最经典的动画库，内置了一些封装好的 CSS 动画类，引入 CSS 文件后就可以直接使用，使用方式非常简单，但是由于会引入整个 CSS 文件，体积会比较大
+
+**2.cssanimation** => <GitHubLink repo="yesiamrocks/cssanimation.io" />
+
+这个动画库的内容更加丰富，还内置了文字动画，让一个单词的不同字母可以不同时机出现和消失
+
+**3.Animista** => https://animista.net/
+
+这是一个在线网站，可以选取你需要的动画，然后拷贝对应的 CSS 代码到你的项目即可，所以几乎不会增大项目的体积
+
+**4.angrytools** => https://angrytools.com/css/animation/
+
+这个网站通过界面的形式调试 CSS 动画的细节，然后生成对应的代码
+
+**5.hover.css** => <GitHubLink repo="IanLunn/Hover" />
+
+专注于 **hover** 的动画交互，内置了丰富的 hover 动画类
+
+**6.three dots** => <GitHubLink repo="nzbin/three-dots" />
+
+由三个点组成的各种**加载**动画
+
+**7.CSSshark** => <GitHubLink repo="elrumordelaluz/csshake" />
+
+内置了各种 CSS **抖动**效果的动画
+
+**8.hamburger** => <GitHubLink repo="jonsuh/hamburgers" />
+
+关于 " <i class="i-material-symbols-menu"></i> " 图标的各种过渡变换效果
+
+:::info
+[这里有一个网站教你从头到尾实现一些CSS效果](https://cssanimation.rocks/)
+:::
