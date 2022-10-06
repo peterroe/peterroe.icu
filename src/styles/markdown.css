@@ -200,6 +200,7 @@ ul {
 
 .md-content {
   display: inline-block;
+  transition: background-color 0.5s; 
   border-bottom: 2px solid #ffc60a;
 }
 .md-content:hover {
