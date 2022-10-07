@@ -1,61 +1,28 @@
 ---
 title: Restart
 subtitle: Relearn the front end
+lists:
+  - name: 'HTML'
+    link: '/restart/html'
+    icon: 'i-mdi-language-html5'
+  - name: 'CSS'
+    link: '/restart/css'
+    icon: 'i-mdi-language-css3'
+  - name: 'JavaScript'
+    link: '/restart/js'
+    icon: 'i-mdi-language-javascript'
+  - name: 'Browser'
+    link: '/restart/browser'
+    icon: 'i-bi-browser-chrome'
+  - name: 'Computer Network'
+    link: ''
+    icon: 'i-carbon-content-delivery-network'
+  - name: 'NodeJs'
+    link: ''
+    icon: 'i-mdi-nodejs'
+  - name: 'Operating System'
+    link: ''
+    icon: 'i-uiw-linux'
 ---
 
-[[toc]]
-
-
-
-<a href="/restart/html" text-6>
-  <i class="i-mdi-language-html5" text="7 red" mr-2/>
-  HTML
-</a>
-
-<div mb-6/>
-
-<a href="/restart/css" text-6>
-  <i class="i-mdi-language-css3" text="7 blue" mr-2/>
-  CSS
-</a>
-
-<div mb-6/>
-
-<a href="/restart/js" text-6>
-  <i class="i-logos-javascript" text="7" mr-2/>
-  JavaScript
-</a>
-
-<div mb-6/>
-
-<a href="/restart/browser" text-6>
-  <i class="i-logos-chrome" text="7" mr-2/>
-  Browser
-</a>
-
-<div mb-6/>
-
-<a href="" text-6>
-  <i class="i-carbon-content-delivery-network" text="7 [14bac6]" mr-2/>
-  Computer Network
-</a>
-
-<div mb-6/>
-
-<a href="" text-6>
-  <i class="i-logos-nodejs-icon" text="7" mr-2/>
-  NodeJs
-</a>
-
-<div mb-6/>
-
-<a href="" text-6>
-  <i class="i-logos-linux-tux" text="7 [fd6262]" mr-2/>
-  Operating System
-</a>
-
-
-
-
-
-
+<ColumnTimeLine :lists="frontmatter.lists"/>

@@ -1,24 +1,12 @@
-<script setup>
-const list = [
-  {
-    link: '/algorithm',
-    name: '算法之路',
-  },
-  {
-    link: '/restart',
-    name: '重学前端',
-  },
-  {
-    link: '/soft-skill',
-    name: '软技能',
-  }, {
-    link: '/source-code',
-    name: '源码解析',
-  }, {
-    link: '/js-style-guide',
-    name: 'JS编程风格指南',
-  },
-]
+<script setup lang="ts">
+interface TimeLineItem {
+  name: string
+  link: string
+  icon: string
+}
+defineProps({
+  lists: Array,
+})
 
 const randomHexColor = function() {
   let hex = Math.floor(Math.random() * 16777216).toString(16) // 生成ffffff以内16进制数
@@ -32,8 +20,8 @@ const randomHexColor = function() {
 
 <template>
   <div>
-    <div v-for="(it, i) in list" :key="it.name" pt="1px">
-      <div flex text-lg>
+    <div v-for="(it, i) in lists" :key="it.name" pt="1px">
+      <div flex text-lg items-center>
         <div
           w-4
           h-4
@@ -43,9 +31,10 @@ const randomHexColor = function() {
           my-2
           mr-4
         />
+        <i :class="it.icon" mr-2 text-6 />
         <a :href="it.link">{{ it.name }}</a>
       </div>
-      <div v-if="i !== list.length-1" ml="7px" h-6 w="2px" bg-gray />
+      <div v-if="i !== lists.length-1" ml="7px" h-6 w="2px" bg-gray />
     </div>
   </div>
 </template>

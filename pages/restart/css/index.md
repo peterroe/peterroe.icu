@@ -420,5 +420,5 @@ div {
 关于 " <i class="i-material-symbols-menu"></i> " 图标的各种过渡变换效果
 
 :::info
-[这里有一个网站教你从头到尾实现一些CSS效果](https://cssanimation.rocks/)
+[这里有一个网站教你从头到尾实现一些CSS动画效果](https://cssanimation.rocks/)
 :::
