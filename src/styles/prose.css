@@ -159,6 +159,7 @@
   padding-bottom: 0.8571429em;
   padding-left: 1.1428571em;
 }
+
 .prose pre code {
   background-color: transparent;
   border-width: 0;
@@ -167,9 +168,10 @@
   font-weight: 400;
   color: inherit;
   font-size: inherit;
-  font-family: inherit;
+  font-family: "dm", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   line-height: inherit;
 }
+
 .prose pre code::before {
   content: none;
 }
