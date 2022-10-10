@@ -4,6 +4,14 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### ssh-keygen
+
+```shell
+$ ssh-keygen
+```
+
+Then copy the public key to the github/gitlab account.
+
 ### Commit description
 
 * **feat: new feature**
@@ -159,7 +167,7 @@ $ git rm -r --cached
 ```shell
 $ brew search node # 查看所有的node版本
 $ brew install node@16 # 安装node@16
-$ brew link -overwrite --force node@16 # 创建node@16的链接
+$ brew link --overwrite --force node@16 # 创建node@16的链接
 $ node -v # 确认node@16已经安装
 ```
 
