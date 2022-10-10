@@ -4,6 +4,14 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### ssh-keygen
+
+```shell
+$ ssh-keygen
+```
+
+Then copy the public key to the github/gitlab account.
+
 ### Commit description
 
 * **feat: new feature**

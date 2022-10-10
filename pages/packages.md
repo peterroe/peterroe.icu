@@ -5,6 +5,33 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### find-up ---> 文件查找 <GitHubStar repo="sindresorhus/find-up" />
+
+通过遍历父目录查找文件或目录
+
+```shell
+/
+└── Users
+    └── sindresorhus
+        ├── unicorn.png
+        └── foo
+            └── bar
+                ├── baz
+                └── example.js
+```
+
+```ts
+import path from 'node:path';
+import {findUp, pathExists} from 'find-up';
+
+console.log(await findUp('unicorn.png'));
+//=> '/Users/sindresorhus/unicorn.png'
+```
+
+地址：<GitHubLink repo="sindresorhus/find-up" />
+
+---
+
 ### konva ---> Canvas库 <GitHubStar repo="konvajs/konva" />
 
 ```js
