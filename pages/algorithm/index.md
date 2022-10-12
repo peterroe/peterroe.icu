@@ -5,6 +5,16 @@ display: ''
 
 [[toc]]
 
+## ~~ 转为整数
+
+```ts
+let a = -10.24
+let b = 43.54
+
+~~a == 10
+~~b == 43
+```
+
 ## 不同纬度看Z行变换
 
 > https://leetcode.cn/problems/zigzag-conversion/

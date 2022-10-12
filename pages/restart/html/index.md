@@ -423,6 +423,22 @@ del 和 ins 一起使用，描述文档中的更新和修正。浏览器通常�
 
 ---
 
+#### figure
+
+figure 元素的内容应该和主内容相关，但如果被删除，则不应该对文档流产生影响 
+
+```html
+<figure>
+  <img src="/download.png" alt="">
+  <figcaption>caption and descriptions</figcaption>
+</figure>
+```
+
+<figure>
+  <img src="download.png" alt="">
+  <figcaption>caption and descriptions</figcaption>
+</figure>
+
 #### pre
 
 之前提到，浏览器会将多个空格合并为一个空格，而 pre 标签用于定义预格式化的文本，文本中的空格和换行都会被**保留**，所以通常用于显示源代码
