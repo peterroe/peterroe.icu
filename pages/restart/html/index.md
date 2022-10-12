@@ -434,10 +434,14 @@ figure 元素的内容应该和主内容相关，但如果被删除，则不应�
 </figure>
 ```
 
+---
+
 <figure>
-  <img src="download.png" alt="">
+  <img src="/download.png" alt="">
   <figcaption>caption and descriptions</figcaption>
 </figure>
+
+---
 
 #### pre
 
@@ -730,3 +734,4 @@ Safari |	[Alt] + accesskey |	N/A |	[Control] [Alt] + accesskey
 ### 拓展
 
 * [被废弃的HTML标签](/restart/html/delete-reason)
+* [高频面试题](/restart/html/interview)

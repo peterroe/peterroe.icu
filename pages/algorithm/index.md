@@ -5,6 +5,56 @@ display: ''
 
 [[toc]]
 
+## 电话号字母组合问题
+
+> https://leetcode.cn/problems/letter-combinations-of-a-phone-number/
+
+```ts
+var letterCombinations = function(digits) {
+  const m = ['', '', 'abc', 'def','ghi','jkl','mno','pqrs','tuv','wxyz']
+  let array = []
+  for(let i = 0; i < digits.length; i++) {
+    array.push(m[digits[i]])
+  }
+  let result = []
+  const dfs = (i, str) => {
+    if(i == array.length) {
+      str && result.push(str)
+      return 
+    }
+    for(let j = 0; j < array[i].length; j++) {
+      const char = array[i][j]
+      dfs(i + 1, str + char)
+    }
+  }
+  dfs(0, '')
+  return result
+};
+```
+
+因为要组合的目标个数是不确定的，所以可以利用 dfs 的思想，一直向下查找，直到找到最后一个目标，然后在利用循环，组合枚举每一层可能的字母，并将状态带到下一个 dfs，便于跳出前存储状态
+
+## 盛水容器问题
+
+> https://leetcode.cn/problems/container-with-most-water/
+
+```ts
+var maxArea = function(height) {
+  let [i, j] = [0, height.length - 1]
+  let max = 0
+  while(i < j) {
+    max = height[i] < height[j] ?
+      Math.max(max, (j - i) * height[i++]) :
+      Math.max(max, (j - i) * height[j--]) 
+  }
+  return max
+};
+```
+
+解题的思路在于，首先我们推导出面积公式 `S(i, j) = min(h[i], h[j]) * (j - i)`，然后尝试去移动 i 和 j，判断面积的变化趋势
+
+得出，只有小边向中心移动，才有可能使得面积**更大**
+
 ## ~~ 转为整数
 
 ```ts
