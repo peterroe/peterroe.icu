@@ -423,6 +423,26 @@ del 和 ins 一起使用，描述文档中的更新和修正。浏览器通常�
 
 ---
 
+#### figure
+
+figure 元素的内容应该和主内容相关，但如果被删除，则不应该对文档流产生影响 
+
+```html
+<figure>
+  <img src="/download.png" alt="">
+  <figcaption>caption and descriptions</figcaption>
+</figure>
+```
+
+---
+
+<figure>
+  <img src="/download.png" alt="">
+  <figcaption>caption and descriptions</figcaption>
+</figure>
+
+---
+
 #### pre
 
 之前提到，浏览器会将多个空格合并为一个空格，而 pre 标签用于定义预格式化的文本，文本中的空格和换行都会被**保留**，所以通常用于显示源代码
@@ -442,6 +462,30 @@ let a = 2
 let b = 3
 a + b
 </pre>
+
+---
+
+#### a
+
+把 a 标签拿出来说是因为，除了跳转一个链接之外，它还有一些其他的用法
+
+```html
+<!-- 打开电子邮件客户端，并填入地址 -->
+<a href="mailto:peterroe@163.com">peteroe@163.com</a>
+<!-- 让用户设备设备呼叫链接的号码 -->
+<a href="tel:110">110</a>
+<!-- 打开短信程序并预填号码 -->
+<a href="sms:110">120</a>
+<!-- 下载文件而不跳转 -->
+<a href="https://peterroe.icu/favicon.ico" download>120</a>
+```
+
+---
+
+<a href="mailto:peterroe@163.com">peteroe@163.com</a> <br />
+<a href="tel:110">110</a> <br />
+<a href="sms:110">120</a> <br />
+<a href="https://peterroe.icu/favicon.ico" download>download</a>
 
 ---
 
@@ -714,3 +758,4 @@ Safari |	[Alt] + accesskey |	N/A |	[Control] [Alt] + accesskey
 ### 拓展
 
 * [被废弃的HTML标签](/restart/html/delete-reason)
+* [高频面试题](/restart/html/interview)

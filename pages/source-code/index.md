@@ -7,6 +7,9 @@ lists:
   - name: '@antfu/ni'
     link: '/source-code/ni'
     icon: 'i-akar-icons-npm-fill'
+  - name: 'tsx'
+    link: '/source-code/tsx'
+    icon: 'i-file-icons-tsx-alt'
 ---
 
 <ColumnTimeLine :lists="frontmatter.lists"/>

@@ -12,7 +12,7 @@ $ tsx index.ts
 
 ## 技术实现
 
-* 命令行辅助工具 [cleye](https://github.com/privatenumber/cleye)，类似 `exec`
+* 命令行辅助工具 [cleye](https://github.com/privatenumber/cleye)，类似 `cac`
 * 命令执行工具 [cross-spawn](https://github.com/moxystudio/node-cross-spawn)，跨平台
 * 转换工具 [@esbuild-kit/esm-loader](https://github.com/esbuild-kit/esm-loader)
 

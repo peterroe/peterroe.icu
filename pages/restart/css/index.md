@@ -422,3 +422,7 @@ div {
 :::info
 [这里有一个网站教你从头到尾实现一些CSS动画效果](https://cssanimation.rocks/)
 :::
+
+### 拓展
+
+* [高频面试题](/restart/css/interview)

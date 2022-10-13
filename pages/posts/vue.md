@@ -1,6 +1,5 @@
 ---
 title: 简单聊聊Vue
-date: 2022-09-10
 duration: 10min
 ---
 

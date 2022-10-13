@@ -30,6 +30,8 @@ Chrome developers' Blog => https://developer.chrome.com/blog/
 
 Lexoral's Blog => https://lexoral.com/blog/
 
+Tiny fool's Blog => https://codechina.org/ <span inline-block border rounded px-2 text="12px">中文</span>
+
 ### Design
 
 [Open UI]{Comparison between different component frameworks} => https://open-ui.org/
@@ -109,6 +111,10 @@ Translate to multiple languages => https://smodin.me/translate-one-text-into-mul
 ### Diagram
 
 Isoflow => https://isoflow.io/
+
+tldraw => https://tldraw.com
+
+zenflowchart => https://app.zenflowchart.com/
 
 ### Music
 

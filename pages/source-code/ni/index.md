@@ -2,7 +2,7 @@
 title: '@antfu/ni'
 ---
 
-### 用法
+## 用法
 
 自动识别项目所用的包管理器，然后使用该管理器安装对应的包
 
@@ -14,7 +14,7 @@ ni vite
 # bun add vite
 ```
 
-### 原理
+## 原理
 
 运行 `ni vite`，本质上是执行了下面的代码
 
@@ -39,7 +39,7 @@ export async function runCli(fn: Runner, options: DetectOptions = {}) {
 }
 ```
 
-`run`函数
+### run
 
 ```ts
 export async function run(fn: Runner, args: string[], options: DetectOptions = {}) {
@@ -99,7 +99,7 @@ export async function run(fn: Runner, args: string[], options: DetectOptions = {
 }
 ```
 
-### 包管理确认
+### getConfig
 
 ```ts
 export async function getConfig(): Promise<Config> {
@@ -126,7 +126,7 @@ export async function getConfig(): Promise<Config> {
 }
 ```
 
-看下 `parseNi` 的实现：
+### parseNi
 
 ```ts
 export const parseNi = <Runner>((agent, args, ctx) => {
@@ -241,8 +241,6 @@ export function getCommand(
 
 ### detect
 
-查找
-
 ```ts
 export const LOCKS: Record<string, Agent> = {
   'bun.lockb': 'bun',
@@ -313,3 +311,24 @@ export async function detect({ autoInstall, cwd }: DetectOptions) {
   return agent
 }
 ```
+
+### 查找流程
+
+**pkg**
+
+* 通过 find-up 从当前目录依依次向上找 lock 文件，在找到同级的 pkg 文件
+* 通过 find-up 从当前目录依依次向上找 pkg 文件
+
+**packageManager**
+
+* 如果 packageManager 字段为 yarn@version，且 version 大于1，则 `agent` 为 yarn@berry
+* 如果 packageManager 字段为 pnpm@version，且 version 小于7，则 `agent` 为 pnpm@6
+* packageManager 必须属于 `npm/yarn/yarn@berry/pnpm/pnpm@6/bun`，否则警告不能识别该管理器 
+
+**agent**
+
+* 如果还未确认 `agent` ，且存在 lock 文件，则 `agent` 为 lock 文件对应的包管理器
+
+* 如果确认了 `agent`，但用户设备未安装，则提示用户安装
+
+* 确定 `agent`
