@@ -45,6 +45,8 @@ FastClick.attach(document.body);
 
 ### 离线存储
 
+是一种缓存技术
+
 当用户无网络的情况下，也可以正常使用某些功能。可以通过在 html 标签上添加 manifest 属性，浏览器会去下载对应的文件中的资源列表，然后缓存
 
 ```html
@@ -81,4 +83,23 @@ images/large/ images/offline.jpg
 *.html /offline.html
 ```
 
-必须修改清单文件本身才能让浏览器刷新缓存文件
+浏览器会对比新的manifest文件与旧的manifest文件，如果文件没有发生改变，就不做任何操作，所以必须修改清单文件本身才能让浏览器刷新缓存文件
+
+### 浏览器多个页面通信
+
+**webSocket**
+
+让服务器当中间者，🔗两个页面的通信
+
+**LocalStorage**
+
+当 localStorage 变化时，会触发事件，可以对其进行监听获取值
+
+```ts
+window.addEventListener('storage', function (e) {
+  if(e.key == 'ctc-msg') {
+    const data = JSON.parse(e.newValue)
+    const text = data.msg
+  }
+})
+```
