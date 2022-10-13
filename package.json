@@ -1,4 +1,5 @@
 {
+  "name": "peterroe.icu",
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=production vite-ssg build && esno ./scripts/rss.ts && cp _dist_redirects dist/_redirects",
