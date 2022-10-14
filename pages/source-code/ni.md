@@ -2,6 +2,8 @@
 title: '@antfu/ni'
 ---
 
+<GitHubLink  repo="antfu/ni" />
+
 ## 用法
 
 自动识别项目所用的包管理器，然后使用该管理器安装对应的包

@@ -2,6 +2,10 @@
 title: Unocss-play
 ---
 
+[[toc]]
+
+<GitHubLink  repo="unocss/unocss/tree/main/playground" />
+
 ## 前置包
 
 **SplitPanes**
@@ -411,4 +415,156 @@ async function send() {
 watch([iframeData, iframe], send, { deep: true })
 ```
 
-到现在为止我们大概清楚一些基本流程
+到现在为止我们大概清楚一些基本流程:
+
+由于 HTML 的改动，会根据配置生成 CSS，然后发送给 __play.html 页面
+
+## 配置
+
+如果 URL 参数没有的话，就也是默认的配置
+
+```html
+<CodeMirror
+  v-model="customConfigRaw"
+  flex-auto
+  mode="javascript"
+  border="l gray-400/20"
+  class="scrolls"
+/>
+```
+
+配置的改变也会触发 throttledWatch 更新 URL 和 Storage，和前面一样
+
+```js
+export const customConfigRaw = ref(decode(params.get('config') || '') || defaultConfigRaw)
+
+throttledWatch(
+  [customConfigRaw, inputHTML, options],
+  () => {
+    const url = new URL('/play/', window.location.origin)
+    url.searchParams.set('html', encode(inputHTML.value))
+    url.searchParams.set('config', encode(customConfigRaw.value))
+    url.searchParams.set('options', encode(JSON.stringify(options.value)))
+    localStorage.setItem(STORAGE_KEY, url.search)
+    window.history.replaceState('', '', `${url.pathname}${url.search}`)
+  },
+  { throttle: 1000, deep: true },
+)
+```
+
+此外，也会执行 reGenerate 重新渲染
+
+```js
+debouncedWatch(
+  customConfigRaw,
+  async () => {
+    customConfigError.value = undefined
+    try {
+      const result = await evaluateUserConfig(customConfigRaw.value)
+      if (result) {
+        customConfig = result
+        reGenerate()
+        if (initial) {
+          const { transformers = [] } = uno.config
+          if (transformers.length)
+            transformedHTML.value = await getTransformedHTML()
+          initial = false
+        }
+      }
+    }
+    catch (e) {
+      console.error(e)
+      customConfigError.value = e as Error
+    }
+  },
+  { debounce: 300, immediate: true },
+)
+```
+
+由于 config 里面有一些 `import xxx from 'xx'` 的句子，JS 是不好直接执行的，需要进行转换：
+
+```js
+const CDN_BASE = 'https://esm.sh/'
+
+export async function evaluateUserConfig<U = UserConfig>(configStr: string): Promise<U | undefined> {
+  const code = configStr
+    .replace(/import\s*(.*?)\s*from\s*(['"])unocss\2/g, 'const $1 = await __import("unocss");')
+    .replace(/import\s*(\{[\s\S]*?\})\s*from\s*(['"])([\w-@/]+)\2/g, 'const $1 = await __import("$3");')
+    .replace(/import\s*(.*?)\s*from\s*(['"])([\w-@/]+)\2/g, 'const $1 = (await __import("$3")).default;')
+    .replace(/export default /, 'return ')
+    .replace(/\bimport\s*\(/, '__import(')
+
+  // bypass vite interop
+  // eslint-disable-next-line no-new-func
+  const _import = new Function('a', 'return import(a);')
+  const __import = (name: string): any => {
+    if (!modulesCache.has(name)) {
+      modulesCache.set(name,
+        name.endsWith('.json')
+          ? $fetch(CDN_BASE + name, { responseType: 'json' }).then(r => ({ default: r }))
+          : _import(CDN_BASE + name),
+      )
+    }
+    return modulesCache.get(name)
+  }
+
+  const fn = new AsyncFunction('__import', code)
+  const result = await fn(__import)
+
+  if (result)
+    return result
+}
+
+```
+
+上面的 fn 打印出来是这个样子：
+
+```js
+(async function anonymous(__import
+) {
+  const {
+    defineConfig,
+    presetAttributify,
+    presetIcons,
+    presetUno,
+  } = await __import("unocss");
+
+  return defineConfig({
+    rules: [
+      ['custom-rule', { color: 'red' }]
+    ],
+    shortcuts: {
+      'custom-shortcut': 'text-lg text-orange hover:text-teal'
+    },
+    presets: [
+      presetUno(),
+      presetAttributify(),
+      presetIcons({
+        scale: 1.2,
+        cdn: 'https://esm.sh/'
+      }),
+    ]
+  })
+})
+```
+
+可以看到，是通过对 import 语法进行转换，然后通过 Function 构造成函数。还要去 CDN 网站实时拉取包的代码，例如：https://esm.sh/unocss
+
+此外，生成的 result 结果类似如下：
+
+![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/272d95c26fa84b1e9564cf74fb008d5a~tplv-k3u1fbpfcp-watermark.image?)
+
+生成的 result 会作为customConfig被注入到 uno 实例中
+
+```js
+const reGenerate = () => {
+  uno.setConfig(customConfig, defaultConfig.value)
+  // 然后重新执行 generate
+  generate()
+  autocomplete = createAutocomplete(uno)
+}
+```
+
+## 架构图
+
+![img](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91e863308c3d4274bc63d7f908733cd0~tplv-k3u1fbpfcp-watermark.image)
