@@ -19,9 +19,4 @@ lists:
     icon: 'i-ph-code-bold'
 ---
 
-<<<<<<< HEAD
 <ColumnTimeLine :lists="frontmatter.lists"/>
-=======
-<ColumnTimeLine />
-
->>>>>>> 92fce9f (update)
