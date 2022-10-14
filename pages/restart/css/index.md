@@ -215,6 +215,21 @@ table {
 }
 ```
 
+**aspect-radio**
+
+规定元素的宽高比例。使用时，只能给定 width 或者 height，同时使用的话，aspect-radio 不生效。
+
+而且 文字内容会影响比例，可以通过 `overflow:hidden` 来保持比例
+
+```css
+div{
+  height: 40px;
+  background: red;
+  aspect-ratio: 1 / 1; 
+  overflow: hidden;
+}
+```
+
 **outline**
 
 input 标签自带了 outline 效果，视觉上表示强调的效果，原理上类似于这样的实现：
@@ -383,6 +398,7 @@ div {
 </div>
 ```
 
+<<<<<<< HEAD
 ### 动画库
 
 动画是 CSS 最强大的功能之一，可以实现各种复杂炫酷的效果，想要写好 CSS 动画，除了考验代码功底，更多地是设计交互能力的体验，好在社区里也有大量动画库提供我们选择
@@ -422,6 +438,11 @@ div {
 :::info
 [这里有一个网站教你从头到尾实现一些CSS动画效果](https://cssanimation.rocks/)
 :::
+=======
+### 单位
+
+// todo
+>>>>>>> 92fce9f (update)
 
 ### 拓展
 

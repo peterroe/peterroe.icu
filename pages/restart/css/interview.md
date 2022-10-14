@@ -64,7 +64,7 @@ bfc 通过一定的规则创建
 
 ### 全屏滚动的实现
 
-通过设置 transformY 加上 transition 的过渡实现，监听滚动事件，改变 transform 的值
+通过设置 transform 加上 transition 的过渡实现，监听滚动事件，改变 transform 的值
 
 ### 视差滚动的实现
 
@@ -74,4 +74,16 @@ bfc 通过一定的规则创建
 
 * CSS 的 attachment
 * JS 库，如 stellar.js
+
+### CSS 会阻塞 DOM 的解析吗？
+
+不会阻塞 DOM 解析，但是会阻塞渲染，严格来说是阻塞 render tree 的生成
+
+### rgba 和 opacity
+
+rgba 只会用于元素的颜色或背景色，而 opactiy 是使整个元素透明
+
+### 文字重叠？
+
+设置 line-height 和 letter-spacing 可以使文字重叠（没啥用，可能有用）
 

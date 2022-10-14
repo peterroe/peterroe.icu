@@ -10,6 +10,9 @@ lists:
   - name: 'tsx'
     link: '/source-code/tsx'
     icon: 'i-file-icons-tsx-alt'
+  - name: 'unocss-play'
+    link: '/source-code/unocss-play'
+    icon: 'i-logos-unocss'
 ---
 
 <ColumnTimeLine :lists="frontmatter.lists"/>
