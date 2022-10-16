@@ -5,6 +5,148 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### nativefier ---> Make App  <GitHubStar repo="nativefier/nativefier" />
+
+通过 electron 将任何网站打包成桌面应用
+
+```shell
+$ npm install -g nativefier
+$ nativefier https://twitter.com
+```
+
+地址：<GitHubLink repo="nativefier/nativefier" />
+
+---
+
+### immutable.js ---> 高效数据结构 <GitHubStar repo="immutable-js/immutable-js" />
+
+用于 Javascript 的不可变持久数据集合，可提高效率和简单性
+
+包括 `List、Stack、Map、OrderedMap、Set、OrderedSet` 等
+
+```js
+const { Map } = require('immutable');
+const map1 = Map({ a: 1, b: 2, c: 3 });
+const map2 = map1.set('b', 50);
+map1.get('b') + ' vs. ' + map2.get('b'); // 2 vs. 50
+```
+
+地址：<GitHubLink repo="immutable-js/immutable-js" />
+
+---
+
+### pixijs ---> WebGL 2D <GitHubStar repo="pixijs/pixijs" />
+
+```js
+import { Application, Sprite, Assets } from 'pixi.js';
+
+// The application will create a renderer using WebGL, if possible,
+// with a fallback to a canvas render. It will also setup the ticker
+// and the root stage PIXI.Container
+const app = new Application();
+```
+
+地址：<GitHubLink repo="pixijs/pixijs" />
+
+---
+
+### socket.io ---> 双向通信 <GitHubStar repo="socketio/socket.io" />
+
+依赖于 Engine.IO，并不是 websocket。尽管 Socket.IO 确实尽可能使用 WebSocket 作为传输，但它会为每个数据包添加一些元数据：数据包类型、名称空间和需要消息确认时的 ack id。这就是为什么 WebSocket 客户端将无法成功连接到 Socket.IO 服务器，而 Socket.IO 客户端也将无法连接到 WebSocket 服务器
+
+```js
+io.on('connection', socket => {
+  socket.emit('request', /* … */); // emit an event to the socket
+  io.emit('broadcast', /* … */); // emit an event to all connected sockets
+  socket.on('reply', () => { /* … */ }); // listen to the event
+});
+```
+
+地址：<GitHubLink repo="socketio/socket.io" />
+
+---
+
+### crawlee ---> NodeJs 爬虫 <GitHubStar repo="apify/crawlee" />
+
+支持 `cheerio、playwright、puppeteer`
+
+```js
+import { PlaywrightCrawler, Dataset } from 'crawlee';
+
+// PlaywrightCrawler crawls the web using a headless
+// browser controlled by the Playwright library.
+const crawler = new PlaywrightCrawler({
+    // Use the requestHandler to process each of the crawled pages.
+    async requestHandler({ request, page, enqueueLinks, log }) {
+        const title = await page.title();
+        log.info(`Title of ${request.loadedUrl} is '${title}'`);
+
+        // Save results as JSON to ./storage/datasets/default
+        await Dataset.pushData({ title, url: request.loadedUrl });
+
+        // Extract links from the current page
+        // and add them to the crawling queue.
+        await enqueueLinks();
+    },
+    // Uncomment this option to see the browser window.
+    // headless: false,
+});
+
+// Add first URL to the queue and start the crawl.
+await crawler.run(['https://crawlee.dev']);
+```
+
+地址：<GitHubLink repo="apify/crawlee" />
+
+---
+
+### Pollen ---> CSS 变量库 <GitHubStar repo="heybokeh/pollen" />
+
+支持 `CSS、CSS in JS、Object Style、Inline Style` 等多种写法
+
+```js
+.button {
+   font-family: var(--font-sans);
+   font-size: var(--scale-00);
+   font-weight: var(--weight-medium); 
+   line-height: var(--line-none);
+   padding: var(--size-3) var(--size-5);
+   background: var(--color-blue);
+   border-radius: var(--radius-xs);
+   color: white;
+}
+```
+
+地址：<GitHubLink repo="heybokeh/pollen" />
+
+---
+
+### broz ---> 简易webview浏览器 <GitHubStar repo="antfu/broz" />
+
+原理是通过 `electron` 打开一个webview，然后载入对应的网页
+
+```shell
+$ npx broz antfu.me
+```
+
+地址：<GitHubLink repo="antfu/broz" />
+
+---
+
+### AdminJS ---> NodeJS管理面板 <GitHubStar repo="SoftwareBrothers/adminjs" />
+
+`frameworke` 例如 `express、koa、nestjs`。
+
+`database adapter` 例如 `mongoose、sequelize、typeorm`
+
+```js
+npm install adminjs @adminjs/<your framework> @adminjs/<your database adapter>
+```
+
+地址：<GitHubLink repo="SoftwareBrothers/adminjs" />
+
+---
+
 ### find-up ---> 文件查找 <GitHubStar repo="sindresorhus/find-up" />
 
 通过遍历父目录查找文件或目录
