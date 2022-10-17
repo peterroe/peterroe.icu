@@ -130,6 +130,8 @@ Music for programming => https://musicforprogramming.net/fifteen
 
 ### interview
 
+Tech Interview Handbook =>  https://www.techinterviewhandbook.org/
+
 Front End Interview Handbook => https://www.frontendinterviewhandbook.com/
 
 Great Front End => https://www.greatfrontend.com/

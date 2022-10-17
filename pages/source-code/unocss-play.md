@@ -16,6 +16,10 @@ title: Unocss-play
 
 更加方便地操作字符串：https://github.com/Rich-Harris/magic-string
 
+**codemirror@5**
+
+编辑器的核心实现：https://github.com/codemirror/codemirror5
+
 ## 主要部分
 
 分为左边的 Preview 和右边的 Editor
@@ -567,4 +571,6 @@ const reGenerate = () => {
 
 ## 架构图
 
-![img](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91e863308c3d4274bc63d7f908733cd0~tplv-k3u1fbpfcp-watermark.image)
+<!-- ![img](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91e863308c3d4274bc63d7f908733cd0~tplv-k3u1fbpfcp-watermark.image) -->
+
+<img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/91e863308c3d4274bc63d7f908733cd0~tplv-k3u1fbpfcp-watermark.image" v-viewer />
