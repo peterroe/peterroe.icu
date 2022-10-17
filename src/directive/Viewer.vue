@@ -8,7 +8,6 @@ defineProps({
 const imgRef = ref()
 
 onMounted(() => {
-  console.dir(imgRef.value)
   const { innerHeight, innerWidth } = window
   const windowScale = innerWidth / innerHeight
   const { naturalHeight, naturalWidth} = imgRef.value

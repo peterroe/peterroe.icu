@@ -2,8 +2,6 @@ import type { App } from 'vue'
 import { createVNode, render } from 'vue' 
 import Viewer from './Viewer.vue'
 
-let instance: HTMLDivElement | null = null
-
 function generateContainer(el: HTMLImageElement) {
   const container = document.createElement('div')
 
@@ -13,7 +11,6 @@ function generateContainer(el: HTMLImageElement) {
   appendContainer(container)
   container.addEventListener('click', () => {
     removeContainer(container)
-    instance = null
   })
 
   return container
@@ -42,7 +39,7 @@ export default function install(app: App) {
   app.directive('viewer', {
     mounted(el) {
       el.onclick = () => {
-        instance = generateContainer(el)
+        generateContainer(el)
       }
     },
   })
