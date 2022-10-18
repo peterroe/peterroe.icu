@@ -5,6 +5,61 @@ display: ''
 
 [[toc]]
 
+## 下一个排列
+
+> https://leetcode.cn/problems/next-permutation/
+
+```js
+function findLowRight(arr) {
+  let i = arr.length - 2;
+  while(arr[i] >= arr[i + 1]) {
+    i--
+  }
+  return i
+}
+
+function findUpperRight(arr, i) {
+  let min = arr[i + 1]
+  let minIndex = i + 1
+  for(let j = i; j < arr.length; j++) {
+    if(arr[j] > arr[i] && arr[j] < min) {
+      arr
+      j
+      minIndex = j
+    }
+  }
+  return minIndex
+}
+
+function exchange(arr,i, j) {
+  let t = arr[i]
+  arr[i] = arr[j]
+  arr[j] = t
+}
+
+function sortFrom(arr, i) {
+  for(let j = i; j < arr.length - 1; j++) {
+    for(let k = i; k < arr.length - j - 1 + i ; k++) {
+      if(arr[k] > arr[k + 1]) {
+        exchange(arr, k, k + 1)
+      }
+    }
+  }
+}
+
+var nextPermutation = function(nums) {
+  let i = findLowRight(nums)
+  if(i == -1) {
+    return sortFrom(nums, 0)
+  }
+  let j = findUpperRight(nums, i)
+  exchange(nums, i, j)
+  sortFrom(nums, i + 1)
+};
+```
+
+需要知道如何确定下一个更大的排列。这个问题的关键在于，从右往左找到第一个比右边小的数，然后从右往左找到第一个比这个数大的数，交换这两个数，然后将这个数右边的数排序。
+
 ## 链表反转
 
 > https://leetcode.cn/problems/UHnkqh/

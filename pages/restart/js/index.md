@@ -6,5 +6,6 @@ title: JavaScript
 
 ### 拓展
 
-* [高频面试题](/restart/js/interview)
+* [面试题](/restart/js/interview)
+* [手写题](/restart/js/hand)
 

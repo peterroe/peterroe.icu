@@ -1,64 +1,25 @@
 [[toc]]
 
-### 打平数组
+### this 在 JavaScript 中是如何工作的
 
-在 JS 中，能打平一层数组的只有 `concat` 方法和 `...` 运算符，打平的核心都是基于这两种方式的。
+* 如果`new`调用函数时使用关键字，函数`this`内部是一个全新的对象。
+* 如果`apply`、`call`或`bind`用于调用/创建函数，`this`则函数内部是作为参数传入的对象。
+* 如果将函数作为方法调用，例如`obj.method()` — `this`是该函数的属性的对象。
+* 如果一个函数作为自由函数调用被调用，这意味着它在没有上述任何条件的情况下被调用，`this`是全局对象。在浏览器中，它是`window`对象。如果在严格模式 ( `'use strict'`) 中，`this`将`undefined`代替全局对象。
+* 如果多个上述规则适用，则较高的规则获胜并设置该`this`值。
+* 如果函数是 ES2015 箭头函数，它会忽略上述所有规则，并`this`在创建时接收其周围作用域的值。
 
-```js
-// 原理
-[].push(...a)
-[].concat(a)
-```
+### 使用 Promise 而不是回调函数有什么优点？
 
-但其实`...` 运算符只是语法糖，最终也是调用了 `concat` 方法：
+* 解决了回调地狱
+* 编写可读的顺序异步代码 `.then()`
+* 可以轻松编写并行异步代码 `Promise.all()`
 
-```js
-[...a] //=> [].concat(a)
-[...a, ...b]  //=> a.concat(b)
-```
+### 什么是闭包？为何要使用闭包？
 
-**方法一：**
+* 数据私有化
+* 柯里化
 
-* 返回了新数组
-* 稍加改造可以控制打平的层数
+### 事件循环？
 
-```js
-let arr = [23,34,[45,56,[45]],34,[234,234]]
-let res = []
-
-function flatten(arr) {
-  arr.forEach(it => {
-    if(Array.isArray(it)) {
-      flatten(it)
-    } else {
-      res.push(it)
-    }
-  })
-}
-
-flatten(arr)
-```
-
-方法二：
-
-* 返回了新数组
-* 稍加改造可以控制打平的层数
-
-```js
-function flatten(arr) {
-  return arr.reduce((pre, cur) => {
-    return pre.concat(Array.isArray(cur) ? flatten(cur) : [cur])
-  }, [])
-}
-```
-
-方法三：
-
-* 返回了新数组
-* 全部打平
-
-```js
-function flatten(arr) {
-  arr.toString().split(',').map(it => +it)
-}
-```
+事件循环是一个单线程循环，它监视调用堆栈并检查任务队列中是否有任何工作要做，如果调用堆栈为空并且任务队列中不为空，则将一个函数出列推送到调用堆栈中执行
