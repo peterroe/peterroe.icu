@@ -78,3 +78,89 @@ JSONP 是一种绕过 Web 浏览器跨域策略的方法。因为 script 是允�
 ```js
 printData({ name: 'John' });
 ```
+
+### 解释同步函数和异步函数的区别？
+
+同步函数是阻塞的，如果其中一个语句花了很长的时间，程序的执行就会暂停
+
+异步函数通常接受回调函数作为参数，并在完成时调用回调函数。回调仅在异步操作完成且调用堆栈为空时调用
+
+### JavaScript中的不可变对象
+在 JavaScript 中，一些内置类型（数字、字符串）是不可变的，但自定义对象通常是可变的，一些常见的不可变对象（immutability object）像 `Math`、`Date`
+
+以下是在纯 JavaScript 对象上添加/模拟不变性的几种方法
+
+**对象常量属性**
+
+```js
+let myObject = {}
+Object.defineProperty(myObject, 'a', {
+  value: 2,
+  writable: false,
+  configurable: false,
+  enumerable: true
+})
+console.log(myObject.number); // 42
+myObject.number = 43;
+console.log(myObject.number); // 42
+```
+
+**阻止扩展**
+
+```js
+let myObject = {
+  a: 2
+}
+
+Object.preventExtensions(myObject)
+// it will throw an error in strict mode
+myObject.b = 3
+console.log(myObject.b) // undefined
+```
+
+**Seal**
+
+防止添加新属性并将所有现有属性标记为不可配置。当前属性的值只要可写就可以改变
+
+```js
+let myObject = {
+  property1: 42
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// expected output: 33
+
+delete object1.property1; // cannot delete when sealed
+```
+
+**freeze**
+
+不能添加新属性，不能修改现有属性的值，不能删除现有属性，以及将所有现有属性标记为不可配置。这对于确保数据不会被意外修改非常有用
+
+```js
+let immutableObject = Object.freeze({});
+```
+
+### attribute 和 property 的区别
+
+attribute 是在 HTML 中定义的，property 是在 DOM 中定义的
+
+有如下的例子：
+
+```html
+<input type="text" value="Hello">
+```
+
+```js
+const input = document.querySelector('input');
+console.log(input.getAttribute('value')); // Hello
+console.log(input.value); // Hello
+```
+当尝试修改 input 输入框的值时，会发现两者的行为不同
+
+```js
+console.log(input.getAttribute('value')); // Hello
+console.log(input.value); // Hello World!
+```

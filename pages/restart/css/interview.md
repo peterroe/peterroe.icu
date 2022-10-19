@@ -79,6 +79,8 @@ bfc 通过一定的规则创建
 
 不会阻塞 DOM 解析，但是会阻塞渲染，严格来说是阻塞 render tree 的生成
 
+HTML 和 CSS 解析是并行的
+
 ### rgba 和 opacity
 
 rgba 只会用于元素的颜色或背景色，而 opactiy 是使整个元素透明

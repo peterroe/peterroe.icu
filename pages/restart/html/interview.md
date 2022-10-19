@@ -103,3 +103,14 @@ window.addEventListener('storage', function (e) {
   }
 })
 ```
+
+### HTML5
+
+* 语义
+* 样式
+* 连接性
+* 离线和存储
+* 多媒体
+* 2D/3D
+* 性能和集成
+* 设备访问
