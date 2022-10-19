@@ -5,6 +5,153 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### EditorJs ---> Block-style 编辑器 <GitHubStar repo="codex-team/editor.js" />
+
+```js
+import EditorJS from '@editorjs/editorjs';
+
+
+const editor = new EditorJS({
+  /**
+   * Id of Element that should contain Editor instance
+   */
+  holder: 'editorjs'
+});
+```
+
+地址：<GitHubLink repo="codex-team/editor.js" />
+
+---
+
+### react-admin ---> React Admin 框架 <GitHubStar repo="t4t5/sweetalert" />
+
+```js
+// in app.js
+import * as React from "react";
+import { render } from 'react-dom';
+import { Admin, Resource } from 'react-admin';
+import restProvider from 'ra-data-simple-rest';
+
+import { PostList, PostEdit, PostCreate, PostIcon } from './posts';
+
+render(
+    <Admin dataProvider={restProvider('http://localhost:3000')}>
+        <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
+    </Admin>,
+    document.getElementById('root')
+);
+```
+
+地址：<GitHubLink repo="doczjs/docz" />
+
+---
+
+### sweetalert ---> alert组件 <GitHubStar repo="t4t5/sweetalert" />
+
+不依赖框架，使用方式很简单，直接调用即可
+
+```js
+swal("Good job!", "You clicked the button!", "success");
+```
+
+地址：<GitHubLink repo="t4t5/sweetalert" />
+
+---
+
+### docz ---> MDX注入React组件 <GitHubStar repo="doczjs/docz" />
+
+如果 React还使用了CSS 预处理器等，也有相应的配套插件
+
+```md
+---
+name: Button
+route: /
+---
+
+import { Playground, Props } from 'docz'
+import Button from './Button'
+
+# Button
+
+<Props of={Button} />
+
+## Basic usage
+
+<Playground>
+  <Button type="submit">Click me</Button>
+  <Button>No, click me</Button>
+</Playground>
+```
+
+地址：<GitHubLink repo="doczjs/docz" />
+
+---
+
+### floating-ui ---> 创建一个浮动UI <GitHubStar repo="floating-ui/floating-ui" />
+
+A low-level toolkit to create floating elements. Tooltips, popovers, dropdowns, and more
+
+```js
+import {computePosition} from '@floating-ui/dom';
+ 
+const button = document.querySelector('#button');
+const tooltip = document.querySelector('#tooltip');
+ 
+computePosition(button, tooltip, {
+  placement: 'right',
+}).then(({x, y}) => {
+  Object.assign(tooltip.style, {
+    left: `${x}px`,
+    top: `${y}px`,
+  });
+});
+```
+
+地址：<GitHubLink repo="floating-ui/floating-ui" />
+
+---
+
+### react-spring ---> React 动画库<GitHubStar repo="pmndrs/react-spring" />
+
+一个基于弹簧物理的 React 动画库
+
+```js
+const styles = useSpring({
+  from: {
+    opacity: 0
+  },
+  to: {
+    opacity: 1
+  }
+})
+
+<animated.div style={styles} />
+```
+
+地址：<GitHubLink repo="pmndrs/react-spring" />
+
+---
+
+### slate ---> 编辑器框架 <GitHubStar repo="ianstormtaylor/slate" />
+
+A completely customizable framework for building rich text editors. (Currently in beta.)
+
+地址：<GitHubLink repo="ianstormtaylor/slate" />
+
+---
+
+### chakra UI ---> React组件库  <GitHubStar repo="chakra-ui/chakra-ui" />
+
+accessible components library for React
+
+```shell
+$ npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+```
+
+地址：<GitHubLink repo="chakra-ui/chakra-ui" />
+
+---
+
 ### nativefier ---> Make App  <GitHubStar repo="nativefier/nativefier" />
 
 通过 electron 将任何网站打包成桌面应用

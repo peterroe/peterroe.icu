@@ -66,7 +66,7 @@ function flatten(arr) {
 ### 排序
 
 ```js
-// 时间：O(n)
+// 时间：O(n)²
 function bubbleSort(arr) {
   for(let i = 0; i < arr.length - 1; i++) {
     for(let j = 0; j < arr.length - 1 - i; j++) {

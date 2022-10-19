@@ -5,6 +5,52 @@ display: ''
 
 [[toc]]
 
+## 最长有效括号
+
+> https://leetcode.cn/problems/longest-valid-parentheses/
+
+```js
+
+function findMaxLenFromIndex(s, i) {
+  let j = i
+  let lc = 0
+  let rc = 0
+  let len = 0
+  while(j < s.length) {
+    if(s[j] == '(') {
+      lc ++
+    }else {
+      rc ++
+    }
+
+    if(rc > lc) {
+      break;
+    }
+
+    if(lc == rc) {
+      len = Math.max(len, lc + rc)
+    }
+
+    j++
+  }
+  return len
+}
+
+var longestValidParentheses = function(s) {
+  let len = 0
+  for(let i = 0; i < s.length; i++) {
+    if(s[i] === ')') {
+      continue
+    }
+    let l = findMaxLenFromIndex(s, i)
+    len = Math.max(len, l)
+  }
+  return len
+};
+```
+
+只需要遵循合法的括号规则，即左括号数量大于等于右括号数量，就可以计算出最长的有效括号长度。
+
 ## 下一个排列
 
 > https://leetcode.cn/problems/next-permutation/
