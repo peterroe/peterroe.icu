@@ -30,7 +30,11 @@ Chrome developers' Blog => https://developer.chrome.com/blog/
 
 Lexoral's Blog => https://lexoral.com/blog/
 
-Tiny fool's Blog => https://codechina.org/ <span inline-block border rounded px-2 text="12px">中文</span>
+<i border rounded px-2 float-left text="14px" ml--14 inline-flex items-center>中文</i> Tiny fool's Blog => https://codechina.org/ 
+
+### Site
+
+<i border rounded px-2 float-left text="14px" ml--14 inline-flex items-center>中文</i> zxuqian => https://zxuqian.cn/
 
 ### Design
 
@@ -119,6 +123,8 @@ tldraw => https://tldraw.com
 excalidraw => https://excalidraw.com/
 
 zenflowchart => https://app.zenflowchart.com/
+
+[jsoncrack]{Seamlessly visualize your JSON data instantly into graphs.} => https://jsoncrack.com/editor
 
 ### Music
 

@@ -5,6 +5,182 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### icoicons ---> Icon for Web component  <GitHubStar repo="ionic-team/ionicons" />
+
+* 易于使用
+* SVG
+* 自带懒加载
+
+```html
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<ion-icon name="heart"></ion-icon>
+```
+
+地址：<GitHubLink repo="ionic-team/ionicons" />
+
+---
+
+### tiptap ---> HeadLess 编辑器  <GitHubStar repo="ueberdosis/tiptap" />
+
+支持多个框架
+
+```js
+import { Editor } from '@tiptap/core'
+import StarterKit from '@tiptap/starter-kit'
+
+new Editor({
+  element: document.querySelector('.element'),
+  extensions: [
+    StarterKit,
+  ],
+  content: '<p>Hello World!</p>',
+})
+```
+
+地址：<GitHubLink repo="ueberdosis/tiptap" />
+
+---
+
+### fingerprint ---> 精确的设备识别  <GitHubStar repo="fingerprintjs/fingerprintj" />
+
+在浏览器上运行，获取较为准确的信息
+
+```js
+<script>
+  // Initialize the agent at application startup.
+  const fpPromise = import('https://fpcdn.io/v3/Se2pjBuE0r9EkhEsfaY7')
+    .then(FingerprintJS => FingerprintJS.load())
+
+  // Get the visitor identifier when you need it.
+  fpPromise
+    .then(fp => fp.get())
+    .then(result => {
+      // This is the visitor identifier:
+      const visitorId = result.visitorId
+      console.log(visitorId)
+    })
+</script>
+```
+
+地址：<GitHubLink repo="fingerprintjs/fingerprintj" />
+
+---
+
+### yup ---> 将类型检验带到运行时 <GitHubStar repo="jquense/yup" />
+
+```js
+import { object, string, number, date, InferType } from 'yup';
+
+let userSchema = object({
+  name: string().required(),
+  age: number().required().positive().integer(),
+  email: string().email(),
+  website: string().url().nullable(),
+  createdOn: date().default(() => new Date()),
+});
+
+// parse and assert validity
+const user = await userSchema.validate(await fetchUser());
+
+type User = InferType<typeof userSchema>;
+/* {
+  name: string;
+  age: number;
+  email?: string | undefined
+  website?: string | null | undefined
+  createdOn: Date
+}*/
+```
+
+地址：<GitHubLink repo="jquense/yup" />
+
+---
+
+### ink ---> 用 React 写命令行工具 <GitHubStar repo="vadimdemedes/ink" />
+
+挺有意思
+
+```js
+import React, {useState, useEffect} from 'react';
+import {render, Text} from 'ink';
+
+const Counter = () => {
+	const [counter, setCounter] = useState(0);
+
+	useEffect(() => {
+		const timer = setInterval(() => {
+			setCounter(previousCounter => previousCounter + 1);
+		}, 100);
+
+		return () => {
+			clearInterval(timer);
+		};
+	}, []);
+
+	return <Text color="green">{counter} tests passed</Text>;
+};
+
+render(<Counter />);
+```
+
+<img v-viewer src="https://github.com/vadimdemedes/ink/raw/master/media/demo.svg" />
+
+地址：<GitHubLink repo="vadimdemedes/in" />
+
+---
+
+### table ---> HeadLess 表格 <GitHubStar repo="TanStack/table" />
+
+支持 `React、Svelte、Vue、Solid`
+
+```js
+import { useVueTable } from '@tanstack/vue-table'
+
+function App() {
+  const table = useVueTable(options)
+
+  // ...render your table
+}
+```
+
+地址：<GitHubLink repo="TanStack/table" />
+
+---
+
+### Astro ---> 静态网站构建 <GitHubStar repo="withastro/astro" />
+
+选择的理由：
+
+* 尽可能服务端渲染
+* 网站速度快，内容关注与服务器优先的 MPA 架构
+* 支持使用 `React、Preact、Svelte、Vue、Solid、Lit` 组件
+* 丰富的可选择集成
+
+```md
+---
+import { storyblokApi } from "../cms";
+
+const { data } = await storyblokApi.get('cdn/links');
+const links = Object.values(data.links);
+---
+<h1>Using your CMS</h1>
+<p>
+  With top-level await, Astro makes it easy
+  to fetch content from your CMS.
+</p>
+<ul>
+  {links.map((link) => (
+    <li><a href={link.slug}>{link.name}</a></li>
+  ))}
+</ul>
+```
+
+地址：<GitHubLink repo="withastro/astro" />
+
+---
+
 ### EditorJs ---> Block-style 编辑器 <GitHubStar repo="codex-team/editor.js" />
 
 ```js
