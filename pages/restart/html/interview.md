@@ -1,3 +1,7 @@
+---
+title: HTML高频面试题
+---
+
 ## async and defer in script
 
 正常情况下，遇到 script 标签，会先停止 HTML 解析，然后夹在 script 资源，执行 JS 脚本
