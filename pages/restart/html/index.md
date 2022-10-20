@@ -755,6 +755,8 @@ Safari |	[Alt] + accesskey |	N/A |	[Control] [Alt] + accesskey
 
 不过你如果想要在 HTML 中直接绑定数据，脱离 JS的函数参数绑定，那么 data-* 就是一个不错的选择。某些场景，例如图片懒加载，就会用 data-img 来绑定图片地址
 
+// shadowdom
+
 ### 拓展
 
 * [被废弃的HTML标签](/restart/html/delete-reason)

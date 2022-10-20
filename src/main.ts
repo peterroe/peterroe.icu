@@ -14,6 +14,7 @@ import dayjs from 'dayjs'
 import vilt from 'vue-img-lazy-tiny'
 import LocalizedFormat from 'dayjs/plugin/localizedFormat.js'
 import App from './App.vue'
+import viewer from './directive/viewer'
 
 declare module 'vue-router' {
   interface RouteMeta {
@@ -43,6 +44,7 @@ export const createApp = ViteSSG(
   ({ router, isClient, app }) => {
     dayjs.extend(LocalizedFormat)
     app.use(vilt)
+    app.use(viewer)
     if (isClient) {
       router.beforeEach(() => { NProgress.start() })
       router.afterEach(() => { NProgress.done() })

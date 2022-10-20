@@ -2,6 +2,8 @@
 title: tsx
 ---
 
+<GitHubLink  repo="esbuild-kit/tsx" />
+
 ## 用法
 
 可以直接执行 `ts` 文件

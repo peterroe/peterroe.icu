@@ -5,6 +5,295 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### EditorJs ---> Block-style 编辑器 <GitHubStar repo="codex-team/editor.js" />
+
+```js
+import EditorJS from '@editorjs/editorjs';
+
+
+const editor = new EditorJS({
+  /**
+   * Id of Element that should contain Editor instance
+   */
+  holder: 'editorjs'
+});
+```
+
+地址：<GitHubLink repo="codex-team/editor.js" />
+
+---
+
+### react-admin ---> React Admin 框架 <GitHubStar repo="t4t5/sweetalert" />
+
+```js
+// in app.js
+import * as React from "react";
+import { render } from 'react-dom';
+import { Admin, Resource } from 'react-admin';
+import restProvider from 'ra-data-simple-rest';
+
+import { PostList, PostEdit, PostCreate, PostIcon } from './posts';
+
+render(
+    <Admin dataProvider={restProvider('http://localhost:3000')}>
+        <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
+    </Admin>,
+    document.getElementById('root')
+);
+```
+
+地址：<GitHubLink repo="doczjs/docz" />
+
+---
+
+### sweetalert ---> alert组件 <GitHubStar repo="t4t5/sweetalert" />
+
+不依赖框架，使用方式很简单，直接调用即可
+
+```js
+swal("Good job!", "You clicked the button!", "success");
+```
+
+地址：<GitHubLink repo="t4t5/sweetalert" />
+
+---
+
+### docz ---> MDX注入React组件 <GitHubStar repo="doczjs/docz" />
+
+如果 React还使用了CSS 预处理器等，也有相应的配套插件
+
+```md
+---
+name: Button
+route: /
+---
+
+import { Playground, Props } from 'docz'
+import Button from './Button'
+
+# Button
+
+<Props of={Button} />
+
+## Basic usage
+
+<Playground>
+  <Button type="submit">Click me</Button>
+  <Button>No, click me</Button>
+</Playground>
+```
+
+地址：<GitHubLink repo="doczjs/docz" />
+
+---
+
+### floating-ui ---> 创建一个浮动UI <GitHubStar repo="floating-ui/floating-ui" />
+
+A low-level toolkit to create floating elements. Tooltips, popovers, dropdowns, and more
+
+```js
+import {computePosition} from '@floating-ui/dom';
+ 
+const button = document.querySelector('#button');
+const tooltip = document.querySelector('#tooltip');
+ 
+computePosition(button, tooltip, {
+  placement: 'right',
+}).then(({x, y}) => {
+  Object.assign(tooltip.style, {
+    left: `${x}px`,
+    top: `${y}px`,
+  });
+});
+```
+
+地址：<GitHubLink repo="floating-ui/floating-ui" />
+
+---
+
+### react-spring ---> React 动画库<GitHubStar repo="pmndrs/react-spring" />
+
+一个基于弹簧物理的 React 动画库
+
+```js
+const styles = useSpring({
+  from: {
+    opacity: 0
+  },
+  to: {
+    opacity: 1
+  }
+})
+
+<animated.div style={styles} />
+```
+
+地址：<GitHubLink repo="pmndrs/react-spring" />
+
+---
+
+### slate ---> 编辑器框架 <GitHubStar repo="ianstormtaylor/slate" />
+
+A completely customizable framework for building rich text editors. (Currently in beta.)
+
+地址：<GitHubLink repo="ianstormtaylor/slate" />
+
+---
+
+### chakra UI ---> React组件库  <GitHubStar repo="chakra-ui/chakra-ui" />
+
+accessible components library for React
+
+```shell
+$ npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion
+```
+
+地址：<GitHubLink repo="chakra-ui/chakra-ui" />
+
+---
+
+### nativefier ---> Make App  <GitHubStar repo="nativefier/nativefier" />
+
+通过 electron 将任何网站打包成桌面应用
+
+```shell
+$ npm install -g nativefier
+$ nativefier https://twitter.com
+```
+
+地址：<GitHubLink repo="nativefier/nativefier" />
+
+---
+
+### immutable.js ---> 高效数据结构 <GitHubStar repo="immutable-js/immutable-js" />
+
+用于 Javascript 的不可变持久数据集合，可提高效率和简单性
+
+包括 `List、Stack、Map、OrderedMap、Set、OrderedSet` 等
+
+```js
+const { Map } = require('immutable');
+const map1 = Map({ a: 1, b: 2, c: 3 });
+const map2 = map1.set('b', 50);
+map1.get('b') + ' vs. ' + map2.get('b'); // 2 vs. 50
+```
+
+地址：<GitHubLink repo="immutable-js/immutable-js" />
+
+---
+
+### pixijs ---> WebGL 2D <GitHubStar repo="pixijs/pixijs" />
+
+```js
+import { Application, Sprite, Assets } from 'pixi.js';
+
+// The application will create a renderer using WebGL, if possible,
+// with a fallback to a canvas render. It will also setup the ticker
+// and the root stage PIXI.Container
+const app = new Application();
+```
+
+地址：<GitHubLink repo="pixijs/pixijs" />
+
+---
+
+### socket.io ---> 双向通信 <GitHubStar repo="socketio/socket.io" />
+
+依赖于 Engine.IO，并不是 websocket。尽管 Socket.IO 确实尽可能使用 WebSocket 作为传输，但它会为每个数据包添加一些元数据：数据包类型、名称空间和需要消息确认时的 ack id。这就是为什么 WebSocket 客户端将无法成功连接到 Socket.IO 服务器，而 Socket.IO 客户端也将无法连接到 WebSocket 服务器
+
+```js
+io.on('connection', socket => {
+  socket.emit('request', /* … */); // emit an event to the socket
+  io.emit('broadcast', /* … */); // emit an event to all connected sockets
+  socket.on('reply', () => { /* … */ }); // listen to the event
+});
+```
+
+地址：<GitHubLink repo="socketio/socket.io" />
+
+---
+
+### crawlee ---> NodeJs 爬虫 <GitHubStar repo="apify/crawlee" />
+
+支持 `cheerio、playwright、puppeteer`
+
+```js
+import { PlaywrightCrawler, Dataset } from 'crawlee';
+
+// PlaywrightCrawler crawls the web using a headless
+// browser controlled by the Playwright library.
+const crawler = new PlaywrightCrawler({
+    // Use the requestHandler to process each of the crawled pages.
+    async requestHandler({ request, page, enqueueLinks, log }) {
+        const title = await page.title();
+        log.info(`Title of ${request.loadedUrl} is '${title}'`);
+
+        // Save results as JSON to ./storage/datasets/default
+        await Dataset.pushData({ title, url: request.loadedUrl });
+
+        // Extract links from the current page
+        // and add them to the crawling queue.
+        await enqueueLinks();
+    },
+    // Uncomment this option to see the browser window.
+    // headless: false,
+});
+
+// Add first URL to the queue and start the crawl.
+await crawler.run(['https://crawlee.dev']);
+```
+
+地址：<GitHubLink repo="apify/crawlee" />
+
+---
+
+### Pollen ---> CSS 变量库 <GitHubStar repo="heybokeh/pollen" />
+
+支持 `CSS、CSS in JS、Object Style、Inline Style` 等多种写法
+
+```js
+.button {
+   font-family: var(--font-sans);
+   font-size: var(--scale-00);
+   font-weight: var(--weight-medium); 
+   line-height: var(--line-none);
+   padding: var(--size-3) var(--size-5);
+   background: var(--color-blue);
+   border-radius: var(--radius-xs);
+   color: white;
+}
+```
+
+地址：<GitHubLink repo="heybokeh/pollen" />
+
+---
+
+### broz ---> 简易webview浏览器 <GitHubStar repo="antfu/broz" />
+
+原理是通过 `electron` 打开一个webview，然后载入对应的网页
+
+```shell
+$ npx broz antfu.me
+```
+
+地址：<GitHubLink repo="antfu/broz" />
+
+---
+
+### AdminJS ---> NodeJS管理面板 <GitHubStar repo="SoftwareBrothers/adminjs" />
+
+`frameworke` 例如 `express、koa、nestjs`。
+
+`database adapter` 例如 `mongoose、sequelize、typeorm`
+
+```js
+npm install adminjs @adminjs/<your framework> @adminjs/<your database adapter>
+```
+
+地址：<GitHubLink repo="SoftwareBrothers/adminjs" />
+
+---
+
 ### find-up ---> 文件查找 <GitHubStar repo="sindresorhus/find-up" />
 
 通过遍历父目录查找文件或目录

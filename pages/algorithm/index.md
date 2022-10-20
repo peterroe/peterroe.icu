@@ -5,6 +5,183 @@ display: ''
 
 [[toc]]
 
+## 最长有效括号
+
+> https://leetcode.cn/problems/longest-valid-parentheses/
+
+```js
+
+function findMaxLenFromIndex(s, i) {
+  let j = i
+  let lc = 0
+  let rc = 0
+  let len = 0
+  while(j < s.length) {
+    if(s[j] == '(') {
+      lc ++
+    }else {
+      rc ++
+    }
+
+    if(rc > lc) {
+      break;
+    }
+
+    if(lc == rc) {
+      len = Math.max(len, lc + rc)
+    }
+
+    j++
+  }
+  return len
+}
+
+var longestValidParentheses = function(s) {
+  let len = 0
+  for(let i = 0; i < s.length; i++) {
+    if(s[i] === ')') {
+      continue
+    }
+    let l = findMaxLenFromIndex(s, i)
+    len = Math.max(len, l)
+  }
+  return len
+};
+```
+
+只需要遵循合法的括号规则，即左括号数量大于等于右括号数量，就可以计算出最长的有效括号长度。
+
+## 下一个排列
+
+> https://leetcode.cn/problems/next-permutation/
+
+```js
+function findLowRight(arr) {
+  let i = arr.length - 2;
+  while(arr[i] >= arr[i + 1]) {
+    i--
+  }
+  return i
+}
+
+function findUpperRight(arr, i) {
+  let min = arr[i + 1]
+  let minIndex = i + 1
+  for(let j = i; j < arr.length; j++) {
+    if(arr[j] > arr[i] && arr[j] < min) {
+      arr
+      j
+      minIndex = j
+    }
+  }
+  return minIndex
+}
+
+function exchange(arr,i, j) {
+  let t = arr[i]
+  arr[i] = arr[j]
+  arr[j] = t
+}
+
+function sortFrom(arr, i) {
+  for(let j = i; j < arr.length - 1; j++) {
+    for(let k = i; k < arr.length - j - 1 + i ; k++) {
+      if(arr[k] > arr[k + 1]) {
+        exchange(arr, k, k + 1)
+      }
+    }
+  }
+}
+
+var nextPermutation = function(nums) {
+  let i = findLowRight(nums)
+  if(i == -1) {
+    return sortFrom(nums, 0)
+  }
+  let j = findUpperRight(nums, i)
+  exchange(nums, i, j)
+  sortFrom(nums, i + 1)
+};
+```
+
+需要知道如何确定下一个更大的排列。这个问题的关键在于，从右往左找到第一个比右边小的数，然后从右往左找到第一个比这个数大的数，交换这两个数，然后将这个数右边的数排序。
+
+## 链表反转
+
+> https://leetcode.cn/problems/UHnkqh/
+
+```js
+var reverseList = function(head) {
+  let prev = null;
+  let curr = head;
+  while (curr) {
+    // 第一步获取后面的节点
+    const next = curr.next
+    // 第二部改变当前节点的指向
+    curr.next = prev
+    // 更新 prev 为当前节点
+    prev = curr
+    // 更新 curr 为下一个节点
+    curr = next
+  }
+  return prev;
+};
+```
+
+链表翻转，在于记录前一个节点，可以使用循环的形式
+
+## 链表交换问题
+
+> https://leetcode.cn/problems/swap-nodes-in-pairs/
+
+```js
+var swapPairs = function(head) {
+  if (head === null|| head.next === null) {
+      return head;
+  }
+  const newHead = head.next
+  head.next = swapPairs(newHead.next)
+  newHead.next = head
+  return newHead
+};
+```
+
+这一题的思路，可以从假设只有三个或者四个节点的链表出发，就容易找出递归关系，假设是四个节点，就会发现，交换的时候 1 后面不是 3，从而意识到需要递归
+
+## 括号生成问题
+
+> https://leetcode.cn/problems/generate-parentheses/
+
+```js
+const generateParenthesis = (n) => {
+  const result = []
+  const back = (left, right, str) => {
+    // 每次进入 back 函数的 str 都是“未来”可能合法的括号串
+    // 如 (、((、(()、()(
+
+    // 如果说'('和')'的数量符合要求了，那么一定是合法的括号串
+    if(left == n && right == n) {
+        result.push(str)
+    }
+    if(left < n) {
+        back(left + 1, right, str + '(')
+    }
+    if(right < left) {
+        back(left, right + 1, str + ')')
+    }
+  }
+  back(0, 0, "")
+  return result
+}
+```
+
+首先要搞清怎样的括号是合法的和不合法的，例子：
+
+* 合法的：`(())()、(()())`
+* 不合法的： `)()(、())()(`
+
+会发现，合法的括号，在任何一个`)`之前，`(`的数量都要大于`)`的数量，否则就是不合法的括号，我们就可以利用这个规则构造合法的括号
+
 ## 电话号字母组合问题
 
 > https://leetcode.cn/problems/letter-combinations-of-a-phone-number/

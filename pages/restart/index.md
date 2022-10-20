@@ -18,7 +18,7 @@ lists:
     link: ''
     icon: 'i-carbon-content-delivery-network'
   - name: 'NodeJs'
-    link: ''
+    link: '/restart/nodejs'
     icon: 'i-mdi-nodejs'
   - name: 'Operating System'
     link: ''

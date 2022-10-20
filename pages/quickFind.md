@@ -4,6 +4,14 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### 统计代码贡献
+
+把 `peterroe` 替换为其他的用户名即可
+
+```shell
+git log --author="peterroe" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 + $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
+```
+
 ### ssh-keygen
 
 ```shell

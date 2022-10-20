@@ -215,6 +215,21 @@ table {
 }
 ```
 
+**aspect-radio**
+
+规定元素的宽高比例。使用时，只能给定 width 或者 height，同时使用的话，aspect-radio 不生效。
+
+而且 文字内容会影响比例，可以通过 `overflow:hidden` 来保持比例
+
+```css
+div{
+  height: 40px;
+  background: red;
+  aspect-ratio: 1 / 1; 
+  overflow: hidden;
+}
+```
+
 **outline**
 
 input 标签自带了 outline 效果，视觉上表示强调的效果，原理上类似于这样的实现：
