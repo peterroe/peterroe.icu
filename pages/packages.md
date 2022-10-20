@@ -43,7 +43,7 @@ new Editor({
 
 ---
 
-### fingerprint ---> 精确的设备识别  <GitHubStar repo="fingerprintjs/fingerprintj" />
+### fingerprint ---> 精确的设备识别  <GitHubStar repo="fingerprintjs/fingerprintjs" />
 
 在浏览器上运行，获取较为准确的信息
 
@@ -64,7 +64,7 @@ new Editor({
 </script>
 ```
 
-地址：<GitHubLink repo="fingerprintjs/fingerprintj" />
+地址：<GitHubLink repo="fingerprintjs/fingerprintjs" />
 
 ---
 
