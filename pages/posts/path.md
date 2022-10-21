@@ -128,6 +128,21 @@ lsh@lsh:/project$ node src/index.js
 
 > 如果你正在写一个NodeJs cli 工具，那么 `process.cwd()` 将会是你的最佳选择
 
+## 获取某个文件的绝对路径
+
+「某个」指的意思是，你知道这个文件的相对路径，但是不知道它的绝对路径，可以用到 `path.resolve` 方法：
+
+```js
+path.resolve('./src/index.ts') //=> /Users/peter/learn-nodejs/path/src/index.ts
+```
+
+除此外，还有一个类似的但更加严格的方法，但属于 `fs` 模块，叫做 `fs.realpath`，它的作用是返回一个文件的真实路径
+
+```js
+// 如果文件不存在，会报错
+fs.realpath('./src/index.ts') //=> /Users/peter/learn-nodejs/path/src/index.ts
+```
+
 ## Home Directory
 
 获取用户的 home 目录：
@@ -143,7 +158,7 @@ const homedir = require('os').homedir()
 //=> /Users/peter
 ```
 
-当然，大多数时候使用 `process.env.HOME` 获取就可以了，或者，再兼容一下平台：
+当然，大多数时候使用上面第一种方式获取就可以了，或者，再兼容一下平台：
 
 ```js
 const home = process.platform === 'win32'

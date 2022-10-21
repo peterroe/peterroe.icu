@@ -5,6 +5,36 @@ display: ''
 
 [[toc]]
 
+## 回溯
+
+> https://leetcode.cn/problems/permutations/
+
+```js
+var permute = function(nums) {
+  let result = []
+  let f = Array.from({length: nums.length})
+  let s = []
+  const back = () => {
+    if(result.length === nums.length) {
+      s.push(Array.from(result))
+      return 
+    }
+    for(let i = 0; i < nums.length; i++) {
+      if(f[i]) continue
+      f[i] = 1
+      result.push(nums[i])
+      back()
+      f[i] = 0
+      result.pop()
+    }
+  }
+  back()
+  return s
+};
+```
+
+需要声明三个数组，一个用来标记是否已经使用过，一个用来存储结果，一个用来存储最终结果。
+
 ## 最长有效括号
 
 > https://leetcode.cn/problems/longest-valid-parentheses/
