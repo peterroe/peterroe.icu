@@ -5,6 +5,43 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### deskreen ---> 局域网分享屏幕内容 <GitHubStar repo="pavlobu/deskreen" />
+
+一款 APP，支持 win、mac、linux
+
+地址：<GitHubLink repo="pavlobu/deskreen" />
+
+---
+
+### fullcalendar ---> 一个全尺寸的事件日历 <GitHubStar repo="fullcalendar/fullcalendar" />
+
+```html
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link href='fullcalendar/main.css' rel='stylesheet' />
+    <script src='fullcalendar/main.js'></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+        });
+        calendar.render();
+      });
+    </script>
+  </head>
+  <body>
+    <div id='calendar'></div>
+  </body>
+</html>
+```
+
+地址：<GitHubLink repo="fullcalendar/fullcalendar" />
+
+---
+
 ### icoicons ---> Icon for Web component  <GitHubStar repo="ionic-team/ionicons" />
 
 * 易于使用
