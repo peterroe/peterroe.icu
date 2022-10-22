@@ -139,7 +139,7 @@ path.resolve('./src/index.ts') //=> /Users/peter/learn-nodejs/path/src/index.ts
 除此外，还有一个类似的但更加严格的方法，但属于 `fs` 模块，叫做 `fs.realpath`，它的作用是返回一个文件的真实路径
 
 ```js
-// 如果文件不存在，会报错
+// 如果文件不存在，会抛出异常
 fs.realpath('./src/index.ts') //=> /Users/peter/learn-nodejs/path/src/index.ts
 ```
 
@@ -154,8 +154,9 @@ const home = process.env.HOME //=> /Users/peter
 有的时候，我们需要获取用户的 home 目录，但是这个环境变量并不是所有系统都有的，所以我们需要做一些兼容性处理：
 
 ```js
-const homedir = require('os').homedir()
-//=> /Users/peter
+import { homedir } from 'os'
+
+homedir() //=> /Users/peter
 ```
 
 当然，大多数时候使用上面第一种方式获取就可以了，或者，再兼容一下平台：
@@ -166,6 +167,6 @@ const home = process.platform === 'win32'
   : process.env.HOME
 ```
 
-之所以需要获取 Home 目录，是因为我们需要在用户的 Home 目录下面创建一些文件，用于存储一些配置信息。大多数工具的配置都是储存在这里的
+之所以需要获取 Home 目录，是因为我们可能需要在用户的 Home 目录下面创建一些文件，用于存储一些配置信息。多数命令行工具的相关配置都是储存在这里的
 
 比如 `.nvm`，`.npmrc`，`.gitconfig`，`.zshrc` 等等。
