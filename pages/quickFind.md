@@ -4,6 +4,12 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### placeholder name
+
+```js
+foobar, foo, bar, baz, qux, quux, corge, grault, garply, waldo, fred, plugh, xyzzy, nacho, and thud
+```
+
 ### 统计代码贡献
 
 把 `peterroe` 替换为其他的用户名即可
@@ -133,6 +139,7 @@ const __dirname = path.dirname(__filename);
 
 ```shell
 # 拉取main分支
+$ git fetch origin main
 $ git checkout -b main origin/main
 ```
 

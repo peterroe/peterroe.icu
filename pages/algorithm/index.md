@@ -5,6 +5,23 @@ display: ''
 
 [[toc]]
 
+## 最大子数组和
+
+> https://leetcode.cn/problems/maximum-subarray/
+
+```js
+var maxSubArray = function(nums) {
+  let max = nums[0], pre = 0
+  nums.forEach(it => {
+    pre = Math.max(pre + it, it)
+    max = Math.max(max, pre)
+  });
+  return max
+};
+```
+
+`max` 之所以设为 `nums[0]` 而不是 `0`，是因为可能有负数
+
 ## 回溯
 
 > https://leetcode.cn/problems/permutations/

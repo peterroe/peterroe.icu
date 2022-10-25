@@ -1,6 +1,6 @@
 ---
 title: Column
-subtitle: 随便写的一些专栏
+subtitle: 一些专栏
 lists:
   - link: '/algorithm'
     name: '算法之路'
@@ -8,15 +8,15 @@ lists:
   - link: '/restart'
     name: '重学前端'
     icon: 'i-akar-icons-arrow-cycle'
-  - link: '/soft-skill'
-    name: '软技能'
-    icon: i-mdi-lead-pencil
   - link: '/source-code'
     name: '源码解析'
     icon: i-mdi-github
   - link: '/js-style-guide'
     name: 'JS编程风格指南'
     icon: 'i-ph-code-bold'
+  - link: '/js-resource'
+    name: 'JS 资源'
+    icon: 'i-mdi-book'
 ---
 
 <ColumnTimeLine :lists="frontmatter.lists"/>
