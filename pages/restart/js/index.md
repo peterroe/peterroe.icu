@@ -32,6 +32,8 @@ Netscape Navigator解释器
 * DOM
 * BOM
 
+---
+
 ### 引擎
 
 用来渲染 HTML/CSS 的叫渲染引擎，执行 JS 的叫 JS 引擎，这两种引擎是浏览器加载 HTML 、执行 JS 的不可或缺的结构
@@ -55,6 +57,8 @@ chromium 是开源的，Chrome 是不开源的
 **Gecko**
 
 火狐浏览器的内核，JS 引擎是 SpiderMonkey
+
+---
 
 ### Error
 

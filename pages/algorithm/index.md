@@ -5,6 +5,32 @@ display: ''
 
 [[toc]]
 
+## 区间合并问题
+
+> https://leetcode.cn/problems/merge-intervals/
+
+```js
+var merge = function(intervals) {
+  if(intervals.length <= 1) return intervals;
+  intervals.sort((a, b) => a[0] - b[0]);
+  let ans = [];
+  ans.push(intervals[0]);
+  for(let i = 1; i < intervals.length; i++){
+      if(intervals[i][0] > ans[ans.length - 1][1]) ans.push(intervals[i]);
+      else if (intervals[i][0] <= ans[ans.length - 1][1] && intervals[i][1] > ans[ans.length - 1][1]){
+          ans[ans.length - 1][1] = intervals[i][1];
+      }
+  }
+  return ans;
+};
+```
+
+对数组排序是一个很好的思路，避免了需要双向扩展数组，然后遍历输入数组，有三种情况
+
+* 在右边界外面，选择 push
+* 在右边界内，忽略
+* 和右边界重叠，选择扩展右边界
+
 ## 最大子数组和
 
 > https://leetcode.cn/problems/maximum-subarray/

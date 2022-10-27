@@ -132,6 +132,8 @@ zenflowchart => https://app.zenflowchart.com/
 
 Music for programming => https://musicforprogramming.net/fifteen
 
+madza.dev => https://radio.madza.dev/
+
 ### Transform
 
 [Cloud convert]{File converter service - more than 200 different audio, video, document, ebook, archive, image, spreadsheet and presentation formats supported.} => https://cloudconvert.com
