@@ -5,6 +5,29 @@ display: ''
 
 [[toc]]
 
+## 文件路径问题
+
+> https://leetcode.cn/problems/simplify-path/
+
+```js
+var simplifyPath = function(path) {
+    const names = path.split("/");
+    const stack = [];
+    for (const name of names) {
+        if (name === "..") {
+            if (stack.length) {
+                stack.pop();
+            } 
+        } else if (name.length && name !== ".") {
+            stack.push(name);
+        }
+    }
+    return "/" + stack.join("/");
+};
+```
+
+解题的关键在于，通过 `/` 分割各个路径，然后判断是否是 `.` 还是 `..`
+
 ## 区间合并问题
 
 > https://leetcode.cn/problems/merge-intervals/

@@ -30,11 +30,11 @@ Chrome developers' Blog => https://developer.chrome.com/blog/
 
 Lexoral's Blog => https://lexoral.com/blog/
 
-<i border rounded px-2 float-left text="14px" ml--14 inline-flex items-center>中文</i> Tiny fool's Blog => https://codechina.org/ 
+<Chinese/> Tiny fool's Blog => https://codechina.org/ 
 
 ### Site
 
-<i border rounded px-2 float-left text="14px" ml--14 inline-flex items-center>中文</i> zxuqian => https://zxuqian.cn/
+<Chinese/> zxuqian => https://zxuqian.cn/
 
 ### Design
 
@@ -84,7 +84,7 @@ Regex 101 => https://regex101.com/
 
 [Bundle Phobia]{Check your npm package size} => https://bundlephobia.com/ 
 
-[Transform]{Collection of code transformers} => (https://transform.tools/
+[Transform]{Collection of code transformers} => https://transform.tools/
 
 [Diffchecker]{Compare text to find the difference between two text files.} => https://www.diffchecker.com/
 
@@ -138,10 +138,16 @@ madza.dev => https://radio.madza.dev/
 
 [Cloud convert]{File converter service - more than 200 different audio, video, document, ebook, archive, image, spreadsheet and presentation formats supported.} => https://cloudconvert.com
 
-### interview
+### Interview
 
 Tech Interview Handbook =>  https://www.techinterviewhandbook.org/
 
 Front End Interview Handbook => https://www.frontendinterviewhandbook.com/
 
 Great Front End => https://www.greatfrontend.com/
+
+<Chinese/>Web Front End => https://vue3js.cn/interview/
+
+<Chinese/> shengxinjing => https://shengxinjing.cn/
+
+<Chinese/> full stack => https://hejialianghe.github.io

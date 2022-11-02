@@ -5,6 +5,182 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### stencli ---> Web 组件框架 <GitHubStar repo="ionic-team/stencil" />
+
+Stencil 组件可以从一个与框架无关的代码库本地分发给 React、Angular、Vue 和传统 Web 开发人员
+
+```js
+import { Component, Prop, h } from '@stencil/core';
+
+@Component({
+  tag: 'my-component',            // the name of the component's custom HTML tag
+  styleUrl: 'my-component.css',   // css styles to apply to the component
+  shadow: true,                   // this component uses the ShadowDOM
+})
+export class MyComponent {
+  // The component accepts two arguments:
+  @Prop() first: string;
+  @Prop() last: string;
+
+   //The following HTML is rendered when our component is used
+  render() {
+    return (
+      <div>
+        Hello, my name is {this.first} {this.last}
+      </div>
+    );
+  }
+}
+
+```
+
+地址：<GitHubLink repo="ionic-team/stencil" />
+
+---
+
+### interact.js ---> 拖放、多点触控、惯性、捕捉功能 <GitHubStar repo="taye/interact.js" />
+
+```js
+var angle = 0
+
+interact('#rotate-area').gesturable({
+  listeners: {
+    move (event) {
+      var arrow = document.getElementById('arrow')
+
+      angle += event.da
+
+      arrow.style.transform = 'rotate(' + angle + 'deg)'
+
+      document.getElementById('angle-info').textContent =
+        angle.toFixed(2) + '\u00b0'
+    }
+  }
+})
+```
+
+地址：<GitHubLink repo="taye/interact.js" />
+
+---
+
+### Tone.js ---> 用于在浏览器中制作交互式音乐的 Web 音频框架  <GitHubStar repo="Tonejs/Tone.js" />
+
+```js
+const synth = new Tone.Synth().toDestination();
+const now = Tone.now()
+synth.triggerAttackRelease("C4", "8n", now)
+synth.triggerAttackRelease("E4", "8n", now + 0.5)
+synth.triggerAttackRelease("G4", "8n", now + 1)
+```
+
+地址：<GitHubLink repo="Tonejs/Tone.js" />
+
+---
+
+### rrweb ---> 记录和回放 <GitHubStar repo="rrweb-io/rrweb" />
+
+记录用户的操作，同时生成 canvas 回放，相较于录屏，有着更高的精度和灵活性
+
+```js
+let events = [];
+
+rrweb.record({
+  emit(event) {
+    // push event into the events array
+    events.push(event);
+  },
+});
+
+// this function will send events to the backend and reset the events array
+function save() {
+  const body = JSON.stringify({ events });
+  events = [];
+  fetch('http://YOUR_BACKEND_API', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body,
+  });
+}
+
+// save events every 10 seconds
+setInterval(save, 10 * 1000);
+```
+
+地址：<GitHubLink repo="rrweb-io/rrweb" />
+
+---
+
+### chartist ---> 简单的响应式图表 <GitHubStar repo="chartist-js/chartist" />
+
+```js
+import { BarChart } from 'chartist';
+
+new BarChart('#chart', {
+  labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
+  series: [
+    [1, 2, 4, 8, 6, -2, -1, -4, -6, -2]
+  ]
+}, {
+  high: 10,
+  low: -10,
+  axisX: {
+    labelInterpolationFnc: (value, index) => (index % 2 === 0 ? value : null)
+  }
+});
+```
+
+地址：<GitHubLink repo="chartist-js/chartist" />
+
+---
+
+### lit ---> Web Component 框架 <GitHubStar repo="lit/lit" />
+
+对于想尝试 web 组件的人，值得一试
+
+```js
+import {LitElement, html} from 'lit';
+import {customElement} from 'lit/decorators.js';
+
+import './my-header.js';
+import './my-article.js';
+import './my-footer.js';
+
+@customElement('my-page')
+class MyPage extends LitElement {
+  render() {
+    return html`
+      <my-header></my-header>
+      <my-article></my-article>
+      <my-footer></my-footer>
+    `;
+  }
+}
+```
+
+HTML: 
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./my-page.js" type="module"></script>
+  <title>lit-element code sample</title>
+</head>
+  <body>
+    <my-page></my-page>
+  </body>
+</html>
+
+```
+
+地址：<GitHubLink repo="lit/lit" />
+
+---
+
 ### deskreen ---> 局域网分享屏幕内容 <GitHubStar repo="pavlobu/deskreen" />
 
 一款 APP，支持 win、mac、linux

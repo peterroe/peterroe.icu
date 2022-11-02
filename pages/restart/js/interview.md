@@ -164,3 +164,10 @@ console.log(input.value); // Hello
 console.log(input.getAttribute('value')); // Hello
 console.log(input.value); // Hello World!
 ```
+
+### ajax 和 fetch 的优缺点
+
+* fetch 只对网路请求报错，400，500 都当作成功
+* fetch 默认不携带 cookie
+* fetch 不支持 abort，所以不支持超时控制
+* fetch [没法检测请求进度](https://peterroe.icu/posts/file-in-browser#%E8%BF%9B%E5%BA%A6%E7%9B%91%E6%8E%A7)

@@ -36,6 +36,8 @@ Then copy the public key to the github/gitlab account.
 * test: adding missing tests
 * ci: changes to CI configuration files and scripts
 
+`dev|feat|fix|docs|dx|style|refactor|perf|test|workflow|build|ci|chore|types|wip|release|lint`
+
 Detail
 
 * fix(style): style bug fix
