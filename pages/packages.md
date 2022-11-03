@@ -5,6 +5,40 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### gzip-size ---> 计算gzip压缩后的大小 <GitHubStar repo="terser/terser" />
+
+经常被同时提及的还有另一个算法 -- brotli，brotle 对 Web 资源有着非常高的压缩率
+
+```js
+import {gzipSizeSync} from 'sindresorhus/gzip-size';
+
+const text = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.';
+
+console.log(text.length);
+//=> 191
+
+console.log(gzipSizeSync(text));
+//=> 78
+```
+
+地址：<GitHubLink repo="sindresorhus/gzip-size" />
+
+地址：<GitHubLink repo="erwinmombay/brotli-size" />
+
+---
+
+### terser ---> js 压缩器 <GitHubStar repo="terser/terser" />
+
+```js
+import { minify } from 'terser'
+
+minify(code)
+```
+
+地址：<GitHubLink repo="terser/terser" />
+
+---
+
 ### stencli ---> Web 组件框架 <GitHubStar repo="ionic-team/stencil" />
 
 Stencil 组件可以从一个与框架无关的代码库本地分发给 React、Angular、Vue 和传统 Web 开发人员
