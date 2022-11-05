@@ -5,6 +5,42 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### snabbdom ---> 虚拟Dom <GitHubStar repo="snabbdom/snabbdom" />
+
+虚拟 DOM patch，支持 svg
+
+```js
+const container = document.getElementById("container");
+
+const vnode = h("div#container.two.classes", { on: { click: someFn } }, [
+  h("span", { style: { fontWeight: "bold" } }, "This is bold"),
+  " and this is just normal text",
+  h("a", { props: { href: "/foo" } }, "I'll take you places!"),
+]);
+// Patch into empty DOM element – this modifies the DOM as a side effect
+patch(container, vnode);
+
+const newVnode = h(
+  "div#container.two.classes",
+  { on: { click: anotherEventHandler } },
+  [
+    h(
+      "span",
+      { style: { fontWeight: "normal", fontStyle: "italic" } },
+      "This is now italic type"
+    ),
+    " and this is still just normal text",
+    h("a", { props: { href: "/bar" } }, "I'll take you places!"),
+  ]
+);
+// Second `patch` invocation
+patch(vnode, newVnode); // Snabbdom efficiently updates the old view to the new state
+```
+
+地址：<GitHubLink repo="snabbdom/snabbdom" />
+
+---
+
 ### gzip-size ---> 计算gzip压缩后的大小 <GitHubStar repo="terser/terser" />
 
 经常被同时提及的还有另一个算法 -- brotli，brotle 对 Web 资源有着非常高的压缩率

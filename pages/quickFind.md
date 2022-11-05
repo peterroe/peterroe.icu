@@ -135,6 +135,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+// or
+fileURLToPath(new URL('.', import.meta.url))
 ```
 
 ### 拉取远程分支

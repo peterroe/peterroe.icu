@@ -36,3 +36,7 @@ const someComplexValue = (() => {
   return b / a
 })()
 ```
+---
+```js
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+```
