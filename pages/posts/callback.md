@@ -103,8 +103,7 @@ function main() {
   console.log(`a + b == b ?, ${c == answer}`)
 }
 ```
-
-这个回调函数需要使用来自`computeSum`函数作用域中的 `answer`，也需要使用来自`main`函数作用域中的`c`，但却没有多余的函数参数传输，也满足模块化的原则，太妙了！
+既需要使用来自`computeSum`函数作用域中的 `answer`，也需要使用来自`main`函数作用域中的`c`，但却没有多余的函数参数传输，也满足模块化的原则，太妙了！
 
 或许有人会反驳像下面这样，不使用回调函数更加简单：
 
@@ -140,7 +139,7 @@ function main() {
 
 ```js
 function main() {
-  const { a, b, c, d, e, isTrue} = compute()
+  const { a, b, c, d, e, isTrue } = compute()
   if(isTrue) {
     // 逻辑A
   } else {
