@@ -36,6 +36,8 @@ Lexoral's Blog => https://lexoral.com/blog/
 
 <Chinese/> zxuqian => https://zxuqian.cn/
 
+<Chinese/> MDH => https://www.yuque.com/chencheng/mdh-weekly
+
 ### Design
 
 [Open UI]{Comparison between different component frameworks} => https://open-ui.org/

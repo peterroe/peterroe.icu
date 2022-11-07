@@ -205,3 +205,52 @@ document.querySelector('#download').onclick = () => {
 遗憾的是，兼容性太不好
 
 ![img](https://raw.githubusercontent.com/peterroe/static-img/master/202210271316294.png)
+
+## 资源库/相机
+
+input 标签有一个属性`capture`用来控制，用户打开**资源库还是相机**。
+
+```html
+<label for="environment">Capture environment:</label>
+<input
+  type="file"
+  id="environment"
+  capture="environment"
+  accept="video/*"
+>
+<br><br>
+<label for="user">Capture user:</label>
+<br>
+<input
+  type="file"
+  id="user"
+  capture="user"
+  accept="image/*"
+>
+```
+
+需要在手机上看到效果：
+
+---
+
+<label for="environment">Capture environment: </label>
+<input
+  type="file"
+  id="environment"
+  capture="environment"
+  accept="video/*"
+  revert
+/>
+
+<label for="user">Capture user: </label>
+<input
+  type="file"
+  id="user"
+  capture="user"
+  accept="image/*"
+  revert
+/>
+
+---
+
+
