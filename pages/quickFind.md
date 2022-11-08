@@ -6,6 +6,8 @@ subtitle: Tips and tricks for quick finding
 
 ### placeholder name
 
+常用于给无意义的变量命名
+
 ```js
 foobar, foo, bar, baz, qux, quux, corge, grault, garply, waldo, fred, plugh, xyzzy, nacho, and thud
 ```

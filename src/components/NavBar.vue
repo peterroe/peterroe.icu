@@ -15,7 +15,7 @@ import { isDark } from '/~/logics'
     </router-link>
     <nav class="nav">
       <div class="spacer" />
-      <div class="right">
+      <div class="right" lt-md="!gap-3">
         <!-- more icon visit: https://icones.js.org/collection/all -->
         <router-link to="/posts">
           <span class="lt-md:hidden">Blog</span>
@@ -43,6 +43,9 @@ import { isDark } from '/~/logics'
           <carbon-column-dependency
             class="md:hidden"
           />
+        </router-link>
+        <router-link class="lt-md:hidden" to="/gist" title="Find">
+          <span >Gist</span>
         </router-link>
         <router-link to="/quickFind" title="Find">
           <CarbonLightning />
