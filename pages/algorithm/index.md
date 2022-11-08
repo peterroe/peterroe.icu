@@ -5,6 +5,54 @@ display: ''
 
 [[toc]]
 
+## 最小覆盖子串
+
+```js
+const initO = (t) => {
+  const o = {}
+    for(let i = 0; i < t.length; i++) {
+      if(o[t[i]]) {
+        o[t[i]] ++
+      } else {
+        o[t[i]] = 1
+      }
+      
+    }
+    return o
+}
+var minWindow = function(s, t) {
+
+  const o = initO(t)
+  let res = ''
+  let len = Object.keys(o).length
+  let [l, r] = [0, 0]
+
+  while(r < s.length) {
+    if(o[s[r]] !== undefined) {
+      o[s[r]] -= 1
+      if(o[s[r]] === 0) len--
+    }
+
+    while(len === 0) {
+
+      const newRes = s.slice(l, r + 1)
+
+      if(!res || newRes.length < res.length) res = newRes
+
+      if(o[s[l]] !== undefined) {
+        o[s[l]] ++
+        if(o[s[l]] === 1) len ++
+      }
+      l ++
+    }
+    r++
+  }
+  return res
+};
+```
+
+解题方法还是从滑动窗口出发，创新点是需要记录下 map 的 size 和对应值的个数
+
 ## 文件路径问题
 
 > https://leetcode.cn/problems/simplify-path/
