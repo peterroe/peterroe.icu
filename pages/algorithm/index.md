@@ -5,6 +5,38 @@ display: ''
 
 [[toc]]
 
+## 删除重复元素II
+
+> https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/description/
+
+```js
+var deleteDuplicates = function(head) {
+   if (!head) {
+       return head;
+   }
+
+   const dummy = new ListNode(0, head);
+
+   let cur = dummy;
+   while (cur.next && cur.next.next) {
+       if (cur.next.val === cur.next.next.val) {
+           const x = cur.next.val;
+           while (cur.next && cur.next.val === x) {
+               cur.next = cur.next.next;
+           } 
+       } else {
+           cur = cur.next;
+       }
+   }
+   return dummy.next;
+};
+```
+
+妙处
+
+* 由于头节点也有可能被删除，所以需要假设一个虚拟节点指向 head
+* 在排除重复元素的时候，每次循环都执行 `cur.next = cur.next.next`，就可以不声明额外的变量
+
 ## 简单排列
 
 ```js

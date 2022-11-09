@@ -5,6 +5,86 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+#
+
+### picocolors ---> 体积极小的输出库 <GitHubStar repo="alexeyraspopov/picocolors" />
+
+```js
+import pc from "picocolors"
+
+console.log(
+  pc.green(`How are ${pc.italic(`you`)} doing?`)
+)
+```
+
+地址：<GitHubLink repo="alexeyraspopov/picocolors" />
+
+---
+
+### type-fest ---> ts 类型库 <GitHubStar repo="sindresorhus/type-fest" />
+
+```js
+import type {Except} from 'type-fest';
+
+type Foo = {
+	unicorn: string;
+	rainbow: boolean;
+};
+
+type FooWithoutRainbow = Except<Foo, 'rainbow'>;
+//=> {unicorn: string}
+```
+
+地址：<GitHubLink repo="sindresorhus/type-fest" />
+
+---
+
+### obfuscator ---> javascript 混淆器 <GitHubStar repo="javascript-obfuscator/javascript-obfuscator" />
+
+```js
+var JavaScriptObfuscator = require('javascript-obfuscator');
+
+var obfuscationResult = JavaScriptObfuscator.obfuscate(`
+  (function(){
+      var variable1 = '5' - 3;
+      var variable2 = '5' + 3;
+      console.log(variable3);
+      console.log(variable4);
+      console.log(variable5);
+  })();
+`);
+
+console.log(obfuscationResult.getObfuscatedCode());
+```
+
+地址：<GitHubLink repo="javascript-obfuscator/javascript-obfuscator" />
+
+---
+
+### barba ---> 页面过度动画 <GitHubStar repo="barbajs/barba" />
+
+```js
+barba.init({
+  transitions: [{
+    name: 'opacity-transition',
+    leave(data) {
+      return gsap.to(data.current.container, {
+        opacity: 0
+      });
+    },
+    enter(data) {
+      return gsap.from(data.next.container, {
+        opacity: 0
+      });
+    }
+  }]
+});
+```
+
+地址：<GitHubLink repo="barbajs/barba" />
+
+---
+
 ### snabbdom ---> 虚拟Dom <GitHubStar repo="snabbdom/snabbdom" />
 
 虚拟 DOM patch，支持 svg
@@ -2019,7 +2099,9 @@ import glob from 'tiny-glob'
 
 地址：<GitHubLink repo="terkelg/tiny-glob" />
 
-相似项目：<GitHubLink repo="mrmlnc/fast-glob" />、<GitHubLink repo="sindresorhus/globby" /> 、<GitHubLink repo="isaacs/node-glob" />、<GitHubLink repo="isaacs/minimatch" />
+相似项目：<GitHubLink repo="mrmlnc/fast-glob" />、<GitHubLink repo="sindresorhus/globby" /> 、<GitHubLink repo="isaacs/node-glob" />
+
+文件无关：<GitHubLink repo="isaacs/minimatch" />、<GitHubLink repo="isaacs/pico" />
 
 ---
 
