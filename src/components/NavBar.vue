@@ -45,7 +45,7 @@ import { isDark } from '/~/logics'
           />
         </router-link>
         <router-link class="lt-md:hidden" to="/gist" title="Find">
-          <span >Gist</span>
+          <span>Gist</span>
         </router-link>
         <router-link to="/quickFind" title="Find">
           <CarbonLightning />
@@ -65,8 +65,11 @@ import { isDark } from '/~/logics'
         <a href="https://github.com/peterroe" target="_blank" title="GitHub">
           <uil-github-alt />
         </a>
-        <router-link to="/life" title="life" class="lt-md:hidden">
+        <!-- <router-link to="/life" title="life" class="lt-md:hidden">
           <ri-calendar-check-line />
+        </router-link> -->
+        <router-link to="/photo" title="life" class="lt-md:hidden">
+          <ri-image-line />
         </router-link>
         <toggle-theme />
       </div>

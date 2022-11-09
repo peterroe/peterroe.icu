@@ -4,6 +4,13 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### naming style
+
+* camelCase
+* PascalCase
+* snake_case
+* kebab-case
+
 ### placeholder name
 
 常用于给无意义的变量命名

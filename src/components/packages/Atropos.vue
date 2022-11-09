@@ -20,7 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import 'atropos/scss';
 
 .my-atropos {

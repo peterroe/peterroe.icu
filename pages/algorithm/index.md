@@ -5,6 +5,66 @@ display: ''
 
 [[toc]]
 
+## 简单排列
+
+```js
+var combine = function(n, k) {
+  const list = new Array(n).fill(0).map((_, i) => i + 1)
+  // 回溯
+  const u = new Array(n).fill(0)
+  const cur = []
+  const result = []
+  const recursive = () => {
+    if(cur.length == k) {
+      result.push(Array.from(cur))
+      return 
+    }
+    for(let i = j; i < list.length; i++) {
+      if(u[i] == 1) continue
+      cur.push(list[i])
+      u[i] = 1
+      recursive()
+      u[i] = 0
+      cur.pop()
+    }
+  }
+  recursive(0)
+  return result
+};
+
+combine(4, 2)
+```
+
+## 去重排列
+
+```js
+var combine = function(n, k) {
+  const list = new Array(n).fill(0).map((_, i) => i + 1)
+  // 回溯
+  const u = new Array(n).fill(0)
+  const cur = []
+  const result = []
+  const recursive = (j) => {
+    if(cur.length == k) {
+      result.push(Array.from(cur))
+      return 
+    }
+    for(let i = j; i < list.length; i++) {
+      if(u[i] == 1) continue
+      cur.push(list[i])
+      u[i] = 1
+      recursive(i) // 标记位置
+      u[i] = 0
+      cur.pop()
+    }
+  }
+  recursive(0)
+  return result
+};
+
+combine(4, 2)
+```
+
 ## 最小覆盖子串
 
 ```js
@@ -32,7 +92,7 @@ var minWindow = function(s, t) {
       o[s[r]] -= 1
       if(o[s[r]] === 0) len--
     }
-
+  
     while(len === 0) {
 
       const newRes = s.slice(l, r + 1)
@@ -74,7 +134,7 @@ var simplifyPath = function(path) {
 };
 ```
 
-解题的关键在于，通过 `/` 分割各个路径，然后判断是否是 `.` 还是 `..`
+解题的关键在于，通过 `/` 分割各个路径，维护一个栈数据结构，然后判断是否是 `.` 还是 `..`
 
 ## 区间合并问题
 

@@ -1,3 +1,4 @@
+@import 'atropos/scss';
 .prose {
   color: var(--fg);
   max-width: 65ch;
