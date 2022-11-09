@@ -39,7 +39,6 @@ title: Photo
   <template #icon>
       <div>
       <div i-ph-buildings />
-      <div i-game-icons-three-friends />
       <div i-material-symbols-android-camera />
       <div i-ph-wall-light />
     </div>
