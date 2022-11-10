@@ -5,8 +5,6 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
-#
-
 ### picocolors ---> 体积极小的输出库 <GitHubStar repo="alexeyraspopov/picocolors" />
 
 ```js
