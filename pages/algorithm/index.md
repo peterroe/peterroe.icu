@@ -5,6 +5,29 @@ display: ''
 
 [[toc]]
 
+## 合法IP地址
+
+> https://leetcode.cn/problems/restore-ip-addresses/description/
+
+```js
+var restoreIpAddresses = function(s) {
+    const res = []
+    const dfs = (str, i, arr) => {
+        if(arr.length == 4 && i == s.length) {
+            res.push(arr)
+        }
+        if(Number(str + s[i]) <= 255 && arr.length < 4) {
+            if(str + s[i] !== '0') {
+                dfs(str + s[i], i + 1, arr)
+            }
+            dfs("", i + 1, [...arr, str + s[i]])
+        }
+    }
+    dfs("", 0, [])
+    return res.map(it => it.join('.'))
+};
+```
+
 ## 删除重复元素II
 
 > https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/description/
