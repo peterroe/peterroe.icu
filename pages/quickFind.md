@@ -4,6 +4,33 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### 100 bytes of css
+
+100 bytes of css to look great nearly everywhere
+
+```css
+html {
+  max-width: 70ch;
+  padding: 3em 1em;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 1.25em
+}
+```
+
+### transform tag
+
+```js
+import { Button } from 'antd';
+ReactDOM.render(<Button>xxxx</Button>);
+
+↓ ↓ ↓ ↓ ↓ ↓
+
+var _button = require('antd/lib/button');
+require('antd/lib/button/style');
+ReactDOM.render(<_button>xxxx</_button>);
+```
+
 ### naming style
 
 * camelCase

@@ -5,6 +5,111 @@ display: ''
 
 [[toc]]
 
+## 买股票时机2
+
+> https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
+
+```js
+var maxProfit = function(prices) {
+    let res = 0
+    for(let i = 1; i < prices.length; i++) {
+        let tmp = prices[i] - prices[i - 1]
+        res = tmp > 0 ? tmp + res : res
+    }
+    return res
+};
+```
+
+上升的时候不用担心今天买明天卖会不会亏损
+
+## 锯齿 bfs
+
+```js
+var zigzagLevelOrder = function(root) {
+  if(!root) return []
+  let res = []
+  let stack = [root]
+  let f = true
+  while(stack.length) {
+    const len = stack.length
+    let arr = []
+    for(let i = 0; i < len; i++) {
+      const el = stack.shift()
+      arr.push(el.val)
+      if(el.left) stack.push(el.left)
+      if(el.right) stack.push(el.right)
+    }
+    f && arr.reverse()
+    res.push(arr)
+    f = !f
+  }
+  return res
+};
+```
+
+## 归并排序 + 链表
+
+> https://leetcode.cn/problems/sort-list/description/
+
+```js
+function merge(node1, node2) {
+  console.log(node1, node2)
+  let node = {}, head = node
+  while(node1 && node2) {
+    let val1 = node1.val
+    let val2 = node2.val
+    if(val1 < val2) {
+      node.next = node1
+      node1 = node1.next
+    } else {
+      node.next = node2
+      node2 = node2.next
+    }
+    node = node.next
+  }
+  node.next = node1 ? node1 : node2
+  return head.next
+}
+var sortList = function(node) {
+  let i = node, j = node, k = { next: node }
+  while(j) {
+    j = j.next? j.next.next : j.next
+    i = i.next
+    k = k.next
+  }
+  if(i == j) return node
+  k.next = null  
+  return merge(sortList(node), sortList(i))
+};
+```
+
+## 二叉树递归
+
+> https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree/description/
+
+```js
+var sortedListToBST = function(head) {
+    if(!head) return null
+    let i = head, j = head, k = { next: head }
+    while(j && j.next) {
+        j = j.next.next
+        i = i.next
+        k = k.next
+    }
+    if(i == j) return new TreeNode(i.val)
+
+    if(head) {
+        k.next = null
+        i.left = sortedListToBST(head)
+    }
+    if(i.next) {
+        i.right = sortedListToBST(i.next)
+    }
+
+    return new  TreeNode(i.val, i.left, i.right)
+};
+```
+
 ## 合法IP地址
 
 > https://leetcode.cn/problems/restore-ip-addresses/description/

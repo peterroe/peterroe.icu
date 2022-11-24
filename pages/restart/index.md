@@ -23,6 +23,9 @@ lists:
   - name: 'Operating System'
     link: ''
     icon: 'i-uiw-linux'
+  - name: 'Rust'
+    link: '/restart/rust'
+    icon: 'i-mdi-language-rust'
 ---
 
 <ColumnTimeLine :lists="frontmatter.lists"/>

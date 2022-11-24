@@ -5,6 +5,28 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### open-props ---> CSS 变量框架 <GitHubStar repo="argyleink/open-props" />
+
+```css
+.card {
+  border-radius: var(--radius-2);
+  padding: var(--size-fluid-3);
+  box-shadow: var(--shadow-2);
+
+  &:hover {
+    box-shadow: var(--shadow-3);
+  }
+
+  @media (--motionOK) {
+    animation: var(--animation-fade-in);
+  }
+}
+```
+
+地址：<GitHubLink repo="argyleink/open-props" />
+
+---
+
 ### picocolors ---> 体积极小的输出库 <GitHubStar repo="alexeyraspopov/picocolors" />
 
 ```js
@@ -406,7 +428,7 @@ new Editor({
 
 ### fingerprint ---> 精确的设备识别  <GitHubStar repo="fingerprintjs/fingerprintjs" />
 
-在浏览器上运行，获取较为准确的信息
+在浏览器上运行，为每个访问设备确定唯一ID
 
 ```js
 <script>
