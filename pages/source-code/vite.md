@@ -2,6 +2,57 @@
 title: vite
 ---
 
+### vite
+
+* 基于 ESM 的 devServer + HMR
+* 基于 esbuild 的依赖预优化
+* 基于 rollup 的 Plugins + Bundle
+* SSR
+
+### Bundle-Based devServer 问题
+
+* devServer 必须等待所有模块构建完成
+* 应用越大，启动时间越长
+* 分片的模块也要构建
+
+### ESM-devServer 问题
+
+* transform 性能问题
+  * 使用性能高的工具
+  * Browser Cache + Server Cache
+* 非 ESM 模块兼容（TS/JSX/CSS）
+  * esbuild 转换，代替 TSC/BABEL
+* Browser ESM 不能识别 Node 模块
+  * es-module-lexer 扫描 import 语法，替换成 /node_modules/vue/dist/vue.runtime.esm-bundler.js
+* 其他 Node 问题
+  * 兼容 CJS 模块，将 CJS 转换为 ESM
+    * @rollup/plugin-commonjs，边缘 Case ，循环引用是不用的，打包结果不一致
+    * esbuild 
+      * 用函数包裹CJS
+  * 请求过多，例如 Vue，通过缓存
+
+### ESM
+
+* 构建模块依赖图
+* 模块含有 import.meta.hot.accept，将模块标记为 boundary
+* 文件更新的时候，向上冒泡找到最近的 boundary，通过 devServer 发送给浏览器端
+* 浏览器端接收到这些信息，对变更的模块执行加载，找到回调函数调用
+* 如果没找到 boundary, 直接 reload
+* 对于 Components， 组件级别进行转换的时候，都会进行 HMR 的 boundary
+
+### SSR
+
+* 重写 import 语法，自己处理模块的引入，导出以及一系列初始化的功能，实现了自己的模块加载器
+
+```js
+import { ref } from 'vue'
+const val = ref(0)
+
+// rewrite
+const __vite_ssr_import_0__ = __vite_ssr_import__(\\"vue\\")
+const val = __vite_ssr_import_0__.ref(0)
+```
+
 ### 执行 vite dev 发生了什么？
 
 vite 使用 cac 作为参数解析工具，可以看到，`vite、 vite serve、 vite dev`都是等价的命令，然后解析一系列参数：

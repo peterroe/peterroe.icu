@@ -13,6 +13,9 @@ lists:
   - name: 'unocss-play'
     link: '/source-code/unocss-play'
     icon: 'i-logos-unocss'
+  - name: 'vite'
+    link: '/source-code/vite'
+    icon: 'i-logos-vitejs'
 ---
 
 <ColumnTimeLine :lists="frontmatter.lists"/>

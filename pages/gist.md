@@ -3,6 +3,25 @@ title: Gist
 subtitle: Nice code
 ---
 
+### node 清空文件夹
+
+```js
+function emptyDir(dir: string) {
+  if(!fs.existsSync(dir))
+    return
+  for(const file of fs.readdirSync(dir)) {
+    if(file === '.git')
+      continue
+    fs.rmSync(
+      resolve(dir, file, {
+        recursive: true,
+        force: true
+      })
+    )
+  }
+}
+```
+
 ### open
 
 Nodejs 跨平台打开网页。也有封装好的库，例如 [`open`](https://github.com/sindresorhus/open)

@@ -5,6 +5,31 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### volta ---> 工具版本固定 <GitHubStar repo="volta-cli/volta" />
+
+打开项目时候，自动切换对于的 node 版本和 yarn 版本
+
+```shell
+$ volta pin node@16
+```
+
+地址：<GitHubLink repo="volta-cli/volta" />
+
+---
+
+### partytown ---> Web Worker <GitHubStar repo="BuilderIO/partytown" />
+
+将 CPU 密集型的工作转移到 web worker 中
+
+```diff
+- <script>...</script>
++ <script type="text/partytown">...</script>
+```
+
+地址：<GitHubLink repo="BuilderIO/partytown" />
+
+---
+
 ### open-props ---> CSS 变量框架 <GitHubStar repo="argyleink/open-props" />
 
 ```css

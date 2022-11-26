@@ -5,6 +5,14 @@ subtitle: List of tools that I am proud of
 description: List of tools that I am proud of
 projects:
   Latest:
+    - name: 'xhs-edith-adapter'
+      link: 'https://github.com/peterroe/xhs-edith-adapter'
+      icon: 'i-lucide-file-type'
+      desc: 'Edith interface generation tool, based on vscode extension'
+    - name: 'finse'
+      link: 'https://github.com/peterroe/finse'
+      icon: 'i-octicon-command-palette-24'
+      desc: 'Find which files reference the target file'
     - name: 'chrome-plugin-display-tag'
       link: 'https://github.com/peterroe/chrome-plugin-display-tag' 
       icon: 'i-teenyicons-chrome-solid'
@@ -13,14 +21,7 @@ projects:
       link: 'https://github.com/peterroe/markdown-it-comment'
       icon: 'i-bi-markdown-fill'
       desc: 'Plugin for creating custom comment for markdown-it markdown parser'
-    - name: 'wasm-starter'
-      link: 'https://github.com/peterroe/wasm-starter'
-      icon: 'i-carbon-assembly'
-      desc: 'A template to help you start a new wasm(Rust) project'
-    - name: renames
-      link: 'https://github.com/peterroe/renames'
-      icon: 'i-carbon-folder'
-      desc:  'A good helper for batch renaming files.'
+   
 
   Units:
     - name: 'xtj'
@@ -45,7 +46,11 @@ projects:
       link: 'https://github.com/peterroe/chrome-plugin-display-tag' 
       icon: 'i-teenyicons-chrome-solid'
       desc: 'A chrome plugin to display the tag name of the element in the browser.'
-  
+    - name: 'xhs-edith-adapter'
+      link: 'https://github.com/peterroe/xhs-edith-adapter'
+      icon: 'i-lucide-file-type'
+      desc: 'Edith interface generation tool, based on vscode extension'
+
   Scaffolds:
     - name: 'create-js-lib'
       link: 'https://github.com/peterroe/create-js-lib'
@@ -103,8 +108,13 @@ projects:
       link: 'https://github.com/peterroe/login-hnust-auto'
       desc: 'Automatically log in by compiling the generated `.exe` file'
       icon: 'i-mdi-login-variant'
+    - name: 'finse'
+      link: 'https://github.com/peterroe/finse'
+      icon: 'i-octicon-command-palette-24'
+      desc: 'Find which files reference the target file'
   
 ---
+
 
 <ListProjects :projects="frontmatter.projects"/>
 

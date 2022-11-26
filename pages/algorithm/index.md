@@ -5,6 +5,49 @@ display: ''
 
 [[toc]]
 
+## 边缘搜索
+
+> https://leetcode.cn/problems/surrounded-regions
+
+```js
+ var solve = function(board) {
+  let m = board.length
+  let n = board[0].length
+  let f = new Array(m).fill(0).map(it => new Array(n).fill(0))
+  const d = [
+      [0, 1],
+      [1, 0],
+      [0, -1],
+      [-1, 0]
+  ]
+  const dfs = (i, j) => {
+    if(board[i][j] === 'X') return 
+    f[i][j] = 1
+    for(let k = 0; k < d.length; k++) {
+      let newi = i + d[k][0]
+      let newj = j + d[k][1]
+      if(newi < 0 && newj < 0 &&  newi >= m && newj >= n && f[newi][newj] === 0)
+      dfs(newi, newj)
+    }
+  }
+  for(let i = 0; i < m; i++) {
+    for(let j = 0; j < n; j++) {
+      if(i === 0 || i === m - 1 || j === 0 || j === n - 1) {
+        dfs(i, j)
+      }
+    }
+  }
+  for(let i = 0; i < m; i++) {
+    for(let j = 0; j < n; j++) {
+      if(f[i][j] == 0)
+      board[i][j] = 'X'
+    }
+  }
+};
+```
+
+妙在从边缘开始搜索，一定是满足条件的
+
 ## 买股票时机2
 
 > https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/
