@@ -15,6 +15,15 @@ fn main() {
   let args_2 = args().nth(2).expect("no second args");
 }
 ```
+or:
+```rust
+use std::env;
+
+fn main() {
+    let args: Vec<String> = env::args().collect();
+    println!("{:?}", args);
+}
+```
 
 ---
 
@@ -39,5 +48,18 @@ fn main() {
   println!("param: {}", args.first);
   println!("param: {}", args.second);
   println!("param: {}", args.third);
+}
+
+```
+
+### 文件 IO
+
+```rust
+use std::fs;
+fn main() {
+  let contents = fs::read_to_string("./src/c.txt").expect("Some Wrong then read file");
+  println!("file Content: {}", contents);
+  fs::write("package.json", "helloworld").unwrap();
+
 }
 ```
