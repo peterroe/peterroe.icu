@@ -5,6 +5,176 @@ display: ''
 
 [[toc]]
 
+## 位运算压缩
+
+> https://leetcode.cn/problems/repeated-dna-sequences
+
+```js
+var findRepeatedDnaSequences = function(s) {
+  let bin = new Map([
+    ['A', 0],
+    ['T', 3],
+    ['C', 1],
+    ['G', 2],
+  ])
+  let x = 0
+  const ans = []
+  if(s.length < 10) return ans
+  for(let i = 0; i < 9; i++) {
+    x = (x << 2) | bin.get(s[i])
+  }
+  const rc = new Map()
+  for(let i = 10; i <= s.length; i++) {
+    x = ((x << 2) | bin.get(s[i - 1])) & ((1 << 20) - 1)
+    rc.set(x, (rc.get(x) || 0) + 1)
+    if(rc.get(x) === 2) {
+      ans.push(s.slice(i - 10, i))
+    }
+  }
+  return ans
+};
+```
+
+将字符串转换为映射为数字，节省储存空间
+
+## 二叉树的右视图
+
+```js
+var rightSideView = function(root) {
+    if(!root) return []
+    const stack = [root]
+    let arr = []
+    while(stack.length) {
+        let len = stack.length
+        for(let i = 0; i < len; i++) {
+            let el = stack.shift()
+            if(i === 0) {
+                arr.push(el.val)
+            }
+            if(el.right) {
+                stack.push(el.right)
+            }
+            if(el.left) {
+                stack.push(el.left)
+            }
+        }
+    }
+    return arr
+};
+```
+
+## 岛屿数量
+
+```js
+/**
+ * @param {character[][]} grid
+ * @return {number}
+ */
+var numIslands = function(grid) {
+    let m = grid.length
+    let n = grid[0].length
+    const d = [
+        [0, 1],
+        [1, 0],
+        [0, -1],
+        [-1, 0]
+    ]
+    const dfs = (i, j) => {
+        grid[i][j] = '0'
+        for(let k = 0; k < d.length; k++) {
+            let newI = i + d[k][0]
+            let newJ = j + d[k][1]
+            if(newI >=0 && newJ >=0 && newI < m && newJ < n && grid[newI][newJ] === '1') {
+                dfs(newI, newJ)
+            }
+        }
+    }
+    let count = 0
+    for(let i = 0; i < m; i++) {
+        for(let j = 0; j < n; j++) {
+            if(grid[i][j] === '1') {
+                dfs(i, j)
+                count++
+            }
+        }
+    }
+    return count
+};
+```
+
+## 克隆图
+
+> https://leetcode.cn/problems/clone-graph
+
+bfs
+
+```js
+const cloneGraph = function(node) {
+  if(!node) return node
+  let stack = [node]
+  let map = new Map([[node, new Node(node.val)]])
+  while(stack.length) {
+    let el = stack.shift()
+    for(let it of el.neighbors) {
+      if(!map.has(it)) {
+        map.set(it, new Node(it.val))
+        stack.push(neighbors)
+      }
+      map.get(el).neighbors.push(map.get(it))
+    }
+  }
+  return map.get(node)
+}
+```
+
+需要提前克隆一个头节点，确保能够顺利 push 进行的数组中
+
+dfs
+
+```js
+const cloneGraph = function(node) {
+  if(!node) return node
+  const map = new Map()
+  const dfs = (node) => {
+    if(map.has(node)) return map.get(node)
+    let newNode = new Node(node.val)
+    map.set(node, newNode)
+    for(let it of node.neighbors) {
+      newNode.neighbors.push(dfs(it))
+    }
+    return newNode
+  }
+  return dfs(node)
+}
+```
+
+## 二叉树最大路径
+
+> https://leetcode.cn/problems/binary-tree-maximum-path-sum
+
+```js
+var maxPathSum = function(root) {
+    let maxValue = -Infinity
+    const dfs = (node) => {
+        if(!node) return 0
+        let left = dfs(node.left)
+        let right = dfs(node.right)
+        let curMax = left + node.val + right
+        maxValue = Math.max(maxValue, curMax) //挑战最大记录
+        let outputMax = node.val + Math.max(left, right, 0)
+        return outputMax < 0 ? 0 : outputMax
+    }
+    dfs(root)
+    return maxValue
+};
+```
+
+每次递归的要做的事情
+
+* 尝试将当前接点当成根节点，挑战最大记录
+* 对上一次递归提供自己能提供最大的值
+* 对负值的考虑
+
 ## 边缘搜索
 
 > https://leetcode.cn/problems/surrounded-regions

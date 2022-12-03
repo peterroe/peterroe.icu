@@ -31,7 +31,7 @@ title: vite
       * 用函数包裹CJS
   * 请求过多，例如 Vue，通过缓存
 
-### ESM
+### HMR
 
 * 构建模块依赖图
 * 模块含有 import.meta.hot.accept，将模块标记为 boundary

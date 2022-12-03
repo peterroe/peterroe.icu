@@ -5,6 +5,68 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### hono ---> Web 框架 <GitHubStar repo="nodeca/pica" />
+
+支持 deno 和 bun，速度快，但不止快
+
+```js
+import { serve } from '@honojs/node-server' // Write above `Hono`
+import { Hono } from 'hono'
+
+const app = new Hono()
+app.get('/', (c) => c.text('Hono meets Node.js'))
+
+serve(app)
+```
+
+地址：<GitHubLink repo="nodeca/pica" />
+
+---
+
+### pica ---> 浏览器图像处理库 <GitHubStar repo="nodeca/pica" />
+
+```js
+pica.resize(from, to)
+  .then(result => console.log('resize done!'));
+
+// Resize & convert to blob
+pica.resize(from, to)
+  .then(result => pica.toBlob(result, 'image/jpeg', 0.90))
+  .then(blob => console.log('resized to canvas & created blob!'));
+```
+
+地址：<GitHubLink repo="nodeca/pica" />
+
+---
+
+### i18next ---> 语言国际化 <GitHubStar repo="i18next/i18next" />
+
+国际化库，还可以配合识别浏览器语言的插件使用： <GitHubLink repo="i18next/i18next-browser-languageDetector" />
+
+```js
+i18next.init({
+  lng: 'en',
+  debug: true,
+  resources: {
+    en: {
+      translation: {
+        "key": "hello world"
+      }
+    }
+  }
+});
+document.getElementById('output').innerHTML = i18next.t('key');
+i18next
+  .changeLanguage('de')
+  .then((t) => {
+    t('key'); // -> same as i18next.t
+  });
+```
+
+地址：<GitHubLink repo="i18next/i18next" />
+
+---
+
 ### volta ---> 工具版本固定 <GitHubStar repo="volta-cli/volta" />
 
 打开项目时候，自动切换对于的 node 版本和 yarn 版本

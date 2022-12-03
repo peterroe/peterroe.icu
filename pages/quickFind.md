@@ -18,19 +18,6 @@ html {
 }
 ```
 
-### transform tag
-
-```js
-import { Button } from 'antd';
-ReactDOM.render(<Button>xxxx</Button>);
-
-↓ ↓ ↓ ↓ ↓ ↓
-
-var _button = require('antd/lib/button');
-require('antd/lib/button/style');
-ReactDOM.render(<_button>xxxx</_button>);
-```
-
 ### naming style
 
 * camelCase

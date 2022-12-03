@@ -34,6 +34,8 @@ Lexoral's Blog => https://lexoral.com/blog/
 
 CSS tricks => https://css-tricks.com/
 
+herman => https://herman.bearblog.dev/blog/
+
 ### Site
 
 <Chinese/> zxuqian => https://zxuqian.cn/
@@ -59,6 +61,8 @@ Babel AST => https://astexplorer.net/
 HTML To SVG => https://og-playground.vercel.app
 
 [markmap]{Markdown to tree}  => https://markmap.js.org/repl
+
+SVG PlayGround => https://www.svgviewer.dev/
 
 ### Color
 
