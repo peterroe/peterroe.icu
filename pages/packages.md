@@ -5,6 +5,51 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### HyperUI ---> Tailwind CSS 组件 <GitHubStar repo="markmead/hyperui" />
+
+```html
+<!-- bottom -->
+<a
+  class="inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+  href="/download"
+>
+  Download
+</a>
+```
+
+地址：<GitHubLink repo="markmead/hyperui" />
+
+---
+
+### threads.js ---> WebWorker 库  <GitHubStar repo="andywer/threads.js" />
+
+```js
+// master.js
+import { spawn, Thread, Worker } from "threads"
+
+const auth = await spawn(new Worker("./workers/auth"))
+const hashed = await auth.hashPassword("Super secret password", "1234")
+
+console.log("Hashed password:", hashed)
+
+await Thread.terminate(auth)
+
+
+// workers/auth.js
+import sha256 from "js-sha256"
+import { expose } from "threads/worker"
+
+expose({
+  hashPassword(password, salt) {
+    return sha256(password + salt)
+  }
+})
+```
+
+地址：<GitHubLink repo="andywer/threads.js" />
+
+---
+
 ### hono ---> Web 框架 <GitHubStar repo="nodeca/pica" />
 
 支持 deno 和 bun，速度快，但不止快
