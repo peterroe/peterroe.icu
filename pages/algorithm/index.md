@@ -5,6 +5,44 @@ display: ''
 
 [[toc]]
 
+## 汉明距离
+
+```js
+var hammingDistance = function(x, y) {
+    let count = 0
+    let s = x ^ y
+    while(s != 0) {
+        s = s & (s - 1)
+        count ++
+    }
+    return count
+};
+```
+
+利用 Brian Kernighan 算法 和异或算法
+
+* 异或运算直接得到不同的位数
+* Brain Kernighan 删除最后一位数字
+
+## 位运算
+
+> https://leetcode.cn/problems/bitwise-and-of-numbers-range
+
+```js
+var rangeBitwiseAnd = function(m, n) {
+    let count = 0
+    while(m != n) {
+        m >>= 1
+        n >>= 1
+        count ++
+    }
+    return m << count
+}
+
+```
+
+找两个数字的公共前缀，一定是与的结果。上面的思路是将数字一只右移动
+
 ## 位运算压缩
 
 > https://leetcode.cn/problems/repeated-dna-sequences
@@ -36,6 +74,8 @@ var findRepeatedDnaSequences = function(s) {
 ```
 
 将字符串转换为映射为数字，节省储存空间
+
+`((1 << 20) - 1)` 的意思是，产生 20 个 1
 
 ## 二叉树的右视图
 

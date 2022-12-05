@@ -76,6 +76,8 @@ Adobe Color => https://color.adobe.com/
 
 NIPPON COLORS => https://nipponcolors.com/
 
+[trianglify]{Trianglify.io is a tool for generating low poly triangle patterns that can be used as wallpapers and website assets.} => https://trianglify.io/
+
 ### Content
 
 [Hemingway]{Text Editor} => http://www.hemingwayapp.com/ 
@@ -165,3 +167,7 @@ Great Front End => https://www.greatfrontend.com/
 <Chinese/> shengxinjing => https://shengxinjing.cn/
 
 <Chinese/> full stack => https://hejialianghe.github.io
+
+### D!
+
+Virtual Number => https://sms-activate.org/
