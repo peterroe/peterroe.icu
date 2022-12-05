@@ -7,6 +7,8 @@ display: ''
 
 ## 汉明距离
 
+> https://leetcode.cn/problems/hamming-distanc
+
 ```js
 var hammingDistance = function(x, y) {
     let count = 0
