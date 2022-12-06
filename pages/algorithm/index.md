@@ -5,6 +5,50 @@ display: ''
 
 [[toc]]
 
+## 乘积最大的子数组
+
+> https://leetcode.cn/problems/maximum-product-subarray
+
+```js
+var maxProduct = function(nums) {
+    let f = new Array(nums.length).fill(0)
+    let max = nums[0]
+    let min = nums[0]
+    f[0] = nums[0]
+    for(let i = 1; i < nums.length; i++) {
+        if(nums[i] < 0) {
+            [max,min] = [min, max]
+        }
+        max = Math.max(nums[i] * max, nums[i])
+        min = Math.min(nums[i] * min, nums[i])
+        f[i] = max
+    }
+    return Math.max(...f)
+};
+```
+
+因为一旦出现一个负数，就可能使得结果反转，所以可以用 max 和 min 来储存最大值和最小值。妙处：交换 **max** 和 **min**
+
+## 正则妙用
+
+> https://leetcode.cn/problems/number-of-different-integers-in-a-string
+> https://leetcode.cn/problems/reverse-words-in-a-string
+> 
+```js
+var numDifferentIntegers = function(word) {
+    let arr =  word.split(/[a-z]+/)
+        .filter(it => it !== '')
+        .map(it => it.replace(/^0+/, ''))
+    return new Set(arr).size
+};
+
+var reverseWords = function(s) {
+    return s.trim().split(/\s+/).reverse().join(' ')
+};
+```
+
+涉及字符串的很多题目都可以用 js 的正则表达式来做，尽力思考，写出一个最简单的 RegExp
+
 ## 汉明距离
 
 > https://leetcode.cn/problems/hamming-distanc
