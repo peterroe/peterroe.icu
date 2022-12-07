@@ -5,6 +5,94 @@ display: ''
 
 [[toc]]
 
+## 打家劫舍
+
+```js
+var rob = function(nums) {
+  if(nums.length == 1) {
+    return nums[0]
+  } else if (nums.length == 2) {
+    return Math.max(nums[0], nums[1])
+  }
+  const robRange = (i, j) => {
+    f[i] = nums[i]
+    f[i + 1] = Math.max(nums[i], num[i + 1])
+    for(let k = i + 2; k <= j; k++) {
+      f[k] = Math.max(f[k - 2] + nums[k], f[k - 1])
+    }
+    return f[k]
+  }
+  return Math.max(robRange(0, nums.length - 2), robRange(1, nums.length - 1))
+}
+```
+
+分两次计算，写法上及其优美
+
+## 计算质数
+
+> https://leetcode.cn/problems/count-primes
+
+```js
+var countPrimes = function(n) {
+  let f = new Array(n).fill(1)
+  let count = 0
+  for(let i = 1; i < n; i++) {
+    if(f[i]) {
+      count ++
+      for(let j = i; j < n; j += i) {
+        f[j] = 0
+      }
+    }
+  }
+  return count
+}
+```
+
+妙！
+
+## 理解后有效性
+
+> https://leetcode.cn/problems/maximum-subarray
+
+```js
+var maxSubArray = function(nums) {
+    let pre = 0, maxAns = nums[0];
+    nums.forEach((x) => {
+        pre = Math.max(pre + x, x);
+        maxAns = Math.max(maxAns, pre);
+    });
+    return maxAns;
+};
+```
+
+因为要求必须是连续的，所以我们可以理解转化为，**求 nums[i] 结尾的子数组最大和是多少**
+
+## 比较版本号
+
+> https://leetcode.cn/problems/compare-version-numbers
+
+```js
+var compareVersion = function(version1, version2) {
+    let arr1 = version1.split('.').map(it => +it)
+    let arr2 = version2.split('.').map(it => +it)
+    let i = 0
+    while(i < arr1.length || i < arr2.length) {
+        let el1 = i < arr1.length ? arr1[i] : 0
+        let el2 = i < arr2.length ? arr2[i] : 0
+        if(el1 == el2) {
+            i ++
+        } else if (el1 < el2) {
+            return -1
+        } else {
+            return 1
+        }
+    }
+    return 0
+};
+```
+
+再一次把兜底的逻辑运用完美！
+
 ## 乘积最大的子数组
 
 > https://leetcode.cn/problems/maximum-product-subarray

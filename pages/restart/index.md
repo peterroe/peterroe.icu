@@ -15,7 +15,7 @@ lists:
     link: '/restart/browser'
     icon: 'i-bi-browser-chrome'
   - name: 'Computer Network'
-    link: ''
+    link: '/restart/network'
     icon: 'i-carbon-content-delivery-network'
   - name: 'NodeJs'
     link: '/restart/nodejs'
