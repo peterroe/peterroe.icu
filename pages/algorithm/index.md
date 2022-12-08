@@ -5,7 +5,7 @@ display: ''
 
 [[toc]]
 
-## 打家劫舍
+## 打家劫舍II
 
 ```js
 var rob = function(nums) {
@@ -26,7 +26,7 @@ var rob = function(nums) {
 }
 ```
 
-分两次计算，写法上及其优美
+分两次计算，写法上极其优美
 
 ## 计算质数
 

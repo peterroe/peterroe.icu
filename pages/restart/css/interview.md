@@ -2,6 +2,15 @@
 title: CSS高频面试题
 ---
 
+### CSS 隔离方案
+
+* CSS 模块，vue 的 scoped，react 的 CSS Module
+* BEM 命名规范
+  * Block 类名 btn
+  * Element 元素 btn_button
+  * Modifier 修饰器 btn_button__larger
+* 使用命名空间
+
 ### link and @import
 
 link 引入 CSS 时候，是与页面同时加载的，@import 需要等网页完全载入以后加载
