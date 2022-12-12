@@ -5,6 +5,40 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### flexsearch ---> 搜索引擎 <GitHubStar repo="nextapps-de/flexsearch" />
+
+可以搜索文本、对象、数组等
+
+```js
+const FlexSearch = require('flexsearch');
+
+// 创建 FlexSearch 实例
+const index = new FlexSearch({
+  encode: 'advanced',
+  tokenize: 'forward',
+  threshold: 0,
+  resolution: 9,
+});
+
+// 准备搜索的数据
+const data = [
+  { id: 1, name: 'John Doe', email: 'john@example.com' },
+  { id: 2, name: 'Jane Doe', email: 'jane@example.com' },
+];
+
+// 向索引中添加数据
+data.forEach(item => {
+  index.add(item.id, [item.name, item.email]);
+});
+
+// 执行搜索操作
+console.log(index.search('jane')); // [2]
+```
+
+地址：<GitHubLink repo="nextapps-de/flexsearch" />
+
+---
+
 ### HyperUI ---> Tailwind CSS 组件 <GitHubStar repo="markmead/hyperui" />
 
 ```html

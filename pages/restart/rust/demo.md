@@ -4,6 +4,35 @@ title: Demo Case
 
 [[toc]]
 
+### 转换操作
+
+```rust
+let s = String::from("hello");
+// String to iterator
+let c = s.chars();
+// iterator reverse
+c.rev();
+```
+
+### String 迭代
+
+```rust
+let s = String::from("hello world");
+
+let s_arr: Vec<char> = s.chars().collect();
+
+s_arr.iter().enumerate().for_each(|i, it| {
+
+});
+```
+
+### Vec Reduce
+
+```rust
+let arr = Vec![1,2,3,4];
+arr.iter().fold(0, |pre, cur| pre + cur)
+```
+
 ### 解析命令行参数
 
 原始方式
