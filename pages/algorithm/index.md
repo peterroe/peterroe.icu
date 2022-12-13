@@ -5,6 +5,28 @@ display: ''
 
 [[toc]]
 
+## 单词距离
+
+```js
+var findClosest = function(words, word1, word2) {
+    let iF,iS 
+    let min = Infinity
+    for(let i = 0; i < words.length; i++) {
+        if(words[i] == word1) {
+            iF = i
+        }
+        if(words[i] == word2) {
+            iS = i
+        }
+        if(iF !== undefined && iS != undefined)
+        min = Math.min(Math.abs(iF - iS), min)
+    }
+    return min
+};
+```
+
+为了简化计算，单词A与单词B直接还存在单词A和单词B，这种计算是无意义的。所以可以通过一次扫描，每次记录最新的下表，尝试计算局部最小值
+
 ## 打家劫舍II
 
 ```js

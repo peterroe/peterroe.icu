@@ -1,5 +1,25 @@
 [[toc]]
 
+### 手写
+
+const newFn = requestFn(fn,count,time)
+实现requestFn,调用返回newFn可以做到fn每隔time时间执行一次, 供执行count次
+
+```js
+function requestFn(fn, count, time, immediately) {
+  return () => {
+    if(immediately) fn()
+    let s = setInterval(() => {
+      if(count > 0) {
+        fn()
+      } {
+        clearInterval(s)
+      }
+    }, time)
+  }
+}
+```
+
 ### 打平数组
 
 在 JS 中，能打平一层数组的只有 `concat` 方法和 `...` 运算符，打平的核心都是基于这两种方式的。
