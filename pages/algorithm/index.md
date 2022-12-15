@@ -5,6 +5,20 @@ display: ''
 
 [[toc]]
 
+## 位运算
+
+> https://leetcode.cn/problems/check-if-the-sentence-is-pangram
+
+```js
+function checkIfPangram(sentence) {
+    let m = 0
+    for(let i = 0; i < sentence.length; i++) {
+        m |= 1 << (sentence[i].charCodeAt() - 'a'.charCodeAt())
+    }
+    return m === (1 << 26) - 1
+};
+```
+
 ## 单词距离
 
 ```js
