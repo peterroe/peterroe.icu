@@ -5,9 +5,44 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+## ag-grid ---> Table data <GitHubStar repo="ag-grid/ag-grid" />
+
+The best JavaScript Data Table for building Enterprise Applications. Supports React / Angular / Vue / Plain JavaScript.
+
+地址：<GitHubLink repo="ag-grid/ag-grid" />
+
+---
+
+### mitosis ---> 通用组件 <GitHubStar repo="BuilderIO/mitosis" />
+
+可以吧一种组件转为 Vue、React、Svelte、Qwik 等等组件，蛮有意思
+
+https://mitosis.builder.io/
+ 
+地址：<GitHubLink repo="BuilderIO/mitosis" />
+
+---
+
+### fontsource ---> 字体资源 <GitHubStar repo="fontsource/fontsource" />
+
+还支持 material icon
+
+```js
+import "@fontsource/open-sans"; // Defaults to weight 400 with normal variant.
+
+import "@fontsource/open-sans/500.css"; // Weight 500.
+import "@fontsource/open-sans/900-italic.css"; // Italic variant.
+import "@fontsource/material-icons-sharp";
+import "@fontsource/material-icons-two-tone";
+```
+ 
+地址：<GitHubLink repo="fontsource/fontsource" />
+
+---
+
 ### flexsearch ---> 搜索引擎 <GitHubStar repo="nextapps-de/flexsearch" />
 
-可以搜索文本、对象、数组等
+可以搜索文本、对象、数组等df
 
 ```js
 const FlexSearch = require('flexsearch');
@@ -17,7 +52,7 @@ const index = new FlexSearch({
   encode: 'advanced',
   tokenize: 'forward',
   threshold: 0,
-  resolution: 9,
+  resolution: 9,dsfa
 });
 
 // 准备搜索的数据

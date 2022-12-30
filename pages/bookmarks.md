@@ -120,6 +120,8 @@ CSS Vocabulary => http://apps.workflower.fi/vocabs/css/en
 
 Easing functions => https://easings.net/
 
+youmightnotneedjs => http://youmightnotneedjs.com/
+
 ### Resources
 
 [World Vector Logo]{Download any svg icon here!} => https://worldvectorlogo.com/
