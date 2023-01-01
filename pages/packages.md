@@ -5,7 +5,7 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
-## ag-grid ---> Table data <GitHubStar repo="ag-grid/ag-grid" />
+### ag-grid ---> Table data <GitHubStar repo="ag-grid/ag-grid" />
 
 The best JavaScript Data Table for building Enterprise Applications. Supports React / Angular / Vue / Plain JavaScript.
 
