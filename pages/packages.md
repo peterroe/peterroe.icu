@@ -29,7 +29,6 @@ https://mitosis.builder.io/
 
 ```js
 import "@fontsource/open-sans"; // Defaults to weight 400 with normal variant.
-
 import "@fontsource/open-sans/500.css"; // Weight 500.
 import "@fontsource/open-sans/900-italic.css"; // Italic variant.
 import "@fontsource/material-icons-sharp";
