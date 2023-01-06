@@ -5,6 +5,20 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### svg-captcha ---> 验证码生成 <GitHubStar repo="produck/svg-captcha" />
+
+```js
+var svgCaptcha = require('svg-captcha');
+
+var captcha = svgCaptcha.create();
+console.log(captcha);
+// {data: '<svg.../svg>', text: 'abcd'}
+```
+
+地址：<GitHubLink repo="produck/svg-captcha" />
+
+---
+
 ### ag-grid ---> Table data <GitHubStar repo="ag-grid/ag-grid" />
 
 The best JavaScript Data Table for building Enterprise Applications. Supports React / Angular / Vue / Plain JavaScript.
