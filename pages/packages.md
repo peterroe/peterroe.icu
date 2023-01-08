@@ -103,7 +103,7 @@ console.log(index.search('jane')); // [2]
 
 ---
 
-### threads.js ---> WebWorker 库  <GitHubStar repo="andywer/threads.js" />
+### threads.js ---> WebWorker 库 <GitHubStar repo="andywer/threads.js" />
 
 ```js
 // master.js
