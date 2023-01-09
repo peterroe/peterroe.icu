@@ -17,6 +17,10 @@ import { isDark } from '/~/logics'
       <div class="spacer" />
       <div class="right" lt-md="!gap-3">
         <!-- more icon visit: https://icones.js.org/collection/all -->
+        <!-- <router-link to="/2022"> -->
+        <!-- <span class="lt-md:hidden">2022</span> -->
+        <!-- <ri-article-line class="md:hidden" /> -->
+        <!-- </router-link> -->
         <router-link to="/posts">
           <span class="lt-md:hidden">Blog</span>
           <ri-article-line class="md:hidden" />
