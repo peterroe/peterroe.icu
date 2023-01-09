@@ -5,6 +5,24 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### Numeraljs ---> 数字标准化 <GitHubStar repo="adamwdraper/Numeral-js" />
+
+可以解析不同格式的数字以及转化成想要的格式
+
+```js
+var string = numeral(1000).format('0,0');
+// '1,000'
+
+var number = numeral(1000),
+    value = 100;
+var difference = number.difference(value);
+// 900
+```
+
+地址：<GitHubLink repo="adamwdraper/Numeral-js" />
+
+---
+
 ### svg-captcha ---> 验证码生成 <GitHubStar repo="produck/svg-captcha" />
 
 ```js
