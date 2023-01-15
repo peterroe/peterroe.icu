@@ -5,6 +5,27 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### blurhash ---> 图片模糊 <GitHubStar repo="woltapp/blurhash" />
+
+可以用来优化图片加载时的体验，显示一张模糊后的 canvas
+
+```js
+import { decode } from "blurhash";
+
+const pixels = decode("LEHV6nWB2yk8pyo0adR*.7kCMdnj", 32, 32);
+
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const imageData = ctx.createImageData(width, height);
+imageData.data.set(pixels);
+ctx.putImageData(imageData, 0, 0);
+document.body.append(canvas);
+```
+
+地址：<GitHubLink repo="woltapp/blurhash" />
+
+---
+
 ### Numeraljs ---> 数字标准化 <GitHubStar repo="adamwdraper/Numeral-js" />
 
 可以解析不同格式的数字以及转化成想要的格式
