@@ -3,13 +3,23 @@ title: Projects
 subtitle: List of projects that I am proud of
 ---
 
+## ECopy📝
+
+<GitHubLink repo="peterroe/ECopy" /> This is a clipboard application based on egui. I built it to help me record history  clipboard content and practice rust.
+
+<img src="https://github.com/peterroe/ECopy/raw/main/snapshot.png" border/>
+
+---
+
 ## RssReader📖
 
-<GitHubLink repo="peterroe/Rss-Reader" />🤔As you can see, there are many RSS products on the market, but most of them are in the form of Web sites, and you have to exchange your personal information for the permission to log in to the site (some people resent this behavior).
+<GitHubLink repo="peterroe/Rss-Reader" /> 🤔As you can see, there are many RSS products on the market, but most of them are in the form of Web sites, and you have to exchange your personal information for the permission to log in to the site (some people resent this behavior).
 
 Among the products of desktop programs, there are few products with beautiful interface and open source. I think it is best if the products on the user side can be free and open source without advertisements, and secondly, capable developers can also add their own ideas.
 
 <RssReader />
+
+---
 
 ## UngeUI🌊
 
