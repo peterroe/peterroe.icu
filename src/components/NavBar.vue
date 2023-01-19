@@ -52,13 +52,16 @@ import { isDark } from '/~/logics'
           <span>Gist</span>
         </router-link>
         <router-link to="/quickFind" title="Find">
-          <CarbonLightning />
+          <carbon-lightning />
         </router-link>
         <router-link to="/bookmarks" title="Bookmarks" class="lt-md:hidden">
           <ri-bookmark-line />
         </router-link>
         <router-link to="/packages" title="Packages">
-          <MdiPackageVariantClosed />
+          <mdi-package-variant-closed />
+        </router-link>
+        <router-link to="/books" title="books">
+          <ph-books />
         </router-link>
         <!-- <router-link to="/notes" title="Notes" class="lt-md:hidden">
           <ri-sticky-note-line />
