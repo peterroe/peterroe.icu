@@ -201,6 +201,7 @@ $ git push origin --delete main
 
 ```shell
 $ git rm -r --cached
+$ git rm dist -r --cached # maybe need pathspec
 ```
 
 ### brew切换node版本
