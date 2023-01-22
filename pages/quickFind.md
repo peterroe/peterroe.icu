@@ -4,6 +4,17 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### file structure
+
+Chars: `├─`、`│`、`└─`
+
+```shell
+├─ src
+│   ├─ index.ts
+│   └─ app.ts
+└─  package.json
+```
+
 ### 100 bytes of css
 
 100 bytes of css to look great nearly everywhere

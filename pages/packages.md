@@ -5,6 +5,27 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### npm-run-all ---> 执行多个脚本 <GitHubStar repo="mysticatea/npm-run-all" />
+
+包含命令 `npm-run-all`、`run-p`、`run-s`
+
+```json
+{
+  "scripts": {
+    "build": "rimraf dist && pnpm build:node && pnpm build:client",
+    "build:client": "vite build",
+    "build:node": "rollup -c",
+    "dev:client": "vite",
+    "dev": "rollup -c --watch --watch.include=node",
+    "dev:ui": "run-p dev dev:client",
+  }
+}
+```
+
+地址：<GitHubLink repo="mysticatea/npm-run-all" />
+
+---
+
 ### blurhash ---> 图片模糊 <GitHubStar repo="woltapp/blurhash" />
 
 可以用来优化图片加载时的体验，显示一张模糊后的 canvas

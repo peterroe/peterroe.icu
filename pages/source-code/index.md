@@ -1,12 +1,13 @@
 ---
 title: 源码解析
+subtitle: 记录有意思的点
 lists:
   - name: 'markdown-it-container'
     link: '/source-code/markdown-it-container'
     icon: 'i-bi-markdown-fill'
   - name: '@antfu/ni'
     link: '/source-code/ni'
-    icon: 'i-akar-icons-npm-fill'
+    icon: 'i-logos-npm-icon'
   - name: 'tsx'
     link: '/source-code/tsx'
     icon: 'i-file-icons-tsx-alt'
@@ -16,6 +17,9 @@ lists:
   - name: 'vite'
     link: '/source-code/vite'
     icon: 'i-logos-vitejs'
+  - name: 'vitest'
+    link: '/source-code/vitest'
+    icon: 'i-logos-vitest'
 ---
 
 <ColumnTimeLine :lists="frontmatter.lists"/>
