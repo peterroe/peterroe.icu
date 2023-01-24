@@ -50,7 +50,7 @@ export default (base = '/__vitest__/') => {
 }
 ```
 
-提供给 vitest 核心使用，必要的时候注入 vite 插件当中 
+提供给 vitest 核心使用
 
 ```js
 function VitestPlugin() {
@@ -62,6 +62,25 @@ function VitestPlugin() {
 }
 
 ```
+
+注入 vite 服务器的插件当中
+
+```js
+const config: ViteInlineConfig = {
+    logLevel: 'error',
+    configFile: configPath,
+    // this will make "mode" = "test" inside defineConfig
+    mode: options.mode || process.env.NODE_ENV || mode,
+    plugins: await VitestPlugin(options, ctx),
+  }
+
+  const server = await createServer(mergeConfig(config, mergeConfig(viteOverrides, { root: options.root })))
+
+  if (ctx.config.api?.port)
+    await server.listen()
+```
+
+---
 
 可以详细看下这个包，下面这个包的作用，封装了一些协议，可以让我们把在 Node 上跑的vitest 测试数据，发送到前端的 UI 界面，这就是实现的核心！
 

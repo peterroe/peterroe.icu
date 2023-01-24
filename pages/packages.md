@@ -5,6 +5,76 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### flatted ---> JSON 解析器 <GitHubStar repo="WebReflection/flatted" />
+
+可以用来解析循环的 JS 对象
+
+```js
+import {toJSON, fromJSON} from 'flatted';
+
+class RecursiveMap extends Map {
+  static fromJSON(any) {
+    return new this(fromJSON(any));
+  }
+  toJSON() {
+    return toJSON([...this.entries()]);
+  }
+}
+
+const recursive = new RecursiveMap;
+const same = {};
+same.same = same;
+recursive.set('same', same);
+
+const asString = JSON.stringify(recursive);
+const asMap = RecursiveMap.fromJSON(JSON.parse(asString));
+asMap.get('same') === asMap.get('same').same;
+// true
+```
+
+地址：<GitHubLink repo="WebReflection/flatted" />
+
+---
+
+### tinypool ---> nodejs workers pool  <GitHubStar repo="tinylibs/tinypool" />
+
+```js
+import path from 'path'
+import Tinypool from 'tinypool'
+
+const pool = new Tinypool({
+  filename: new URL('./worker.js', import.meta.url).href,
+})
+
+const result = await pool.run({ a: 4, b: 6 })
+console.log(result) // Prints 10
+```
+
+地址：<GitHubLink repo="tinylibs/tinypool" />
+
+---
+
+### splide ---> 轮播图组件 <GitHubStar repo="Splidejs/splide" />
+
+功能丰富、灵活度高、支持多个框架
+
+```html
+<template>
+  <Splide :options="{ rewind: true }" aria-label="My Favorite Images">
+    <SplideSlide>
+      <img src="image1.jpg" alt="Sample 1">
+    </SplideSlide>
+    <SplideSlide>
+      <img src="image2.jpg" alt="Sample 2">
+    </SplideSlide>
+  </Splide>
+</template>
+```
+
+地址：<GitHubLink repo="Splidejs/splide" />
+
+---
+
 ### npm-run-all ---> 执行多个脚本 <GitHubStar repo="mysticatea/npm-run-all" />
 
 包含命令 `npm-run-all`、`run-p`、`run-s`
