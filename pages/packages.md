@@ -5,6 +5,67 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### birpc ---> 基于消息的双向远程过程调用 <GitHubStar repo="antfu/birpc" />
+
+基于消息的双向远程过程调用。对 WebSockets 和 Workers 通信很有用
+
+```js
+// client 
+import type { ServerFunctions } from './types'
+
+const ws = new WebSocket('ws://url')
+
+const clientFunctions: ClientFunctions = {
+  hey(name: string) {
+    return `Hey ${name} from client`
+  }
+}
+
+const rpc = createBirpc<ServerFunctions>(
+  clientFunctions,
+  {
+    post: data => ws.send(data),
+    on: data => ws.on('message', data),
+    // these are required when using WebSocket
+    serialize: v => JSON.stringify(v),
+    deserialize: v => JSON.parse(v),
+  },
+)
+
+await rpc.hi('Client') // Hi Client from server
+
+
+// server
+import { WebSocketServer } from 'ws'
+import type { ClientFunctions } from './types'
+
+const serverFunctions: ServerFunctions = {
+  hi(name: string) {
+    return `Hi ${name} from server`
+  }
+}
+
+const wss = new WebSocketServer()
+
+wss.on('connection', (ws) => {
+  const rpc = createBirpc<ClientFunctions>(
+    serverFunctions,
+    {
+      post: data => ws.send(data),
+      on: data => ws.on('message', data),
+      serialize: v => JSON.stringify(v),
+      deserialize: v => JSON.parse(v),
+    },
+  )
+
+  await rpc.hey('Server') // Hey Server from client
+})
+```
+
+地址：<GitHubLink repo="antfu/birpc" />
+
+---
+
 ### flatted ---> JSON 解析器 <GitHubStar repo="WebReflection/flatted" />
 
 可以用来解析循环的 JS 对象
