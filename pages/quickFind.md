@@ -4,6 +4,10 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### Distance of HTMLElement
+
+![img](https://shubo.io/static/89a5cfb0e676baf28dafc3ae9f339355/78612/size-cheatsheet.png)
+
 ### file structure
 
 Chars: `├─`、`│`、`└─`
