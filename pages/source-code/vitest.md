@@ -32,7 +32,7 @@ vitest --ui 后，会开启一个界面服务，更好的观察测试结果
 └─ package.json
 ```
 
-`ui` 项目暴露的出口是一个 `vite` 的插件函数
+`ui` 项目暴露的出口是一个 `vite` 的插件函数。我们知道，UI 界面的地址一般是 `localhost:5173/__vitest__/`，下面的这个代码就是当启动 vite 服务的时候，访问 `/__vitest__` 的时候，打开的资源就是 `dist` 资源
 
 ```js
 export default (base = '/__vitest__/') => {
@@ -50,20 +50,15 @@ export default (base = '/__vitest__/') => {
 }
 ```
 
-提供给 vitest 核心使用
+`vite --ui` 让我感兴趣的点是，在 Node 中才能访问的文件信息，是如何能展现在浏览器页面上的呢，必然有一个浏览器和 `nodejs` 通信的过程
 
-```js
-function VitestPlugin() {
-  async function UIPlugin() {
-    await ensurePackageInstalled('@vitest/ui', getRoot())
-    return (await import('@vitest/ui')).default(options.uiBase)
-  }
-  // ...
-}
+通信的技术实际上是通过 `websocket` 实现的，又因为 websocket 服务依赖于 `HTTP` 服务，所以一般情况下可能要启动两个 HTTP 服务，一个是 Vite 的服务，一个是 WebSocket 服务。
 
-```
+当然我们有更好的方法，那就是让 vite 的 HTTP 服务，让一个路由来代理 websocket 服务，那样就只用启动一个 Vite 就可以了，vitest 就是这么做的，vitest 中是通过 `localhost:5173/__vitest_api__` 这个后端路由代理的
 
-注入 vite 服务器的插件当中
+为了封装 websocket 通信， antfu 封装了一个叫 <GitHubLink repo="antfu/brirpc" /> 的包，帮助我们去注册服务
+
+
 
 ```js
 const config: ViteInlineConfig = {
@@ -81,7 +76,3 @@ const config: ViteInlineConfig = {
 ```
 
 ---
-
-可以详细看下这个包，下面这个包的作用，封装了一些协议，可以让我们把在 Node 上跑的vitest 测试数据，发送到前端的 UI 界面，这就是实现的核心！
-
-<GitHubLink repo="vitest-dev/vitest/tree/main/packages/vite-node" />
