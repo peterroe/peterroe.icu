@@ -1,10 +1,11 @@
 ---
 title: 盘点浏览器的滚动行为
+date: 2023-01-31
 ---
 
 [[toc]]
 
-> CSS 的滚动在有些情况下表现不符合我们的预期，又不知道如何去修正，这里是一些整理
+> CSS 的滚动在有些情况下表现不符合我们的预期，又不知道如何去修正，这里是一些兼容性比较好的特性
 
 ### 控制滚动条展示 - overflow
 
@@ -37,6 +38,14 @@ https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-wrap
 控制子元素滚动外面不滚动，一般情况下我们都需要这个特性，类似地， `overscroll-behavior-x` 和 `overscroll-behavior-y` 可以细粒度控制
 
 https://www.zhangxinxu.com/wordpress/2020/01/css-overscroll-behavior/
+
+---
+
+### 预留滚动条的位置 - scrollbar-gutter
+
+通过预留滚动条的位置，可以让滚动条突然出现的时候，文字排版不会变化
+
+https://www.zhangxinxu.com/wordpress/2022/01/css-scrollbar-gutter/
 
 ---
 
@@ -111,3 +120,76 @@ if (history.scrollRestoration) {
 ```
 
 https://www.zhangxinxu.com/wordpress/2022/05/history-scrollrestoration/
+
+---
+
+### 平滑滚动到元素的指定位置 - scroll snap
+
+可以实现移动端 Swipe 的效果，处理大小不一致的子元素很好用
+
+```html
+<style>
+  .scroll-x {
+    width: 300px;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    overflow: auto;
+  }
+  .scroll-x img { 
+    scroll-snap-align: start;
+  }
+</style>
+<div class="scroll-x">
+  <img src="./mm.jpg">
+  <img src="./mm2.jpg">
+  <img src="./mm3.jpg">
+  <img src="./mm4.jpg">
+  <img src="./mm5.jpg">
+</div>
+```
+
+https://www.zhangxinxu.com/wordpress/2018/11/know-css-scroll-snap/
+
+---
+
+### 容器滚动 - scrollTop/scrollLeft/scrollTo()/scrollBy()
+
+`scrollTop/scrollLeft` 可以让容器滚动到某一个位置，配合 `scroll-behavior` 还可以有平滑滚动的效果
+
+```html
+<ul>
+  <li />
+  <li />
+  <li />
+  <li />
+</ul>
+
+<script>
+  document.querySelector('ul').scrollTop = 200
+</script>
+```
+
+`scrollTo()` 表示滚到到指定的位置，而`scrollBy()`表示相对当前的位置滚动多少距离。而且可以单词指定是否平滑。不用像上面设置 CSS 的 `scroll-behavior: smooth`
+
+::: info
+`scrollTo()` 和 `scroll()` 等价，这里不做过多介绍
+:::
+
+```js
+// 语法
+element.scrollTo(x-coord, y-coord)
+element.scrollTo(options)
+element.scrollBy(x-coord, y-coord)
+element.scrollBy(options)
+
+// 例子
+element.scrollBy(10, 20)
+// 等价于
+element.scrollBy({
+  left: 10,
+  right: 20,
+  // behavior: 'smooth' //是否平滑
+})
+```
+
+https://www.zhangxinxu.com/wordpress/2019/07/js-scrollto-scrollby/
