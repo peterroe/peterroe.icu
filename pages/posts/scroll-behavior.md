@@ -1,6 +1,7 @@
 ---
-title: 盘点浏览器的滚动行为
+title: 盘点浏览器的滚动相关行为
 date: 2023-01-31
+duration: 10min
 ---
 
 [[toc]]
