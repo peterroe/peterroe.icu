@@ -6,7 +6,7 @@ subtitle: Tips and tricks for quick finding
 
 ### hash link smooth
 
-```JS
+```js
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
