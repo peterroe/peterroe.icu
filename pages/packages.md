@@ -5,6 +5,31 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### lodash-decorators ---> lodash 封装的装饰器 <GitHubStar repo="steelsojka/lodash-decorators" />
+
+```js
+import { Debounce, Memoize } from 'lodash-decorators';
+
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  @Debounce(100)
+  save(date) {
+    return this.httpService.post(data);
+  }
+
+  @Memoize(item => item.id)
+  doSomeHeavyProcessing(arg1, arg2) {}
+}
+```
+
+地址：<GitHubLink repo="steelsojka/lodash-decorators" />
+
+---
+
 ### styleguide ---> style of code <GitHubStar repo="google/styleguide" />
 
 style of code in Google.
