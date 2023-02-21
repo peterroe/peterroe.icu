@@ -5,6 +5,58 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### compare-versions ---> semver 版本比较器 <GitHubStar repo="omichelsen/compare-versions" />
+
+比较大小，验证条件等功能
+
+```js
+import { compareVersions, compare, satisfies, validate } from 'compare-versions';
+
+compareVersions('11.1.1', '10.0.0'); //  1
+compare('10.1.8', '10.0.4', '>');  // true
+satisfies('10.0.1', '~10.0.0');  // true
+validate('1.0.0-rc.1'); // true
+
+```
+
+地址：<GitHubLink repo="omichelsen/compare-versions" />
+
+---
+
+### color-convert ---> 颜色转换 <GitHubStar repo="Qix-/color-convert" />
+
+Color-convert is a color conversion library for JavaScript and node. It converts all ways between rgb, hsl, hsv, hwb, cmyk, ansi, ansi16, hex strings, and CSS keywords (will round to closest):
+
+```js
+var convert = require('color-convert');
+
+convert.rgb.hsl(140, 200, 100);             // [96, 48, 59]
+convert.keyword.rgb('blue');                // [0, 0, 255]
+
+var rgbChannels = convert.rgb.channels;     // 3
+var cmykChannels = convert.cmyk.channels;   // 4
+var ansiChannels = convert.ansi16.channels; // 1
+```
+
+地址：<GitHubLink repo="Qix-/color-convert" />
+
+---
+
+### clean-css ---> CSS 压缩工具 <GitHubStar repo="clean-css/clean-css" />
+
+除了压缩功能，还有这极为灵活的兼容模式
+
+```js
+var CleanCSS = require('clean-css');
+var input = 'a{font-weight:bold;}';
+var options = { /* options */ };
+var output = new CleanCSS(options).minify(input);
+```
+
+地址：<GitHubLink repo="clean-css/clean-css" />
+
+---
+
 ### Dexie.js ---> IndexedDB lib <GitHubStar repo="dexie/Dexie.js" />
 
 ```html
@@ -37,6 +89,31 @@ subtitle: Gather some npm packages
 ```
 
 地址：<GitHubLink repo="dexie/Dexie.js" />
+
+---
+
+### lodash-decorators ---> lodash 封装的装饰器 <GitHubStar repo="steelsojka/lodash-decorators" />
+
+```js
+import { Debounce, Memoize } from 'lodash-decorators';
+
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  @Debounce(100)
+  save(date) {
+    return this.httpService.post(data);
+  }
+
+  @Memoize(item => item.id)
+  doSomeHeavyProcessing(arg1, arg2) {}
+}
+```
+
+地址：<GitHubLink repo="steelsojka/lodash-decorators" />
 
 ---
 
