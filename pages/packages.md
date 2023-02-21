@@ -5,6 +5,41 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### Dexie.js ---> IndexedDB lib <GitHubStar repo="dexie/Dexie.js" />
+
+```html
+<!doctype html>
+<html>
+ <head>
+  <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+  <script>
+   //
+   // Declare Database
+   //
+   var db = new Dexie("FriendDatabase");
+   db.version(1).stores({
+     friends: "++id,name,age"
+   });
+
+   //
+   // Manipulate and Query Database
+   //
+   db.friends.add({name: "Josephine", age: 21}).then(function() {
+       return db.friends.where("age").below(25).toArray();
+   }).then(function (youngFriends) {
+       alert ("My young friends: " + JSON.stringify(youngFriends));
+   }).catch(function (e) {
+       alert ("Error: " + (e.stack || e));
+   });
+  </script>
+ </head>
+</html>
+```
+
+地址：<GitHubLink repo="dexie/Dexie.js" />
+
+---
+
 ### styleguide ---> style of code <GitHubStar repo="google/styleguide" />
 
 style of code in Google.

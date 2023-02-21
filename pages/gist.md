@@ -5,8 +5,6 @@ subtitle: Nice code
 
 ### css svg filter
 
-
-
 ```html
 <style>
 #app {
@@ -22,6 +20,19 @@ subtitle: Nice code
     </filter>
   </defs>
 </svg>
+```
+
+### hash link smooth
+
+```js
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth',
+      })
+    })
+  })
 ```
 
 ### node 清空文件夹

@@ -4,17 +4,10 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
-### hash link smooth
+### copy to clipboard
 
-```js
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault()
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth',
-      })
-    })
-  })
+```sh
+$ pbcopy < ~/.ssh/id_rsa.pub  
 ```
 
 ### Distance of HTMLElement
