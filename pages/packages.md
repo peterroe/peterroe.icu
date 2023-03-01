@@ -5,6 +5,162 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### dom-to-png 从 DOM 生成图片 <GitHubStar repo="tsayen/dom-to-image" />
+
+```js
+var node = document.getElementById('my-node');
+
+domtoimage.toPng(node)
+    .then(function (dataUrl) {
+        var img = new Image();
+        img.src = dataUrl;
+        document.body.appendChild(img);
+    })
+    .catch(function (error) {
+        console.error('oops, something went wrong!', error);
+    });
+```
+
+地址：<GitHubLink repo="tsayen/dom-to-image" />
+
+---
+
+### pinyin ---> 获得汉字的拼音 <GitHubStar repo="hotoo/pinyin" />
+
+```js
+import pinyin from "pinyin";
+
+console.log(pinyin("中心"));    // [ [ 'zhōng' ], [ 'xīn' ] ]
+
+console.log(pinyin("中心", {
+  heteronym: true,              // 启用多音字模式
+}));                            // [ [ 'zhōng', 'zhòng' ], [ 'xīn' ] ]
+
+console.log(pinyin("中心", {
+  heteronym: true,              // 启用多音字模式
+  segment: true,                // 启用分词，以解决多音字问题。默认不开启，使用 true 开启使用 nodejieba 分词库。
+})); 
+```
+
+地址：<GitHubLink repo="hotoo/pinyin" />
+
+---
+
+### listr ---> 终端列表任务 UI <GitHubStar repo="SamVerschueren/listr" />
+
+用于展示执行任务的过程
+
+```js
+const tasks = new Listr([
+	{
+		title: 'Success',
+		task: () => 'Foo'
+	},
+	{
+		title: 'Failure',
+		task: () => {
+			throw new Error('Bar')
+		}
+	}
+]);
+```
+
+地址：<GitHubLink repo="SamVerschueren/listr" />
+
+---
+
+### boxen ---> 在终端中创建框 <GitHubStar repo="sindresorhus/boxen" />
+
+```js
+import boxen from 'boxen';
+
+console.log(boxen('unicorn', {padding: 1}));
+/*
+┌─────────────┐
+│             │
+│   unicorn   │
+│             │
+└─────────────┘
+*/
+```
+
+地址：<GitHubLink repo="sindresorhus/boxen" />
+
+---
+
+### vditor ---> Markdown 编辑器 <GitHubStar repo="Vanessa219/vditor" />
+
+```js
+import Vditor from 'vditor'
+import "~vditor/src/assets/less/index"
+
+const vditor = new Vditor(id, {options...})
+```
+
+地址：<GitHubLink repo="Vanessa219/vditor" />
+
+---
+
+### introJs ---> 用户引导 <GitHubStar repo="usablica/intro.js" />
+
+可惜收费。
+
+地址：<GitHubLink repo="usablica/intro.js" />
+
+---
+
+### countupJs ---> 数字过渡 <GitHubStar repo="inorganik/countUp.js" />
+
+```js
+const countUp = new CountUp('targetId', 5234);
+if (!countUp.error) {
+  countUp.start();
+} else {
+  console.error(countUp.error);
+}
+```
+
+地址：<GitHubLink repo="inorganik/countUp.js" />
+
+---
+
+### sortableJS ---> 拖拽排序 <GitHubStar repo="SortableJS/Sortable" />
+
+适用于现代浏览器和触摸设备的可重新排序的拖放列表
+
+地址：<GitHubLink repo="SortableJS/Sortable" />
+
+---
+
+### mitt ---> 发布订阅模式库 <GitHubStar repo="developit/mitt" />
+
+```js
+import mitt from 'mitt'
+
+const emitter = mitt()
+
+// listen to an event
+emitter.on('foo', e => console.log('foo', e) )
+
+// listen to all events
+emitter.on('*', (type, e) => console.log(type, e) )
+
+// fire an event
+emitter.emit('foo', { a: 'b' })
+
+// clearing all events
+emitter.all.clear()
+
+// working with handler references:
+function onFoo() {}
+emitter.on('foo', onFoo)   // listen
+emitter.off('foo', onFoo)  // unlisten
+```
+
+地址：<GitHubLink repo="developit/mitt" />
+
+---
+
 ### compare-versions ---> semver 版本比较器 <GitHubStar repo="omichelsen/compare-versions" />
 
 比较大小，验证条件等功能
