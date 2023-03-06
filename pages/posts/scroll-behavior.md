@@ -197,7 +197,7 @@ https://www.zhangxinxu.com/wordpress/2019/07/js-scrollto-scrollby/
 
 ### 解决 sticky 和锚点的冲突
 
-当页面存在使用了 sticky 定位的 header 元素时候，我们发现使用 `scrollIntoView` 等方法，让页面滚动到元素所在的地方的时候，内容会被遮住
+当页面存在使用了 sticky 定位的 header 元素时候，我们发现使用 `scrollIntoView` 等方法，让元素滚动到页面视口的时候，元素内容会 header 被遮住
 
 查看：https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
 
