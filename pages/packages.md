@@ -5,7 +5,33 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
-### dom-to-png 从 DOM 生成图片 <GitHubStar repo="tsayen/dom-to-image" />
+### gray-matter ---> 解析 frontmatter <GitHubStar repo="jonschlinkert/gray-matter" />
+
+transform:
+
+```md
+---
+title: Hello
+slug: home
+---
+<h1>Hello world!</h1>
+```
+to: 
+```js
+{
+  content: '<h1>Hello world!</h1>',
+  data: { 
+    title: 'Hello', 
+    slug: 'home' 
+  }
+}
+```
+
+地址：<GitHubLink repo="jonschlinkert/gray-matter" />
+
+---
+
+### dom-to-png ---> 从 DOM 生成图片 <GitHubStar repo="tsayen/dom-to-image" />
 
 ```js
 var node = document.getElementById('my-node');

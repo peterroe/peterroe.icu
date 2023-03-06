@@ -124,7 +124,7 @@ https://www.zhangxinxu.com/wordpress/2022/05/history-scrollrestoration/
 
 ---
 
-### 平滑滚动到元素的指定位置 - scroll snap
+### 吸附滚动 - scroll snap type
 
 可以实现移动端 Swipe 的效果，处理大小不一致的子元素很好用
 
@@ -155,7 +155,7 @@ https://www.zhangxinxu.com/wordpress/2018/11/know-css-scroll-snap/
 
 ### 容器滚动 - scrollTop/scrollLeft/scrollTo()/scrollBy()
 
-`scrollTop/scrollLeft` 可以让容器滚动到某一个位置，配合 `scroll-behavior` 还可以有平滑滚动的效果
+`scrollTop/scrollLeft` 可以让容器滚动到某一个位置，配合 CSS 的 `scroll-behavior` 还可以有平滑滚动的效果
 
 ```html
 <ul>
@@ -194,3 +194,25 @@ element.scrollBy({
 ```
 
 https://www.zhangxinxu.com/wordpress/2019/07/js-scrollto-scrollby/
+
+### 解决 sticky 和锚点的冲突
+
+当页面存在使用了 sticky 定位的 header 元素时候，我们发现使用 `scrollIntoView` 等方法，让页面滚动到元素所在的地方的时候，内容会被遮住
+
+查看：https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+
+这个时候，可以通过使用 `scroll-margin-top` 来解决问题
+
+```css
+h1 {
+  scroll-margin-top: 5rem
+}
+```
+
+或者如果不确定哪些元素会被锚点，控制滚动容器的 padding 也是可以的，好处就是省去了对每个元素添加 CSS 的麻烦
+
+```css
+body {
+  scroll-padding-top: 5rem
+}
+```
