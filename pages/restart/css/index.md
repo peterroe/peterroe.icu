@@ -438,6 +438,12 @@ div {
 [这里有一个网站教你从头到尾实现一些CSS动画效果](https://cssanimation.rocks/)
 :::
 
+### Animation
+
+**1.cubic-bezier** => https://cubic-bezier.com
+
+调试贝塞尔曲线动画
+
 ----
 
 ### CSS 隔离方案
