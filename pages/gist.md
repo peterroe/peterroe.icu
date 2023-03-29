@@ -3,6 +3,37 @@ title: Gist
 subtitle: Nice code
 ---
 
+### Readable
+
+```js
+const fs = require('fs');
+const { Readable } = require('stream');
+
+// 创建一个可读流
+const readableStream = new Readable({
+  read(size) {
+    // 您可以在这里生成或读取数据
+    // 然后使用 this.push(data) 将数据推送到可读流中
+    // 当没有更多数据可读时，使用 this.push(null) 结束流
+
+    // 示例：将字符串 'Hello, World!' 推送到可读流中
+    this.push('Hello, World!');
+    this.push(null);
+  }
+});
+
+// 创建一个可写流，将数据写入 'output.txt' 文件
+const writableStream = fs.createWriteStream('output.txt');
+
+// 将可读流的数据传递给可写流
+readableStream.pipe(writableStream);
+
+// 监听 'finish' 事件以获取写入完成的通知
+writableStream.on('finish', () => {
+  console.log('Data has been successfully written to the file.');
+});
+```
+
 ### image
 
 ```html
