@@ -5,6 +5,22 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### ts-morph ---> TS TYPE AST <GitHubStar repo="dsherret/ts-morph" />
+
+解析 TS 代码结构, [ts-ast-viewer]https://ts-ast-viewer.com/
+
+```ts
+import { Project } from "ts-morph";
+
+const project = new Project();
+const sourceFile = project.createSourceFile('validate.ts', tsCode);
+const tsTypeString = file.getTypeAlias(item.name) || file.getInterface(item.name) || file.getEnum(item.name)
+```
+
+地址：<GitHubLink repo="dsherret/ts-morph" />
+
+---
+
 ### gray-matter ---> 解析 frontmatter <GitHubStar repo="jonschlinkert/gray-matter" />
 
 transform:
