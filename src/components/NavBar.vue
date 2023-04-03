@@ -69,8 +69,8 @@ import { isDark } from '/~/logics'
         <!-- <a href="https://t.me/peterroe" target="_blank" title="Telegram" >
           <tabler-brand-telegram />
         </a> -->
-        <router-link to="/photo" title="life" class="lt-md:hidden">
-          <ri-image-line />
+        <router-link to="/log" title="log" class="lt-md:hidden">
+          <mdi-console />
         </router-link>
         <a href="https://github.com/peterroe" target="_blank" title="GitHub">
           <uil-github-alt />

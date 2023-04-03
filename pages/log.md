@@ -1,3 +1,15 @@
+---
+title: log
+---
+
+```shell
+// additional stuff ---------------------------+
+// message ----------+                         |
+// prefix ----+      |                         |
+// level -+   |      |                         |
+//        v   v      v                         v
+    log.info('fyi', 'I have a kitty cat: %j', myKittyCat)
+```
 
 ```shell
 ╭─────╮  Houston:
