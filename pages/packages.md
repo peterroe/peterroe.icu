@@ -5,6 +5,52 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### p-queue ---> 限制并发 promise <GitHubStar repo="sindresorhus/p-queue" />
+
+```ts
+import PQueue from 'p-queue';
+import got from 'got';
+
+const queue = new PQueue({concurrency: 1});
+
+(async () => {
+	await queue.add(() => got('https://sindresorhus.com'));
+	console.log('Done: sindresorhus.com');
+})();
+
+(async () => {
+	await queue.add(() => got('https://avajs.dev'));
+	console.log('Done: avajs.dev');
+})();
+
+(async () => {
+	const task = await getUnicornTask();
+	await queue.add(task);
+	console.log('Done: Unicorn task');
+})();
+```
+地址：<GitHubLink repo="sindresorhus/p-queue" />
+
+---
+### yargs ---> 命令行参数解析工具 <GitHubStar repo="yargs/yargs" />
+
+```js
+#!/usr/bin/env node
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
+
+if (argv.ships > 3 && argv.distance < 53.5) {
+  console.log('Plunder more riffiwobbles!')
+} else {
+  console.log('Retreat from the xupptumblers!')
+}
+```
+
+地址：<GitHubLink repo="yargs/yargs" />
+
+---
+
 ### ts-morph ---> TS TYPE AST <GitHubStar repo="dsherret/ts-morph" />
 
 解析 TS 代码结构, [ts-ast-viewer]https://ts-ast-viewer.com/
