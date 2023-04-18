@@ -5,6 +5,41 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### markdownlint-cli markdown 文档 lint <GitHubStar repo="igorshubovych/markdownlint-cli" />
+
+可以和 `case-police` 一起使用
+
+```json 
+{
+  "lint:docs": "markdownlint ./docs && case-police 'docs/**/*.md'",
+  "lint:docs:fix": "markdownlint ./docs --fix && case-police 'docs/**/*.md' --fix",
+}
+```
+
+地址：<GitHubLink repo="igorshubovych/markdownlint-cli" />
+
+---
+
+### expect-type TS 类型单元测试 <GitHubStar repo="mmkal/expect-type" />
+
+```ts
+import {foo, bar} from '../foo'
+import {expectTypeOf} from 'expect-type'
+
+test('foo types', () => {
+  // make sure `foo` has type {a: number}
+  expectTypeOf(foo).toMatchTypeOf<{a: number}>()
+
+  // make sure `bar` is a function taking a string:
+  expectTypeOf(bar).parameter(0).toBeString()
+  expectTypeOf(bar).returns.not.toBeAny()
+})
+```
+
+地址：<GitHubLink repo="tsayen/dom-to-image" />
+
+---
+
 ### dom-to-png 从 DOM 生成图片 <GitHubStar repo="tsayen/dom-to-image" />
 
 ```js
