@@ -5,6 +5,27 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### unpic-img 图片组件 <GitHubStar repo="ascorbic/unpic-img" />
+
+* 图片 layout
+* cdn 适配 srcset
+* 懒加载
+* ...
+
+```html
+<Image
+  src="https://cdn.shopify.com/static/sample-images/bath_grande_crop_center.jpeg"
+  layout="constrained"
+  width="800"
+  height="600"
+  alt="A lovely bath"
+/>
+```
+
+地址：<GitHubLink repo="ascorbic/unpic-img" />
+
+---
+
 ### markdownlint-cli markdown 文档 lint <GitHubStar repo="igorshubovych/markdownlint-cli" />
 
 可以和 `case-police` 一起使用
@@ -36,11 +57,100 @@ test('foo types', () => {
 })
 ```
 
-地址：<GitHubLink repo="tsayen/dom-to-image" />
+地址：<GitHubLink repo="mmkal/expect-type" />
 
 ---
 
-### dom-to-png 从 DOM 生成图片 <GitHubStar repo="tsayen/dom-to-image" />
+### p-queue ---> 限制并发 promise <GitHubStar repo="sindresorhus/p-queue" />
+
+```ts
+import PQueue from 'p-queue';
+import got from 'got';
+
+const queue = new PQueue({concurrency: 1});
+
+(async () => {
+	await queue.add(() => got('https://sindresorhus.com'));
+	console.log('Done: sindresorhus.com');
+})();
+
+(async () => {
+	await queue.add(() => got('https://avajs.dev'));
+	console.log('Done: avajs.dev');
+})();
+
+(async () => {
+	const task = await getUnicornTask();
+	await queue.add(task);
+	console.log('Done: Unicorn task');
+})();
+```
+地址：<GitHubLink repo="sindresorhus/p-queue" />
+
+---
+
+### yargs ---> 命令行参数解析工具 <GitHubStar repo="yargs/yargs" />
+
+```js
+#!/usr/bin/env node
+const yargs = require('yargs/yargs')
+const { hideBin } = require('yargs/helpers')
+const argv = yargs(hideBin(process.argv)).argv
+
+if (argv.ships > 3 && argv.distance < 53.5) {
+  console.log('Plunder more riffiwobbles!')
+} else {
+  console.log('Retreat from the xupptumblers!')
+}
+```
+
+地址：<GitHubLink repo="yargs/yargs" />
+
+---
+
+### ts-morph ---> TS TYPE AST <GitHubStar repo="dsherret/ts-morph" />
+
+解析 TS 代码结构, [ts-ast-viewer]https://ts-ast-viewer.com/
+
+```ts
+import { Project } from "ts-morph";
+
+const project = new Project();
+const sourceFile = project.createSourceFile('validate.ts', tsCode);
+const tsTypeString = file.getTypeAlias(item.name) || file.getInterface(item.name) || file.getEnum(item.name)
+```
+
+地址：<GitHubLink repo="dsherret/ts-morph" />
+
+---
+
+### gray-matter ---> 解析 frontmatter <GitHubStar repo="jonschlinkert/gray-matter" />
+
+transform:
+
+```md
+---
+title: Hello
+slug: home
+---
+<h1>Hello world!</h1>
+```
+to: 
+```js
+{
+  content: '<h1>Hello world!</h1>',
+  data: { 
+    title: 'Hello', 
+    slug: 'home' 
+  }
+}
+```
+
+地址：<GitHubLink repo="jonschlinkert/gray-matter" />
+
+---
+
+### dom-to-png ---> 从 DOM 生成图片 <GitHubStar repo="tsayen/dom-to-image" />
 
 ```js
 var node = document.getElementById('my-node');
