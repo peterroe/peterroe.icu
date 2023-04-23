@@ -5,6 +5,77 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### sentry-javascript 监控库 <GitHubStar repo="getsentry/sentry-javascript" />
+
+```ts
+import { init, captureMessage } from '@sentry/browser';
+
+init({
+  dsn: '__DSN__',
+  // ...
+});
+
+captureMessage('Hello, world!');
+```
+
+地址：<GitHubLink repo="getsentry/sentry-javascript" />
+
+---
+
+### mrmime 通过文件名得到 mime 类型 <GitHubStar repo="lukeed/mrmime" />
+
+```ts
+import { lookup, mimes } from 'mrmime';
+
+// Get a MIME type
+// ---
+lookup('txt'); //=> "text/plain"
+lookup('.txt'); //=> "text/plain"
+lookup('a.txt'); //=> "text/plain"
+
+// Unknown extension
+// ---
+lookup('.xyz'); //=> undefined
+
+// Add extension to dictionary
+// ---
+mimes['xyz'] = 'hello/world';
+lookup('xyz'); //=> "hello/world"
+```
+
+地址：<GitHubLink repo="lukeed/mrmime" />
+
+---
+
+### clack 超级好看的命令行 inquire <GitHubStar repo="natemoo-re/clack" />
+
+两种选择：
+* @clack/core: 无样式，可以自己扩展
+* @clack/prompts：准备好的
+
+地址：<GitHubLink repo="natemoo-re/clack" />
+
+---
+
+### drizzle-orm ORM 框架 <GitHubStar repo="drizzle-team/drizzle-orm" />
+
+支持 MySql 等多种数据库
+
+```ts
+// schema.ts
+import { mysqlTable, serial, text, varchar } from "drizzle-orm/mysql-core";
+
+export const users = mysqlTable('users', {
+  id: serial('id').primaryKey(),
+  fullName: text('full_name'),
+  phone: varchar('phone', { length: 256 }),
+});
+```
+
+地址：<GitHubLink repo="drizzle-team/drizzle-orm" />
+
+---
+
 ### unpic-img 图片组件 <GitHubStar repo="ascorbic/unpic-img" />
 
 * 图片 layout
