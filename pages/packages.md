@@ -5,6 +5,19 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
+### difftastic Diff 命令行工具 <GitHubStar repo="Wilfred/difftastic" />
+
+```shell
+$ brew install difftastic
+
+```
+
+[img](https://github.com/Wilfred/difftastic/raw/master/img/js.png)
+
+地址：<GitHubLink repo="Wilfred/difftastic" />
+
+---
+
 ### sentry-javascript 监控库 <GitHubStar repo="getsentry/sentry-javascript" />
 
 ```ts
