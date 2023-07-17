@@ -60,7 +60,7 @@ import { isDark } from '/~/logics'
         <router-link to="/packages" title="Packages">
           <mdi-package-variant-closed />
         </router-link>
-        <router-link to="/books" title="books">
+        <router-link class="lt-md:hidden" to="/books" title="books">
           <ph-books />
         </router-link>
         <!-- <router-link to="/notes" title="Notes" class="lt-md:hidden">
