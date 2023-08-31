@@ -5,7 +5,22 @@ subtitle: Gather some npm packages
 
 [[toc]]
 
-### difftastic Diff 命令行工具 <GitHubStar repo="Wilfred/difftastic" />
+### clipboardy ---> 剪切板工具 <GitHubStar repo="sindresorhus/clipboardy" />
+
+```ts
+import clipboard from 'clipboardy';
+
+clipboard.writeSync('🦄');
+
+clipboard.readSync();
+//=> '🦄'
+```
+
+地址：<GitHubLink repo="sindresorhus/clipboardy" />
+
+---
+
+### difftastic ---> Diff 命令行工具 <GitHubStar repo="Wilfred/difftastic" />
 
 ```shell
 $ brew install difftastic
@@ -18,7 +33,7 @@ $ brew install difftastic
 
 ---
 
-### sentry-javascript 监控库 <GitHubStar repo="getsentry/sentry-javascript" />
+### sentry-javascript ---> 监控库 <GitHubStar repo="getsentry/sentry-javascript" />
 
 ```ts
 import { init, captureMessage } from '@sentry/browser';
@@ -35,7 +50,7 @@ captureMessage('Hello, world!');
 
 ---
 
-### mrmime 通过文件名得到 mime 类型 <GitHubStar repo="lukeed/mrmime" />
+### mrmime ---> 通过文件名得到 mime 类型 <GitHubStar repo="lukeed/mrmime" />
 
 ```ts
 import { lookup, mimes } from 'mrmime';
@@ -60,7 +75,7 @@ lookup('xyz'); //=> "hello/world"
 
 ---
 
-### clack 超级好看的命令行 inquire <GitHubStar repo="natemoo-re/clack" />
+### clack ---> 超级好看的命令行 inquire <GitHubStar repo="natemoo-re/clack" />
 
 两种选择：
 * @clack/core: 无样式，可以自己扩展
@@ -70,7 +85,7 @@ lookup('xyz'); //=> "hello/world"
 
 ---
 
-### drizzle-orm ORM 框架 <GitHubStar repo="drizzle-team/drizzle-orm" />
+### drizzle-orm ---> ORM 框架 <GitHubStar repo="drizzle-team/drizzle-orm" />
 
 支持 MySql 等多种数据库
 
@@ -89,7 +104,7 @@ export const users = mysqlTable('users', {
 
 ---
 
-### unpic-img 图片组件 <GitHubStar repo="ascorbic/unpic-img" />
+### unpic-img ---> 图片组件 <GitHubStar repo="ascorbic/unpic-img" />
 
 * 图片 layout
 * cdn 适配 srcset
@@ -110,7 +125,7 @@ export const users = mysqlTable('users', {
 
 ---
 
-### markdownlint-cli markdown 文档 lint <GitHubStar repo="igorshubovych/markdownlint-cli" />
+### markdownlint-cli ---> markdown 文档 lint <GitHubStar repo="igorshubovych/markdownlint-cli" />
 
 可以和 `case-police` 一起使用
 
@@ -125,7 +140,7 @@ export const users = mysqlTable('users', {
 
 ---
 
-### expect-type TS 类型单元测试 <GitHubStar repo="mmkal/expect-type" />
+### expect-type ---> TS 类型单元测试 <GitHubStar repo="mmkal/expect-type" />
 
 ```ts
 import {foo, bar} from '../foo'
