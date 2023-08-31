@@ -4,6 +4,27 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### exec module.exports
+
+浏览器中解析 `module.exports`
+
+```js
+const moduleStr = `
+  module.exports = {
+    foo: 'bar',
+    world: ()=> console.log('cks')
+  }  
+`;
+
+const obj = eval(moduleStr)
+/** //=>
+{
+  foo: 'bar',
+  world: ()=> console.log('cks')
+} 
+*/
+```
+
 ### copy to clipboard
 
 ```sh
