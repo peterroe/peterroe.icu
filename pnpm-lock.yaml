@@ -54,7 +54,7 @@ specifiers:
   vite-plugin-md: ^0.11.4
   vite-plugin-pages: ^0.18.2
   vite-plugin-pwa: ^0.11.6
-  vite-plugin-yaml: ^1.0.5
+  vite-plugin-yaml: 1.0.4
   vite-ssg: 0.17.10
   vue: ^3.2.22
   vue-img-lazy-tiny: ^1.1.4
@@ -116,7 +116,7 @@ devDependencies:
   vite-plugin-md: 0.11.9_vite@2.6.14
   vite-plugin-pages: 0.18.2_vite@2.6.14
   vite-plugin-pwa: 0.11.13_vite@2.6.14
-  vite-plugin-yaml: 1.0.5_vite@2.6.14
+  vite-plugin-yaml: 1.0.4_vite@2.6.14
   vite-ssg: 0.17.10_cc76c965df92231ebb8687123db19483
 
 packages:
@@ -6327,11 +6327,11 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-yaml/1.0.5_vite@2.6.14:
-    resolution: {integrity: sha512-LeA1EalMmGnblEqbSvU0PZea38O7FPn0BnTab6vyBovZcJppzGnzK5sAocMknayu98Uxu9id6m4fC9//B9ZReQ==}
+  /vite-plugin-yaml/1.0.4_vite@2.6.14:
+    resolution: {integrity: sha512-ISR3f+LiNkrXHVML3oDt76gAu42s5OHRntb486AjWpI8A5R0XEQeTJoHX3gBxfJywvgarUhrAcTtjtLdGISJww==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
-      vite: ^1.0.0-rc.13
+      vite: ^1.0.0-rc.4
     dependencies:
       js-yaml: 3.14.1
       tosource: 2.0.0-alpha.3
