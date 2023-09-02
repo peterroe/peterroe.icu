@@ -18,7 +18,7 @@ specifiers:
   '@vueuse/core': ^6.9.2
   '@vueuse/head': 0.7.0
   atropos: ^1.0.2
-  critters: 0.0.14
+  critters: ^0.0.16
   cross-env: ^7.0.3
   dayjs: ^1.10.7
   diacritics: ^1.3.0
@@ -87,7 +87,7 @@ devDependencies:
   '@types/nprogress': 0.2.0
   '@unocss/reset': 0.16.4
   '@vitejs/plugin-vue': 1.10.2_vite@2.6.14
-  critters: 0.0.14
+  critters: 0.0.16
   cross-env: 7.0.3
   diacritics: 1.3.0
   eslint: 8.48.0
@@ -117,7 +117,7 @@ devDependencies:
   vite-plugin-md: 0.11.9_vite@2.6.14
   vite-plugin-pages: 0.18.2_vite@2.6.14
   vite-plugin-pwa: 0.11.13_vite@2.6.14
-  vite-ssg: 0.17.10_cc76c965df92231ebb8687123db19483
+  vite-ssg: 0.17.10_ac93962ad5017d0197c27bc1246e4842
 
 packages:
 
@@ -2865,8 +2865,8 @@ packages:
       browserslist: 4.21.10
     dev: true
 
-  /critters/0.0.14:
-    resolution: {integrity: sha512-YiBoGKfU8/xg+tVMw0KfMBgmr0TWa1JGmRXDzbQRQQaDarGUcZZtZEB25QyYrLasQZAnvqoZhSg2GW0zdsQkYQ==}
+  /critters/0.0.16:
+    resolution: {integrity: sha512-JwjgmO6i3y6RWtLYmXwO5jMd+maZt8Tnfu7VVISmEWyQqfLpB8soBswf8/2bu6SBXxtKA68Al3c+qIG1ApT68A==}
     dependencies:
       chalk: 4.1.2
       css-select: 4.3.0
@@ -6329,7 +6329,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-ssg/0.17.10_cc76c965df92231ebb8687123db19483:
+  /vite-ssg/0.17.10_ac93962ad5017d0197c27bc1246e4842:
     resolution: {integrity: sha512-gPcw5RLmAq5CwZ9Q/Ca9kJWUm6KdxhkNRBzm8P4bGDCRQLNQkgTiQmK7ZwsdqD7C8bah4CMBFDeqz2MKSQintw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -6344,7 +6344,7 @@ packages:
         optional: true
     dependencies:
       '@vueuse/head': 0.7.0_vue@3.3.4
-      critters: 0.0.14
+      critters: 0.0.16
       fs-extra: 10.1.0
       html-minifier: 4.0.0
       html5parser: 2.0.2
