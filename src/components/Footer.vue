@@ -7,7 +7,7 @@
 -->
 <template>
   <div class="mt-10 mb-6 prose m-auto opacity-50 flex">
-    <span class="text-sm">2022 © Peter Roe</span>
+    <span class="text-sm">2023 © Peter Roe</span>
     <div class="flex-auto" />
   </div>
 </template>
