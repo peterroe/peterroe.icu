@@ -4,6 +4,12 @@ display: Quick Find
 subtitle: Tips and tricks for quick finding
 ---
 
+### vscode schema
+
+```html
+<a href="vscode://file/{full path to file}:line:column">Open the file</a>
+```
+
 ### exec module.exports
 
 浏览器中解析 `module.exports`
