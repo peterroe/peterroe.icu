@@ -2,15 +2,18 @@
 title: Peter Roe
 ---
 
-<ClientOnly>
+<!-- <ClientOnly>
   <Plum/>
-</ClientOnly>
+</ClientOnly> -->
 
-Hey👋, I am Peter Roe, a software developer.
+<img src="/download.png" float-right rounded-full class="!mt-0 !mb-0" draggable="false">
 
-I enjoy explore everything around coding. Dreaming up ideas and making them come true is where my passion lies.
+Hey👋, I am Peter Roe
 
-Welcome to share your thoughts with me😜.
+* 💻 A front end developer.
+* 🦄 Enjoy JavaScript,VueJs and NodeJs.
+* 🍉 Hobby maybe blogging and write open source [tools](/tools).
+* 💨 Find a remote job opportunity.
 
 ***
 
